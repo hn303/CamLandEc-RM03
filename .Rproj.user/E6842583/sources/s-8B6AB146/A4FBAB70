@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "446000930",
+    "hash" : "2950473505",
     "id" : "A4FBAB70",
-    "lastKnownWriteTime" : 1570195273,
-    "last_content_update" : 1570195273656,
+    "lastKnownWriteTime" : 1570195403,
+    "last_content_update" : 1570195404006,
     "path" : "~/Dropbox/github/CamLandEc-RM03/.gitignore",
     "project_path" : ".gitignore",
     "properties" : {
-        "cursorPosition" : "35,9",
-        "scrollLine" : "8"
+        "cursorPosition" : "20,11",
+        "scrollLine" : "4"
     },
     "read_only" : false,
     "read_only_alternatives" : [
