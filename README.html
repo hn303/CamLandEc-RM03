@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -268,7 +269,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -342,18 +342,6 @@ summary {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
 
@@ -380,7 +368,7 @@ $(document).ready(function () {
 <div id="camlandec-rm03" class="section level1">
 <h1>CamLandEc-RM03</h1>
 <p>Welcome to RM03: Spatial Analysis and New Technologies in Planning.<br />
-This repo is created by <a href="https://haifengniu.com/en/"><strong>Haifeng Niu</strong></a>. The meterials taught by Haifeng Niu could be found here.</p>
+This repo is created by <a href="https://haifengniu.com/en/"><strong>Haifeng Niu</strong></a>. Meterials taught by Haifeng Niu could be found here.</p>
 </div>
 
 
@@ -400,6 +388,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
