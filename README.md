@@ -4,7 +4,8 @@ This repo is created by [**Haifeng Niu**](https://haifengniu.com/en/). Meterials
 
 ## Course outline
 
-Lectures|Topic|Lecturers|
+Lectures|Topic|Lecturers
+---|---|---
 Lecture 1|ntroduction: Concepts, theory and practice in spatial analysis using GI and data science |(Elisabete A. Silva)
 Lecture 2|Data types of data, data collection and processing: from census to new live data harvesting in a digital age of big data |(Elisabete A. Silva)
 Lecture 3|GIS and Data Processing: vector/raster/image data sets |(Elisabete A. Silva)
