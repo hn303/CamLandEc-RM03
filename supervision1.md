@@ -1,4 +1,3 @@
-# RM03 Spatial Analysis and New Technologies in Planning
 # Assignment for Supervision 1
 **Submission Date**: before Supervision 1
 
