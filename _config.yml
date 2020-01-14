@@ -14,6 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: RM03
+logo: https://www.landecon.cam.ac.uk/images/logo/le-logo.jpg/image_preview
 email: ""
 description: >- # this means to ignore newlines until "baseurl:"
   RM03
