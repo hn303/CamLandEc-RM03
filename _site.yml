@@ -1,6 +1,6 @@
 #_site.yml
-ouput_dir: "."
 name: "RNotebookExample"
+ouput_dir: "."
 navbar:
   title: "RNotebook Example"
   left:
