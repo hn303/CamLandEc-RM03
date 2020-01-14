@@ -13,11 +13,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: RM03
+title: RM03: Spatial Analysis and New Technologies in Planning
 logo: https://www.landecon.cam.ac.uk/images/logo/le-logo.jpg
 email: ""
 description: >- # this means to ignore newlines until "baseurl:"
-  RM03
+  Course material for RM03 in lent term, 2020
 #baseurl: "" # the subpath of your site, e.g. /blog
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: haifengniu
