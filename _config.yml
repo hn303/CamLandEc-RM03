@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: RM03: Spatial Analysis and New Technologies in Planning
+title: RM03-Spatial Analysis and New Technologies in Planning
 logo: https://www.landecon.cam.ac.uk/images/logo/le-logo.jpg
 email: ""
 description: >- # this means to ignore newlines until "baseurl:"
