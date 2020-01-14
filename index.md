@@ -3,11 +3,7 @@ Welcome to RM03: Spatial Analysis and New Technologies in Planning.
 This repo is created by [**Haifeng Niu**](https://haifengniu.com/en/). Meterials taught by Haifeng Niu could be found here.  
 
 ## Course outline
-<style>
-table th:first-of-type {  #first表示表格第一列
-    width: 100px; # 可使用%比例
-}
-</style>
+
 |Lectures|Topic|Lecturers|
 |---|---|---:|
 |Lecture 1|Introduction: Concepts, theory and practice in spatial analysis using GIS and data science |(Elisabete A. Silva)|
