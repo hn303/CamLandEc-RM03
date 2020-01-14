@@ -1,0 +1,22 @@
+#_site.yml
+ouput_dir: "."
+name: "RNotebookExample"
+navbar:
+  title: "RNotebook Example"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+#about.Rmd
+---
+title: "About This Website"
+---
+
+More about this website.
+#index.Rmd
+---
+title: "RNotebook Example"
+---
+
+Hello, Website!
