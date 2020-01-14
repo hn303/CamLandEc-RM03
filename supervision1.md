@@ -21,8 +21,7 @@ Data required:
 3.  Car Parks (point)
 
 ## Tasks
-1.  Download `District Wards` data (shapefile) of Cambridgeshire from:
-https://data.cambridgeshireinsight.org.uk/dataset/wardselectoral-divisions/resource/a5da0436-1142-48a9-8d82-d070fae138aa 
+1.  Download `District Wards` data (shapefile) of Cambridgeshire from:[link](https://data.cambridgeshireinsight.org.uk/dataset/wardselectoral-divisions/resource/a5da0436-1142-48a9-8d82-d070fae138aa)
 Note: You need to unzip the contents of zip file to a folder before working.
 
 2.  Using `Select by Attributes` in ArcMap, create a new shapefile for the wards of Cambridge City. This shapefile will include these wards: Abbey, Arbury, Castle, Cherry Hinton, Coleridge, East Chesterton, King's Hedges, Market, Newnham, Petersfield, Queen Edith's, Romsey, Trumpington and West Chesterton. Name this file as `Cam_City.shp’.
