@@ -2,11 +2,11 @@
 **Submission Date**: before Supervision 1
 
 ## Instructions
-1.  Please download and install QGIS standalone install version according to your platform: https://qgis.org/en/site/forusers/download.html
+1.  Please download and install QGIS standalone install version according to your platform:[link](https://qgis.org/en/site/forusers/download.html)
 2.  Read through the tasks carefully. You may face problems if you overlook any of the steps.
 3.  Remember to save the QGIS document regularly. 
 4.  Save all the files used or prepared in your assignment (kml, shapefiles, map document, etc.).
-5.  Go through the tutorial on converting spreadsheet or csv file to shapefile using QGIS: https://www.qgistutorials.com/en/docs/importing_spreadsheets_csv.html
+5.  Go through the tutorial on converting spreadsheet or csv file to shapefile using QGIS:[link](https://www.qgistutorials.com/en/docs/importing_spreadsheets_csv.html)
 6.  All figures in the assignment are for illustration purpose only and do not necessarily depict the actual data
 
 Note: functions and filename are `highlighted` in this document.
@@ -29,8 +29,7 @@ Note: You need to unzip the contents of zip file to a folder before working.
 Hint: Use Export Data command to export the data to a new shapefile.
       
 
-3.  Download Cambridge population estimates data 2015 (csv) from:
-https://data.cambridgeshireinsight.org.uk/dataset/2015-based-population-and-dwelling-stock-forecasts-cambridgeshire-and-peterborough-0 
+3.  Download Cambridge population estimates data 2015 (csv) from:[link](https://data.cambridgeshireinsight.org.uk/dataset/2015-based-population-and-dwelling-stock-forecasts-cambridgeshire-and-peterborough-0)
 
 4.  Open it in excel and comprise only one sheet, containing five columns, Ward Code, Ward name, Y2011, Y2016 and Y2021.
  
@@ -41,8 +40,7 @@ https://data.cambridgeshireinsight.org.uk/dataset/2015-based-population-and-dwel
 
 6.  Use the Export Data command to create a new shapefile, name it as `Cam_City_Pop.shp’. The Attribute Table of this shapefile must be showing the ward names as well as the corresponding population in 2011, 2016 and 2021.
 
-7.  Some of the fields in the Cam_City_Pop shapefile are not needed for the assignment. Therefore, delete the following fields:
-Wd15cd\Wd15nm\Wd15nmw\Ward_code\Objectid\lad15cd\st_lengths\st_areasha
+7.  Some of the fields in the Cam_City_Pop shapefile are not needed for the assignment. Therefore, delete the following fields:[link](Wd15cd\Wd15nm\Wd15nmw\Ward_code\Objectid\lad15cd\st_lengths\st_areasha)
 
  
 
@@ -69,8 +67,7 @@ c.  Pop_Den21
 Hint: Use help to understand the function of Dissolve tool. You will need one field in the attribute table of Cam_City_Pop.shp. This field should contain same values for all the wards. Then use this attribute in the Dissolve function so that it spatially merges all the wards.
  
 
-12. Download `Car Parks` data (kml) of Cambridgeshire from: 
-https://data.cambridgeshireinsight.org.uk/dataset/car-parks/resource/ea299dcb-ff39-4e0c-ae76-99076e7bb071
+12. Download `Car Parks` data (kml) of Cambridgeshire from: [link](https://data.cambridgeshireinsight.org.uk/dataset/car-parks/resource/ea299dcb-ff39-4e0c-ae76-99076e7bb071)
 
 
 13. Convert the kml file to shapefile in ArcMap and name it `Car_Parks’.
