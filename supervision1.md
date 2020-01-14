@@ -45,9 +45,9 @@ Hint: Use Export Data command to export the data to a new shapefile.
 
 8.  In the Attribute Table of Cam_City_Pop shapefile, add a new field named `Sq_Km’. Remember to set the data type of this field to `Float’, Precision = 4 and Scale = 2. We will compute the area of each ward in km2 (sq kilometre). Compute the area using `Calculate Geometry` tool (right click after choosing the new field).
 
-### Question B: Why did we use `Float` as the data type while adding the field `Sq_Km` in the Attribute Table of Cam_City_Pop shapefile? What is the purpose of setting the `Precision` and `Scale` values?
+**Question B: Why did we use `Float` as the data type while adding the field `Sq_Km` in the Attribute Table of Cam_City_Pop shapefile? What is the purpose of setting the `Precision` and `Scale` values?**
 
-### Question C: Which ward is the largest and smallest in terms of area? Also note their areas in km2.
+**Question C: Which ward is the largest and smallest in terms of area? Also note their areas in km2.**
 
 9.  In the Attribute Table of Cam_City_Pop shapefile, add three new fields. Remember to set the data type as `Float’, Precision = 7 and Scale = 2.
 a.  Pop_Den11 
@@ -60,7 +60,7 @@ c.  Pop_Den21
 
  
 
-### Question D: Which ward has the highest and lowest population densities in 2011, 2012 and 2013? Tabulate and also write respective population densities.
+**Question D: Which ward has the highest and lowest population densities in 2011, 2012 and 2013? Tabulate and also write respective population densities.**
 
 11. Use the `Dissolve` function in ArcToolbox to merge the spatial boundaries of all the wards in Cam_City_Pop shapefile to obtain the boundary of Cambridge City. Name this new file as `Cam_Boundary.shp’. Change the symbology of Cam_Boundary.shp (without fill, 1 outline width, black color).
 Hint: Use help to understand the function of Dissolve tool. You will need one field in the attribute table of Cam_City_Pop.shp. This field should contain same values for all the wards. Then use this attribute in the Dissolve function so that it spatially merges all the wards.
@@ -76,21 +76,21 @@ Hint: Use the `KML To Layer (conversion tool’) in ArcToolbox for this purpose.
 14. Using the `Select by Location` tool, select the `Car_Parks` that are within the boundary of Cambridge City (Cam_Boundary.shp). Then, create layer from selected features as `Cam_Car_Parks` and change symbol by searching `Parking` in symbol selector。
  
 
-### Question E: How many parks are there in Cambridge city?
+**Question E: How many parks are there in Cambridge city?**
 
 15. Using the `Select by Location` tool, select the parks that are within the boundary of `Market` ward.
 Hint: You will use the Cam_City_Pop.shp for this purpose.
 
-### Question F: How many car parks are there in the `Market` ward? Also note the names of these car  parks.
+**Question F: How many car parks are there in the `Market` ward? Also note the names of these car  parks.**
 
 16. Final task is to present the data in the form of a map. Switch to Layout View (Menu Bar -layout view) and remember to show the basic map elements such as map title, north arrow, scale, legend and map description (Menu Bar-Insert). 
         
 
-### Question H: Prepare a map that presents the following information:
+**Question H: Prepare a map that presents the following information:
    Cambridge ward boundaries with graduated-colour-coded 2016 population density
    Car parks within the boundary of Cambridge
    Add symbols and labelling wherever necessary
-   Export the map as TIFF file.
+   Export the map as TIFF file.**
 
 Note: if you want, please goes an extra mile by exploring and justifiably using data and/or tools other than those mentioned in this exercise
 
