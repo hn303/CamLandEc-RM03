@@ -33,7 +33,7 @@ Hint: Use Export Data command to export the data to a new shapefile.
 4.  Open it in excel and comprise only one sheet, containing five columns, Ward Code, Ward name, Y2011, Y2016 and Y2021.
  
 
-### Question A: Which ward has the highest and lowest population in 2011, 2016 and 2021? Tabulate and also write respective population.
+**Question A: Which ward has the highest and lowest population in 2011, 2016 and 2021? Tabulate and also write respective population.
 
 5.  Use the `Join` function in ArcMap to join the population data in excel file created in Task 4 to the Cam_City shapefile that was created in Task 2 above. Once this is done, the Attribute Table of Cam_City shapefile should show the Ward name and the population of each ward in 2011, 2016 and 2021.
 
