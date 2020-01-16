@@ -26,10 +26,12 @@ permalink: :title
 
 repository: "hn303.github.io/CamLandEc-RM03"
 
-theme: jekyll-theme-cayman
-  
+# theme: jekyll-theme-cayman
+remote_theme: mattvh/jekyllthemes
+
 # Build settings
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-sitemap
 
