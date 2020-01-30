@@ -1,5 +1,20 @@
 # Supervision 2
 
+## Instructions
+1. Read through the instruction carefully. You may face problems if you overlook any of the steps.
+2. Remember to save the QGIS document regularly. 
+
+Note: functions and filename are `highlighted` in this document.
+
+## Supervision overview
+In this exercise, you will familiarise yourself with geoprocessing raster data on QGIS software as well as basic features of NetLogo software and how to use the GIS extension to input raster maps. 
+
+### Setup work enviornment (10 mins)
+1. Please download and install `NetLogo (6.1.1)` according to your platform. We recommend downloading `Windows (64-bit)`, `Mac OS X`, or `Linux (64-bit)`: [NetLogo Download Page](https://ccl.northwestern.edu/netlogo/6.1.1/
+). 
+2. It is suggested to create a folder and name it as `rm03_YourCRSid_sup2`, at your prefered directory on your disk. This folder will be the working directory for all datasets and QGIS project file in this supervision.
+3. Launch QGIS and NetLogo.
+
 ## What are raster data?
 •	While vector data use points, lines, and polygons, raster data store information in cells – coded image on a grid/matrix of X columns by Y rows
 •	Examples: aerial photography, satellite image, digital elevation model (DEM)…
