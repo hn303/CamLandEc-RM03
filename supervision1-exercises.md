@@ -27,7 +27,10 @@ Note: if some panels or toolbars are not showing, nevigate to menu bar  `View` >
     - `CRS` tab: this tab provide coordinate reference system (CRS) setting for the project file. Be aware that CRS setting in the `Project Properties` is just for the project (called as `Data Frame setting` in ArcGIS). CRS setting for layers will be introduced later.
 
 Note: after adding project home, you can find `Project Home` directory is showing in the `Browser panel`. It is much easier to locate your data files through this panel.
-![](statics/QGIS_general.png)![](statics/QGIS_project.png)![](statics/QGIS_crs.png)
+
+[](statics/QGIS_property.png) 
+
+
 
 ### Vector data (30 mins)
 1. Download `Cambridge District Wards` data of Cambridgeshire from:[Cambridgeshire Insight Open Data](https://data.cambridgeshireinsight.org.uk/dataset/wardselectoral-divisions/resource/a5da0436-1142-48a9-8d82-d070fae138aa) and save into your working directory.
@@ -65,8 +68,8 @@ Note: You don't need to type expression manually, expand `Field and Values` opti
 
 ### Digitizing Map Data (10 mins)
 #### Basemap and plugins in QGIS
-1. Extent the function of your QGIS function with plugins: open `Plugins` > `Manafement and Install Plugins` on menu bar. Search `QuickMapServices` and click `Install plugin`. 
-Note: if some plugins are not showing, please allow the `experienment` option.
+1. Extent the function of your QGIS function with plugins: open `Plugins` > `Manage and Install Plugins` on menu bar. Search `QuickMapServices` and click `Install plugin`. 
+Note: if some plugins are not showing, please allow the `experiment` option.
 2. After isntalling plugin, you can find `QuickMapServices` function in the `web` section on menu bar. Choose `OSM`-`OSM Standard` and you will add basemap in QGIS.
 
 #### Create features/shapefiles in QGIS
@@ -75,17 +78,18 @@ Note: if some plugins are not showing, please allow the `experienment` option.
 2.  Zoom in to the Cambridge area to find the location of your college/office.
 Note: You computer must be connected to the internet to add basemap as the imagery is fetched from web servers
 
-2.  Create the following three shapefiles using `layer` - `Creat Layer`. Remember to assign the `EPSG:27700 - OSGB 1936 / British National Grid` coordinate system (select CRS > filter > Search `OSGB 1936`). Add new fields into `Fields list` with setting data type, length and precision. For instance, add `name` as new field and set length at 15.
+3.  Create the following three shapefiles using `layer` - `Create Layer` > `New Shapefile Layer`. Remember to assign the `EPSG:27700 - OSGB 1936 / British National Grid` coordinate system (select CRS > filter > Search `OSGB 1936`). Add new fields into `Fields list` with setting data type, length and precision. For instance, add `name` as new field and set length at 15.
 
-3. Select the `my_college/office` layer in layer penel, then open `Toggle editing` and select `Add Point Feature`. After pin a point feature on map winodw, a `Feature Attribute` window will pop up. Input value you want to assign to attributes of this new feature. 
+4. Select the `my_college/office` layer in layer penel, then open `Toggle editing` and select `Add Point Feature`. After pin a point feature on map winodw, a `Feature Attribute` window will pop up. Input value you want to assign to attributes of this new feature. 
 ![](statics/QGIS_feature.png)
-4. After creating features in map window, click `Toggle Editing` to save the edit.
+5. After creating features in map window, click `Toggle Editing` to save the edit.
 
 
-3.  The following things will be digitized in these three shapefiles:
+6.  The following things will be digitized in these three shapefiles:
 a.  `My_Route.shp` (Polyline)
 b.  `My_PoI.shp` (Point)
 c.  `My_Locations.shp` (Polygon)
+
 - `My_Route` – You will digitize a ‘line’ showing your daily route from your house to college/office. You will also add a Field to its Attribute Table to store the ‘distance’ of this path.
 - `My_PoI` – You will digitize your ‘points’ of interests (PoI) alongside this route. These may include locations of your favourite restaurants, coffee shops, cash machines, etc. You will add two Fields to its Attribute Table to store the ‘name’ and ‘category’ (restaurant, coffee shop, etc.) of each PoI.
 - `My_Locations` – You will digitize the spatial extent of your living place (house, flat, etc.) and your college/office in the form of ‘polygon’. You will add two Fields to its Attribute Table to store the ‘name’ and ‘area’ of each polygon.
@@ -95,5 +99,6 @@ c.  `My_Locations.shp` (Polygon)
 ### Raster data (5 mins)
 1. Download `Cambridge District Wards` data of Cambridgeshire from:[link](https://data.cambridgeshireinsight.org.uk/dataset/wardselectoral-divisions/resource/a5da0436-1142-48a9-8d82-d070fae138aa) and save into your working directory.
 2. Import shapefile into your project:  Navigate to the your working directory in browser panel and drag the `Wards_December_2015_Generalised_Clipped_Boundaries_in_Great_Britain.shp` into the map view window. Or, you can add vector file through data source manager.
+You can check your raster map with [Camrbidge Terrain Map](https://en-gb.topographic-map.com/maps/dgf/Cambridge/)
 Note: Click ok if there is a CRS transformation window pop-up
 ![](statics/QGIS_import.png)
