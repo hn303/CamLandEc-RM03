@@ -118,7 +118,8 @@ c.  `My_Locations.shp` (Polygon)
 2. Import shapefile into your project:  Locate this file at your working directory through `Browser Panel` and hold the left mouse and drag the `n52_e000_1arc_v3.tif` into the map window. Or, you can add vector file through data source manager.
 ![](statics/QGIS_raster.png)
 
-3. dissolve
+3. Dissolve: Use the ‘Dissolve’ function in ArcToolbox to merge the spatial boundaries of all the wards in Cam_City_Pop shapefile to obtain the boundary of Cambridge City. Name this new file as ‘Cam_Boundary.shp’. Change the symbology of Cam_Boundary.shp (without fill, 1 outline width, black color).
+Hint: Use help to understand the function of Dissolve tool. You will need one field in the attribute table of Cam_City_Pop.shp. This field should contain same values for all the wards. Then use this attribute in the Dissolve function so that it spatially merges all the wards.
 
 4. clip
 
