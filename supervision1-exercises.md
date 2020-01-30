@@ -113,10 +113,16 @@ c.  `My_Locations.shp` (Polygon)
 7.  After digitizing the features, open the Attribute Table of each shapefile one by one and add new fields to store data as mentioned in Task 3. Compute the distance and area using ‘Calculate Geometry’ tool.
 
 ### Raster data (5 mins)
-1. Download `Cambridge District Wards` data of Cambridgeshire from:[link](https://data.cambridgeshireinsight.org.uk/dataset/wardselectoral-divisions/resource/a5da0436-1142-48a9-8d82-d070fae138aa) and save into your working directory.
+1. Download `Cambridge SRTM1` data of Cambridgeshire from:[Cambridge SRTM1 Data](statics/n52_e000_1arc_v3.tif) and download into your working directory.
 
-2. Import shapefile into your project:  Navigate to the your working directory in browser panel and drag the `Wards_December_2015_Generalised_Clipped_Boundaries_in_Great_Britain.shp` into the map view window. Or, you can add vector file through data source manager.
+2. Import shapefile into your project:  Locate this file at your working directory through `Browser Panel` and hold the left mouse and drag the `n52_e000_1arc_v3.tif` into the map window. Or, you can add vector file through data source manager.
+![](statics/QGIS_raster.png)
+
+3. dissolve
+
+4. clip
+
+5. sympology
+
 You can check your raster map with [Camrbidge Terrain Map](https://en-gb.topographic-map.com/maps/dgf/Cambridge/)
 Note: Click ok if there is a CRS transformation window pop-up
-
-[Cambridge SRTM1 Data](statics/n52_e000_1arc_v3.tif)
