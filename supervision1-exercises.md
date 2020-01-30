@@ -27,6 +27,11 @@ Note: if some panels or toolbars are not showing, nevigate to menu bar  `View` >
     - `CRS` tab: this tab provide coordinate reference system (CRS) setting for the project file. Be aware that CRS setting in the `Project Properties` is just for the project (called as `Data Frame setting` in ArcGIS). CRS setting for layers will be introduced later.
 
 Note: after adding project home, you can find `Project Home` directory is showing in the `Browser panel`. It is much easier to locate your data files through this panel.
+
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![](statics/QGIS_general.png) |![](statics/QGIS_project.png)
+
 ![](statics/QGIS_general.png)![](statics/QGIS_project.png)![](statics/QGIS_crs.png)
 
 ### Vector data (30 mins)
