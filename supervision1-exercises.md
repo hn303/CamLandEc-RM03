@@ -65,7 +65,7 @@ Note: You don't need to type expression manually, expand `Field and Values` opti
 
 ### Digitizing Map Data (10 mins)
 #### Basemap and plugins in QGIS
-1. Extent the function of your QGIS function with plugins: open `Plugins` on menu bar. Search `QuickMapServices` and click `Install plugin`. 
+1. Extent the function of your QGIS function with plugins: open `Plugins` > `Manafement and Install Plugins` on menu bar. Search `QuickMapServices` and click `Install plugin`. 
 Note: if some plugins are not showing, please allow the `experienment` option.
 2. After isntalling plugin, you can find `QuickMapServices` function in the `web` section on menu bar. Choose `OSM`-`OSM Standard` and you will add basemap in QGIS.
 
