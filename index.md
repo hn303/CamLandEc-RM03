@@ -13,7 +13,7 @@ This repo is created by [**Haifeng Niu**](https://haifengniu.com/en/). Meterials
 |Supervision 1|QGIS - data analysis [[Slides]](supervision1-slides.md) [[Exercises]](supervision1-exercises.md) [[Assignment]](supervision1-assignment.md)|(H. Niu, H. R. Kwon)|
 |Lecture 5|Urban and Environmental Dynamic Modelling |(Elisabete A. Silva )|
 |Lecture 6|Dynamic simulation models SA, MCA, ABM, CA, GA and NN: development, calibration, validation |(Elisabete Silva)|
-|Supervision 2|Netlogo - urban modelling [Slides]](supervision2-slides.md) [[Exercises]](supervision2-exercises.md) [[Assignment]](supervision2-assignment.md)|(H. R. Kwon, P. M. Scherer)|
+|Supervision 2|Netlogo - urban modelling [[Slides]](supervision2-slides.md) [[Exercises]](supervision2-exercises.md) [[Assignment]](supervision2-assignment.md)|(H. R. Kwon, P. M. Scherer)|
 |Lecture 7|Hot topics in Spatial analysis and new technologies |(H. Niu, Y. Chen, H. R. Kwon, P. M. Scherer)|
 |Lecture 8|Data Science, Complexity Theory and Adaptive Planning |(Elisabete A. Silva)|
 |Supervision 3|Linking QGIS, API data harvesting and Netlogo|(H. Niu, Y. Chen)|
