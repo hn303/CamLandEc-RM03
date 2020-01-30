@@ -26,7 +26,7 @@ permalink: :title
 
 repository: "hn303.github.io/CamLandEc-RM03"
 
-theme: jekyll-theme-cayman
+theme: jekyll-theme-slate
 # remote_theme: dyndna/lanyon-plus
 
 # Build settings
