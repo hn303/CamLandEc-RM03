@@ -118,4 +118,5 @@ c.  `My_Locations.shp` (Polygon)
 2. Import shapefile into your project:  Navigate to the your working directory in browser panel and drag the `Wards_December_2015_Generalised_Clipped_Boundaries_in_Great_Britain.shp` into the map view window. Or, you can add vector file through data source manager.
 You can check your raster map with [Camrbidge Terrain Map](https://en-gb.topographic-map.com/maps/dgf/Cambridge/)
 Note: Click ok if there is a CRS transformation window pop-up
-![](statics/QGIS_import.png)
+
+[Cambridge SRTM1 Data](statics/n52_e000_1arc_v3.tif)
