@@ -28,20 +28,26 @@ Note: if some panels or toolbars are not showing, nevigate to menu bar  `View` >
 
 Note: after adding project home, you can find `Project Home` directory is showing in the `Browser panel`. It is much easier to locate your data files through this panel.
 
-![](statics/QGIS_general.png) ![](statics/QGIS_metadata.png) ![](statics/QGIS_CRS.png) 
+![](statics/QGIS_general.png)
+![](statics/QGIS_metadata.png)
+![](statics/QGIS_CRS.png) 
 
 
 
 ### Vector data (30 mins)
-1. Download `Cambridge District Wards` data of Cambridgeshire from:[Cambridgeshire Insight Open Data](https://data.cambridgeshireinsight.org.uk/dataset/wardselectoral-divisions/resource/a5da0436-1142-48a9-8d82-d070fae138aa) and save into your working directory.
+1. Download `Cambridge District Wards` data of Cambridgeshire from: [Cambridgeshire Insight Open Data](https://data.cambridgeshireinsight.org.uk/dataset/wardselectoral-divisions/resource/a5da0436-1142-48a9-8d82-d070fae138aa) and save into your working directory.
 2. Import shapefile into your project:  Locate this file at your working directory through `browser panel` and hold the left mouse and drag the `Wards_December_2015_Generalised_Clipped_Boundaries_in_Great_Britain.shp` into the map window. Or, you can add vector file through data source manager.
+
 Note: You will beprompted a window to conduct CRS transformation. 
+
 ![](statics/QGIS_import.png)
+
 3: Layer ticked then can be found in layer panel. You can turn on and off layer by tick it or not. If you intend to process one layer, please make sure the target layer are ticked and selected with hightlight.
 
 #### Attributes table
 - How to open attribute table?
 - How to select ploygons only in cambridge from attribute tbale?
+
 1. Select layer in layers penel, click the `open attribute table` in the `Attribut Toolbar`. You will see the attribute table with different fields including `wd15nm` (name for Ward District) and `lad12nm` (name for Local Authority District). 
 ![](statics/QGIS_table.png)
 2. In the attribute table of Cambridgeshire layer and double-click `lad12nm` to sort by value/content. Select all rows whose `lad12nm` value equals `cambridge` (select first one and then press SHIFT on your keyboard while selecting the last one).
@@ -62,6 +68,7 @@ Note: You don't need to type expression manually, expand `Field and Values` opti
 
 #### Join layer
 - How can we link cambridge local services with district information?
+
 1. Nevigate to `Processing` > `Toolbox` and search `Join  attributes by location`. In the prompted window, choose `Cam_services` as input layer and `Cam_City` as join layer. In the geometric predicate stection, choose `intersects`. In the join type section, choose `create seperate feature for each located feature (one-to-many)`.
 ![](statics/QGIS_join.png)
 2. Check attribute table of `Joined layer` and you will find district information for each service item.
@@ -94,7 +101,7 @@ c.  `My_Locations.shp` (Polygon)
 - `My_PoI` – You will digitize your ‘points’ of interests (PoI) alongside this route. These may include locations of your favourite restaurants, coffee shops, cash machines, etc. You will add two Fields to its Attribute Table to store the ‘name’ and ‘category’ (restaurant, coffee shop, etc.) of each PoI.
 - `My_Locations` – You will digitize the spatial extent of your living place (house, flat, etc.) and your college/office in the form of ‘polygon’. You will add two Fields to its Attribute Table to store the ‘name’ and ‘area’ of each polygon.
 
-4.  After digitizing the features, open the Attribute Table of each shapefile one by one and add new fields to store data as mentioned in Task 3. Compute the distance and area using ‘Calculate Geometry’ tool.
+7.  After digitizing the features, open the Attribute Table of each shapefile one by one and add new fields to store data as mentioned in Task 3. Compute the distance and area using ‘Calculate Geometry’ tool.
 
 ### Raster data (5 mins)
 1. Download `Cambridge District Wards` data of Cambridgeshire from:[link](https://data.cambridgeshireinsight.org.uk/dataset/wardselectoral-divisions/resource/a5da0436-1142-48a9-8d82-d070fae138aa) and save into your working directory.
