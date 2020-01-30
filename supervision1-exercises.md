@@ -30,7 +30,7 @@ Note: after adding project home, you can find `Project Home` directory is showin
 
 ![](statics/QGIS_general.png)
 ![](statics/QGIS_metadata.png)
-![](statics/QGIS_CRS.png) 
+![](statics/QGIS_crs.png) 
 
 
 
