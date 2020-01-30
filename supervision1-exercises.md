@@ -113,7 +113,7 @@ c.  `My_Locations.shp` (Polygon)
 7.  After digitizing the features, open the Attribute Table of each shapefile one by one and add new fields to store data as mentioned in Task 3. Compute the distance and area using ‘Calculate Geometry’ tool.
 
 ### Raster data (5 mins)
-1. Download `Cambridge SRTM1` data of Cambridgeshire from:[Cambridge SRTM1 Data](statics/n52_e000_1arc_v3.tif) and download into your working directory.
+1. Download `Cambridge SRTM1` data of Cambridgeshire from: [Cambridge SRTM1 Data](statics/n52_e000_1arc_v3.tif) and download into your working directory.
 
 2. Import shapefile into your project:  Locate this file at your working directory through `Browser Panel` and hold the left mouse and drag the `n52_e000_1arc_v3.tif` into the map window. Or, you can add vector file through data source manager.
 ![](statics/QGIS_raster.png)
