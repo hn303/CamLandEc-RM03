@@ -28,7 +28,7 @@ Note: if some panels or toolbars are not showing, nevigate to menu bar  `View` >
 
 Note: after adding project home, you can find `Project Home` directory is showing in the `Browser panel`. It is much easier to locate your data files through this panel.
 
-Solarized dark             |  Solarized Ocean
+
 :-------------------------:|:-------------------------:
 ![](statics/QGIS_general.png) |![](statics/QGIS_project.png)
 
