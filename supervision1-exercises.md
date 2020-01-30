@@ -46,7 +46,7 @@ Note: You will beprompted a window to conduct CRS transformation.
 3.  Here is an alternative method to select elements precisely: Open attribute table of Cambridgeshire layer and Select features using an expression in QGIS. In the window of expression, input `"lad15nm" = 'Cambridge'` and click select features. 
 Note: You don't need to type expression manually, expand `Field and Values` option in the right panel and  double click `lad15nm`. The field name will show in the expression window. Once you select the field `lad15nm`, click `All Unique` button on the right, it will show a list of unique values from the field of `lad15nm`. Double click it to finish the expression.
 ![](statics/QGIS_select3.png)
-4. Once select elements you need, right-click this layer and nevigative to `Export` > `Save Selected Features As`. Name this file as `Cam_City.shp`. This shapefile will include these wards: Abbey, Arbury, Castle, Cherry Hinton, Coleridge, East Chesterton, King’s Hedges, Market, Newnham, Petersfield, Queen Edith’s, Romsey, Trumpington and West Chesterton. 
+4. Once select elements you need, right-click this layer and nevigative to `Export` > `Save Selected Features As`. Name this file as `Cam_City.shp` and save to your working directory. This shapefile will include these wards: Abbey, Arbury, Castle, Cherry Hinton, Coleridge, East Chesterton, King’s Hedges, Market, Newnham, Petersfield, Queen Edith’s, Romsey, Trumpington and West Chesterton. 
 
 
 5. Check other functions in attribute table: `select all`, `invert selection`, `deselect all`
