@@ -28,11 +28,7 @@ Note: if some panels or toolbars are not showing, nevigate to menu bar  `View` >
 
 Note: after adding project home, you can find `Project Home` directory is showing in the `Browser panel`. It is much easier to locate your data files through this panel.
 
-
-:-------------------------:|:-------------------------:
-![](statics/QGIS_general.png) |![](statics/QGIS_project.png)
-
-![](statics/QGIS_general.png)![](statics/QGIS_project.png)![](statics/QGIS_crs.png)
+|![](statics/QGIS_general.png) |![](statics/QGIS_project.png)|![](statics/QGIS_crs.png)|
 
 ### Vector data (30 mins)
 1. Download `Cambridge District Wards` data of Cambridgeshire from:[Cambridgeshire Insight Open Data](https://data.cambridgeshireinsight.org.uk/dataset/wardselectoral-divisions/resource/a5da0436-1142-48a9-8d82-d070fae138aa) and save into your working directory.
