@@ -14,8 +14,7 @@ In this exercise, you will familialise youself with basic features of QGIS softw
 1. Please download and install `QGIS standalone install version` according to your platform: [QGIS Download Page](https://qgis.org/en/site/forusers/download.html). 
 2. It is suggested to create a folder and name it as `rm03_YourCRSid_sup1`, at your prefered directory on your disk. This folder will be the working directory for all datasets and QGIS project file in this supervision.
 3. Launch QGIS: Start QGIS Desktop and check interface (menu bar, toolbar, brower panel, layer panerl and map window)
-
-Note: if some panels or toolbars are not showing, nevigate to menu bar  `View` > `Panels` or `Toolbars` to switch on.
+- Note: if some panels or toolbars are not showing, nevigate to menu bar  `View` > `Panels` or `Toolbars` to switch on.
 
 ![](statics/QGIS_start.png)
 
