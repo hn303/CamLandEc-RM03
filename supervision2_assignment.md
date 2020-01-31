@@ -21,7 +21,7 @@ In this assignment, you will familiarise yourself with geoprocessing raster data
 4. Go to `Project` >  `Properties` in menu bar and open the `Project Properties` window.
     - `General` tab: Set your working directory as `Project Home`.
 Note: after adding project home, you can find `Project Home` directory is showing in the `Browser panel`. It is much easier to locate your data files through this panel.
-5. Drag `Urban_2018.shp` `Exclusion_2014.shp` `Road_2018.shp` `Boundary.shp` to the  `Layers panel`. Drag `Boundary.shp` to the bottom. Uncheck all layers except `Boundary.shp`.
+5. Drag `Urban_2018.shp` `Exclusion_2014.shp` `Road_2018.shp` `Boundary.shp` to the  `Layers panel`. Drag `Boundary.shp` to the bottom. Uncheck all layers except `Boundary.shp`. Note: You can check/uncheck the layer to make it visible/invisible by clicking the box next to the layer name in the `Layer panel`. 
 ![](statics/Sup2_project_setup.PNG)
 
 Note: `Urban_2018` layer is a combination of urban land-use data by parcel and building data, with the urban/non-urban information coded in the attribute `URBAN`. `Exclusion_2014` layer is a combination of river, urban parks, and development restriction zone, with the excluded/non-excluded information coded in the attribute `EXCLUSION`. `Road_2018` layer contains roads, with the road-class information coded in the attribute `road_class`.
@@ -29,7 +29,9 @@ Note: `Urban_2018` layer is a combination of urban land-use data by parcel and b
 ### Using symbology to assign colour to visualize the data
 1. Right-click on `Boundary` layer > `Properties` > `Symbology` (or double-click the color box). Click `Simple fill`, change `Fill color` to `black`, change `Stroke style` to `No Pen`, click `OK`. 
 2. Check `Urban_2018` layer, double-click the color box. Click `Simple fill`, change `Fill color `to `white`, change `Stroke style` to `No Pen`, click `OK`.
+
 ![](statics/Sup2_symbology1.PNG)  
+
 3. Uncheck `Urban_2018` layer, check `Exclusion_2014` layer, double-click the color box. Click `Single symbol` > `Categorized`, click `Column` > `Exclusion`, click `Classify` and change `Legend` to 0=non-excluded, 100=excluded.
 4. Double-click the color box of non-excluded, click `Simple fill`, change `Fill color` to `black`, change `Stroke style` to `No Pen`, click `OK`. Double-click the color box of excluded, click `Simple fill`, change `Fill color` to `white`, change `Stroke style` to `No Pen`, click `OK`. 
 5. Delete the third row (unnecessary) by pressing the `negative sign` next to `Classify`. Click `OK`.
@@ -46,9 +48,11 @@ Note: Numbers of the output extent came from the layer with the largest layer ex
 Note: If you don't save as, these temporary files will disappear next time you open the QGIS file.
 ![](statics/Sup2_rasterize2.PNG) 
 
-#### Question 1. Zoom into the `Urban_2018` layer. You will see that the pixels are in a grid. Check the size of the grid by right-clicking on the layer and clicking `Properties`. In the `Information` tab, what are the dimensions and pixel size? (Note: pixel size is in meters)
+#### Question 1. Uncheck all layers except two `Urban_2018` layers and `Boundary`. Compare `Urban_2018.tif` with `Urban_2018.shp` by turning on and off the check of the raster layer. How is the raster data different from vector data?
 
-#### Question 2. In real life, what would be the dimension (width and length on a map) of this city of Sejong, South Korea in kilometers? (hint: real distance = dimension * pixel size). Find this city on [Google Map](https://www.google.com/maps/place/Sejong+City+Hall/@36.5675237,127.1919615,11z/data=!4m5!3m4!1s0x357ad2abe6c47565:0x4da638f5f9f95e37!8m2!3d36.4800984!4d127.2890354) to see whether your calculation makes sense. You can search Sejong City Hall, and refer to the grey dotted line as the city boundary.
+#### Question 2. Zoom into the `Urban_2018` layer. You will see that the pixels are in a grid. Check the size of the grid by right-clicking on the layer and clicking `Properties`. In the `Information` tab, what are the dimensions and pixel size? (Note: pixel size is in meters)
+
+#### Question 3. In real life, what would be the dimension (width and length on a map) of this city of Sejong, South Korea in kilometers? (hint: real distance = dimension * pixel size). Find this city on [Google Map](https://www.google.com/maps/place/Sejong+City+Hall/@36.5675237,127.1919615,11z/data=!4m5!3m4!1s0x357ad2abe6c47565:0x4da638f5f9f95e37!8m2!3d36.4800984!4d127.2890354) to see whether your calculation makes sense. You can search Sejong City Hall, and refer to the grey dotted line as the city boundary.
 ![](statics/Sup2_google_map.PNG) 
 
 4. Uncheck `Urban_2018` layer. Click and check `Excluson_2014` layer, click `Raster` in menu bar, `Conversion` > `Rasterize`. Set `Field to use for a burn-in value` as `EXCLUSION`, `A field value to burn` as `Not set`, `output raster size units` as `Georeferenced units`, and `Resolution` as `30` and `30`.
