@@ -37,7 +37,7 @@ Note: after adding project home, you can find `Project Home` directory is showin
 
 ### Vector Data (30 mins)
 - How to import shapefile into QGIS?
-- How to activate a layer
+- How to activate a layer?
 
 1. Download `Cambridge District Wards` data of Cambridgeshire from: [Cambridgeshire Insight Open Data](https://data.cambridgeshireinsight.org.uk/dataset/wardselectoral-divisions/resource/a5da0436-1142-48a9-8d82-d070fae138aa) and save zip file into your working directory.
 2. Import shapefile into your project:  Locate this file at your working directory through `Browser Panel` and hold the left mouse and drag the `Wards_December_2015_Generalised_Clipped_Boundaries_in_Great_Britain.shp` into the map window. Or, you can add vector file through data source manager.
@@ -96,44 +96,44 @@ Note: You don't need to type expression manually, expand `Field and Values` opti
 
 1. Extend functions of your QGIS with plugins: open `Plugins` > `Manage and Install Plugins` from menu bar. Search `QuickMapServices` and click `Install plugin`. 
 Note: if some plugins are not showing, please switch to `Setting tab` and trun on the `Show also experimental plugins` option.
+![](statics/QGIS_plugins.png)
+
 2. After installing the plugin, you can find `QuickMapServices` function in the `Web` section from menu bar. Choose `OSM`-`OSM Standard` and you will add basemap in QGIS.
 
 #### Create features/shapefiles in QGIS
-
 1.  Once you add basemap for your QGIS project, you will see a scalable map in the map window.
-
 Note: You computer must be connected to the internet to add basemap as the imagery is fetched from web servers.
-
 2.  Zoom in to the Cambridge area to find the location of your frequently visited services including cafe, restaurant, book shop, cash machines, etc. 
-3.  Create the following three shapefiles using `Layer` > `Create Layer` > `New Shapefile Layer`. Name the file as `My_POI.shp`(Point). Remember to choose the `EPSG:27700 - OSGB 1936 / British National Grid` coordinate system (select CRS > filter > Search `OSGB 1936`). Add new fields into `Fields list` with setting data type, length and precision. For instance, add `name` as new field and set length at 15. You will add two Fields to its Attribute Table to store the ‘name’ and ‘category’ (restaurant, coffee shop, etc.) of each POI.
+3.  Create the following three shapefiles using `Layer` > `Create Layer` > `New Shapefile Layer`. Name the file as `My_POI.shp`(Point). Remember to choose the `EPSG:27700 - OSGB 1936 / British National Grid` coordinate system (select CRS > filter > Search `OSGB 1936`).  You will add two `New Fields` (`name` and `category`) to its `Fields List` to store the name  and  category of each POI.
+![](statics/QGIS_new.png)
+![](statics/QGIS_new_field.png)
 
-4. Select the `My_POI` layer in layer penel, then open `Toggle editing` and select `Add Point Feature`. After pin a point feature on map winodw, a `Feature Attribute` window will pop up. Input value you want to assign to attributes of this new feature. 
+4. Select the `My_POI` layer in layer penel, then open `Toggle editing` and select `Add Point Feature`. After pin a point feature on map winodw, a `Feature Attribute` window will pop up. Input id, name and category (cafe, resturant, book shops, etc.) of this new feature. 
 ![](statics/QGIS_feature.png)
+![](statics/QGIS_add_point.png)
 
-5. After creating features in map window, click `Toggle Editing` to save the edit.
+5. After creating features in map window, click `Toggle Editing` again to save the edit.
 
-6.  Repeat above step from 3 to 5. Create another shapefile and name it as `My_Locations.shp` (Polygon). This time, You will digitize the spatial extent of your living place (house, flat, etc.) and your college/office in the form of ‘polygon’. You will add two Fields to its Attribute Table to store the ‘name’ and ‘area’ of each polygon.
-7.  After digitizing the features, open the `Attribute Table` of the  shapefile. Select the `XXXfunction` Compute the area using ‘Calculate Geometry’ tool.
+6.  Repeat above step from 4 to 5. Create another 4 points with inputing attributes.
 
 ### Raster Data (15 mins)
 - How to import raster data?
 - How to extract part of raster in Cambridge?
 - How to symbolise raster map?
 
-1. Download `Cambridge SRTM1` data of Cambridgeshire from: [Cambridge SRTM1 Data](data/n52_e000_1arc_v3.tif) and download into your working directory.
+1. Download `Cambridge SRTM1` data of Cambridgeshire from: [Cambridge SRTM1 Data](data/n52_e000_1arc_v3.tif) into your working directory.
 
 2. Import shapefile into your project:  Locate this file at your working directory through `Browser Panel` and hold the left mouse and drag the `n52_e000_1arc_v3.tif` into the map window. Or, you can add vector file through data source manager.
 ![](statics/QGIS_raster.png)
 
 3. Before extracting from raster, we need a aggragated shapefile covering whole cambridge city. Nevigate to `Processing` > `Toolbox` and search `Dissolve` under `Vector geometry` section. In the prompted window, choose `Cam_City` as input layer and save as `Cam_City_dissolved.shp` to your working directory.
-![](statics/QGIS_dissove.png)
-![](statics/QGIS_dissoved.png)
+![](statics/QGIS_dissolve.png)
+![](statics/QGIS_dissolved.png)
 
 4. Nevigate to `Processing` > `Toolbox` and search `Clip`. In the prompted window, choose `n52_e000_1arc_v3` as input layer and `Cam_City_dissolved` as mask layer. Save extracted raster as `Cam_Strm1.tif`.
 ![](statics/QGIS_clip.png)
 
-5. Change sympology: Select cliped layer and right-click to the properties option. Switch to `Symbology` tab and change `Render type` to `Paletted/Unique values`. Expand `Color ramp` section and choose `Spectral` . Then click `classify` button to automaticlly assign color to each value. Back to `Color ramp` section and tick `Invert Color Ramp` option. 
+5. Change sympology: Select `Cam_Strm1.tif` and right-click to the properties option. Switch to `Symbology` tab and change `Render type` to `Paletted/Unique values`. Expand `Color ramp` section and choose `Spectral` . Then click `Classify` button to automaticlly assign color to each value. Back to `Color ramp` section and tick `Invert Color Ramp` option. 
 ![](statics/QGIS_symbology.png)
 
-You can check your raster map with [Camrbidge Terrain Map](https://en-gb.topographic-map.com/maps/dgf/Cambridge/)
-Note: Click ok if there is a CRS transformation window pop-up
+6.You can check your raster map with [Camrbidge Terrain Map](https://en-gb.topographic-map.com/maps/dgf/Cambridge/)
