@@ -17,7 +17,7 @@ In this assignment, you will familiarise yourself with geoprocessing raster data
 ### QGIS project setup
 1. Create new project: In the QGIS – Map view window, click `New`.
 2. Save your project: Click `Project` button in `Project Toolbar` and save as `supervision2.QGZ` to the working directory. 
-3. Download dataset (sample data of Sejong, South Korea): `Urban_2018.shp` `Exclusion_2014.shp` `Road_2018.shp` `Boundary.shp` `Slope_2014.txt`
+3. Download dataset (sample data of Sejong, South Korea): `Urban_2018.shp` `Exclusion_2014.shp` `Road_2018.shp`, and `Boundary.shp`.
 4. Go to `Project` >  `Properties` in menu bar and open the `Project Properties` window.
     - `General` tab: Set your working directory as `Project Home`.
 Note: after adding project home, you can find `Project Home` directory is showing in the `Browser panel`. It is much easier to locate your data files through this panel.
@@ -59,4 +59,4 @@ Note: If you don't save as, these temporary files will disappear next time you o
 8. Repeat the exact same `Rasterize` task on `Boundary` layer using `boundary` as the `Field to use for a burn-in value`. `Save As` the temporary layer to `Boundary` and remove the temporary layer.
 9. Use `Identify Features` button on menu bar (information sign + cursor) and click on the road pixels on the map to check that the grids are coded correctly (0=non-road, 25=small road, 50=medium road, 75=large road, 100=expressway).
 ![](statics/Sup2_rasterize4.PNG) 
-10. Check the `Properties` > `Information` of all four raster layers and check that they have identical dimensions, origin, and pixel size.
+10. Check the `Properties` > `Information` of all four raster layers (`Urban_2018`, `Exclusion_2014`, `Road_2018`, and `Boundary`) and check that they have identical dimensions, origin, and pixel size.
