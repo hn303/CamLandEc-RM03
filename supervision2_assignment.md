@@ -72,9 +72,9 @@ Note: If you don't save as, these temporary files will disappear next time you o
 6. Right-click on the newly created `Rasterized` layer, click `Export` > `Save As`. Set `File name` as `Exclusion_2014.tif`, click `OK`. You can now right-click `Rasterized` layer and click `Remove Layer`.
 7. Repeat the exact same `Rasterize` task on `Road_2018` layer using `road_class` as the `Field to use for a burn-in value`. `Save As` the temporary layer to `Road_2018.tif` and remove the temporary layer.
 8. Repeat the exact same `Rasterize` task on `Boundary` layer using `boundary` as the `Field to use for a burn-in value`. `Save As` the temporary layer to `Boundary.tif` and remove the temporary layer.
-9. Use `Identify Features` button on menu bar (information sign + cursor) and click on the road pixels on the map to check that the grids are coded correctly (0=non-road, 25=small road, 50=medium road, 75=large road, 100=expressway).
+9. Check and click `Road_2018` raster layer and zoom in. Use `Identify Features` button on menu bar (information sign + cursor) and click on the road pixels on the map to check that the grids are coded correctly (0=non-road, 25=small road, 50=medium road, 75=large road, 100=expressway).
 
 ![](statics/Sup2_rasterize4.PNG) 
 
 10. Check the `Properties` > `Information` of all four raster layers (`Urban_2018`, `Exclusion_2014`, `Road_2018`, and `Boundary`) and check that they have identical dimensions, origin, and pixel size. Check that these files are well present in your working directory folder in `.tif`. We will use these layers in the Supervision 2.
-11. Save your QGIS working file and close. 
+11. Save your QGIS working file and close. At Supervision 2, together we will continue the raster map preparation on QGIS (e.g. slope map from txt file), introduce NetLogo, and load the raster maps on NetLogo using the GIS extension. See you at Supervision 2!
