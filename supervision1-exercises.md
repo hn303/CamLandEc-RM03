@@ -113,9 +113,9 @@ Note: You computer must be connected to the internet to add basemap as the image
 ![](statics/QGIS_feature.png)
 ![](statics/QGIS_add_point.png)
 
-5. After creating features in map window, click `Toggle Editing` again to save the edit.
+5. After creating features in map window, click `Toggle Editing` again and save changes.
 
-6.  Repeat above step from 4 to 5. Create another 4 points with inputing attributes.
+6. Repeat above step from 4 to 5. Create another 4 points with inputing attributes.
 
 ### Raster Data (15 mins)
 - How to import raster data?
@@ -135,6 +135,9 @@ Note: You computer must be connected to the internet to add basemap as the image
 ![](statics/QGIS_clip.png)
 
 5. Change sympology: Select `Cam_Strm1.tif` and right-click to the properties option. Switch to `Symbology` tab and change `Render type` to `Paletted/Unique values`. Expand `Color ramp` section and choose `Spectral` . Then click `Classify` button to automaticlly assign color to each value. Back to `Color ramp` section and tick `Invert Color Ramp` option. 
-![](statics/QGIS_symbology.png)
 
-6.You can check your raster map with [Camrbidge Terrain Map](https://en-gb.topographic-map.com/maps/dgf/Cambridge/)
+Note: if your layer is not showing, change order of layers in `Layer Panel`.
+![](statics/QGIS_symbology.png)
+![](statics/QGIS_cam_dem.png)
+
+6. Check your raster map with [Camrbidge Terrain Map](https://en-gb.topographic-map.com/maps/dgf/Cambridge/)
