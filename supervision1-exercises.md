@@ -67,8 +67,10 @@ Note: You don't need to type expression manually, expand `Field and Values` opti
 
 5. Check other functions in attribute table: `select all`, `invert selection`, `deselect all`
 
-#### Importing Spreadsheets or CSV files
-1. Download `Cambridge local services` data of Cambridgeshire from: [Cambridgeshire Insight Open Data](https://data.cambridgeshireinsight.org.uk/dataset/cambridge-local-services/resource/af2c41d1-c8a0-46cf-ab77-ca407732e060) and save into your working directory.
+
+
+#### Importing spreadsheets or CSV files
+1. Download `Cambridge local services` data of Cambridgeshire from: [Cambridgeshire Insight Open Data](https://data.cambridgeshireinsight.org.uk/dataset/cambridge-local-services/resource/af2c41d1-c8a0-46cf-ab77-ca407732e060) and save into your working directory. This is a set of data to be used to geo-locate a short list of agencies and facilities around Cambridge.
 2. Nevigate to menu bar click `Layer` > `Add Layer` > `Add Delimited Text Layer`. Browse the `cambridge-services-geolocated-csv-2-standardized.csv` just dowloaded and change the layer name to `Cam_Services`. In the section of File Format, choose CSV. In the Geometry Definition section, choose `Point coordinates` and select `Longitude` and `Latitude` fields as X Y fields respectively. Normally the Geometry definition secction will be auto-populated if it finds a suitable X and Y coordinate fields. Then choose the right CRS (EPSG: 4277 - OSGB 1936) for this file. Finally, click add and you will find a point layer 
 ![](statics/QGIS_csv.png)
 
@@ -76,7 +78,7 @@ Note: You don't need to type expression manually, expand `Field and Values` opti
 #### Join layer
 - How can we link cambridge local services with district information?
 
-1. Nevigate to `Processing` > `Toolbox` and search `Join  attributes by location`. In the prompted window, choose `Cam_services` as input layer and `Cam_City` as join layer. In the geometric predicate stection, choose `intersects`. In the join type section, choose `create seperate feature for each located feature (one-to-many)`.
+1. Nevigate to `Processing` > `Toolbox` and search `Join  attributes by location`. In the prompted window, choose `Cam_Services` as input layer and `Cam_City` as join layer. In the geometric predicate stection, choose `intersects`. In the join type section, choose `create seperate feature for each located feature (one-to-many)`.
 ![](statics/QGIS_join.png)
 
 2. Check attribute table of `Joined layer` and you will find district information for each service item.
@@ -112,11 +114,27 @@ c.  `My_Locations.shp` (Polygon)
 
 7.  After digitizing the features, open the Attribute Table of each shapefile one by one and add new fields to store data as mentioned in Task 3. Compute the distance and area using ‘Calculate Geometry’ tool.
 
-### Raster data (5 mins)
-1. Download `Cambridge District Wards` data of Cambridgeshire from:[link](https://data.cambridgeshireinsight.org.uk/dataset/wardselectoral-divisions/resource/a5da0436-1142-48a9-8d82-d070fae138aa) and save into your working directory.
+### Raster data (10 mins)
+- How to import raster data?
+- How to extract part of raster in Cambridge?
 
-2. Import shapefile into your project:  Navigate to the your working directory in browser panel and drag the `Wards_December_2015_Generalised_Clipped_Boundaries_in_Great_Britain.shp` into the map view window. Or, you can add vector file through data source manager.
+1. Download `Cambridge SRTM1` data of Cambridgeshire from: [Cambridge SRTM1 Data](statics/n52_e000_1arc_v3.tif) and download into your working directory.
+
+2. Import shapefile into your project:  Locate this file at your working directory through `Browser Panel` and hold the left mouse and drag the `n52_e000_1arc_v3.tif` into the map window. Or, you can add vector file through data source manager.
+![](statics/QGIS_raster.png)
+
+
+3. Dissolve: Use the ‘Dissolve’ function in ArcToolbox to merge the spatial boundaries of all the wards in Cam_City_Pop shapefile to obtain the boundary of Cambridge City. Name this new file as ‘Cam_Boundary.shp’. Change the symbology of Cam_Boundary.shp (without fill, 1 outline width, black color).
+Hint: Use help to understand the function of Dissolve tool. You will need one field in the attribute table of Cam_City_Pop.shp. This field should contain same values for all the wards. Then use this attribute in the Dissolve function so that it spatially merges all the wards.
+
+4. Before extract from raster, we need a aggragated shapefile covering whole cambridge city. Nevigate to `Processing` > `Toolbox` and search `Dissolve`. In the prompted window, choose `Cam_City` as input layer and `Cam_City` as dissolve field. 
+![](statics/QGIS_dissove.png)
+
+4. clip: Nevigate to `Processing` > `Toolbox` and search `Clip`. In the prompted window, choose `Cam_City` as input layer and `Cam_City` as dissolve field. 
+![](statics/QGIS_Clip.png)
+
+5. sympology
+select cliped layer and right-click to the properties option. switch to symbology tab.
+
 You can check your raster map with [Camrbidge Terrain Map](https://en-gb.topographic-map.com/maps/dgf/Cambridge/)
 Note: Click ok if there is a CRS transformation window pop-up
-
-[Cambridge SRTM1 Data](statics/n52_e000_1arc_v3.tif)
