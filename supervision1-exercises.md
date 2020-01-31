@@ -88,11 +88,12 @@ Note: You don't need to type expression manually, expand `Field and Values` opti
 2. Check attribute table of `Joined layer` and you will find district information for each service item.
 
 ### Digitizing Map Data (15 mins)
-#### Basemap and plugins in QGIS
 - How to install a plugin in QGIS?
 - How to add basemap to QGIS?
 - How to create a new shaefile?
 - How to add new features with attributes?
+
+#### Basemap and plugins in QGIS
 
 1. Extend functions of your QGIS with plugins: open `Plugins` > `Manage and Install Plugins` from menu bar. Search `QuickMapServices` and click `Install plugin`. 
 Note: if some plugins are not showing, please switch to `Setting tab` and trun on the `Show also experimental plugins` option.
