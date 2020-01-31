@@ -15,8 +15,8 @@ In this assignment, you will familiarise yourself with geoprocessing raster data
 1. It is suggested to create a folder and name it as `rm03_YourCRSid_sup2`, at your prefered directory on your disk. This folder will be the working directory for the assignment and supervision.
 
 ### QGIS project setup
-1. Create new project: In the QGIS – Map view window, click `New`.
-2. Save your project: Click `Project` button in `Project Toolbar` and save as `supervision2.QGZ` to the working directory. 
+1. Click `Project` > `New`.
+2. Click `Project` > `Save As`, and save as `supervision2.qgz` to the working directory. 
 3. Download dataset (sample data of Sejong, South Korea): `Urban_2018.shp` `Exclusion_2014.shp` `Road_2018.shp`, and `Boundary.shp`.
 4. Go to `Project` >  `Properties` in menu bar and open the `Project Properties` window.
     - `General` tab: Set your working directory as `Project Home`.
