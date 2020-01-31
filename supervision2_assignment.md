@@ -51,7 +51,7 @@ Note: Numbers of the output extent came from the layer with the largest layer ex
 
 ![](statics/Sup2_rasterize1.PNG) 
 
-3. Right-click on the newly created `Rasterized` layer, click `Export` > `Save As`. Set `File name` as `Urban_2018`, click `OK`. You can now right-click `Rasterized` layer and click `Remove Layer`.
+3. Right-click on the newly created temporary `Rasterized` layer, click `Export` > `Save As`. Set `File name` as `Urban_2018.tif`, click `OK`. You can now right-click `Rasterized` layer and click `Remove Layer`.
 Note: If you don't save as, these temporary files will disappear next time you open the QGIS file.
 
 ![](statics/Sup2_rasterize2.PNG) 
@@ -69,9 +69,9 @@ Note: If you don't save as, these temporary files will disappear next time you o
 
 ![](statics/Sup2_rasterize3.PNG) 
 
-6. Right-click on the newly created `Rasterized` layer, click `Export` > `Save As`. Set `File name` as `Exclusion_2014`, click `OK`. You can now right-click `Rasterized` layer and click `Remove Layer`.
-7. Repeat the exact same `Rasterize` task on `Road_2018` layer using `road_class` as the `Field to use for a burn-in value`. `Save As` the temporary layer to `Road_2018` and remove the temporary layer.
-8. Repeat the exact same `Rasterize` task on `Boundary` layer using `boundary` as the `Field to use for a burn-in value`. `Save As` the temporary layer to `Boundary` and remove the temporary layer.
+6. Right-click on the newly created `Rasterized` layer, click `Export` > `Save As`. Set `File name` as `Exclusion_2014.tif`, click `OK`. You can now right-click `Rasterized` layer and click `Remove Layer`.
+7. Repeat the exact same `Rasterize` task on `Road_2018` layer using `road_class` as the `Field to use for a burn-in value`. `Save As` the temporary layer to `Road_2018.tif` and remove the temporary layer.
+8. Repeat the exact same `Rasterize` task on `Boundary` layer using `boundary` as the `Field to use for a burn-in value`. `Save As` the temporary layer to `Boundary.tif` and remove the temporary layer.
 9. Use `Identify Features` button on menu bar (information sign + cursor) and click on the road pixels on the map to check that the grids are coded correctly (0=non-road, 25=small road, 50=medium road, 75=large road, 100=expressway).
 
 ![](statics/Sup2_rasterize4.PNG) 
