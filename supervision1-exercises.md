@@ -3,13 +3,14 @@
 ## Instructions
 1. Read through the instruction carefully. You may face problems if you overlook any of the steps.
 2. Remember to save the QGIS document regularly. 
+3. When running tasks on QGIS, leave the settings as default unless instructed.
 
 Note: functions and filename are `highlighted` in this document.
 
 ## Supervision overview
 In this exercise, you will familialise youself with basic features of QGIS software and geoprocessing exercises with vector data and raster data.
 
-### Setup work enviornment (10 mins)
+### Setup Work Enviornment (10 mins)
 1. Please download and install `QGIS standalone install version` according to your platform: [QGIS Download Page](https://qgis.org/en/site/forusers/download.html). 
 2. It is suggested to create a folder and name it as `rm03_YourCRSid_sup1`, at your prefered directory on your disk. This folder will be the working directory for all datasets and QGIS project file in this supervision.
 3. Launch QGIS: Start QGIS Desktop and check interface (menu bar, toolbar, brower panel, layer panerl and map window)
@@ -18,10 +19,10 @@ Note: if some panels or toolbars are not showing, nevigate to menu bar  `View` >
 
 ![](statics/QGIS_start.png)
 
-### QGIS project setup (5 mins)
+### QGIS Project Setup (5 mins)
 1. Create new project: In the QGIS – Map view window, click `New`.
 2. Save your project: Click `Project` button in `Project Toolbar` and save as `supervision1.QGZ` to the working directory. 
-3. Go to `Project` >  `Properties` in menu bar and open the `Project Properties` window. Check following tabs and edit: 
+3. Go to `Project` >  `Properties` from menu bar and open the `Project Properties` window. Check following tabs and edit: 
     - `General` tab: in the general settings, set your working directory as `Project Home`, change the unit for distance measurement you prefer and also display coordinates units.
     - `Metadata` tab: It is suggested to input title, author, creation date and a short abstract in the identification tab.
     - `CRS` tab: this tab provide coordinate reference system (CRS) setting for the project file. Be aware that CRS setting in the `Project Properties` is just for the project (called as `Data Frame setting` in ArcGIS). CRS setting for layers will be introduced later.
@@ -34,9 +35,9 @@ Note: after adding project home, you can find `Project Home` directory is showin
 
 
 
-### Vector data (30 mins)
-- How to import shapfile into QGIS?
-- How to activate a layer
+### Vector Data (30 mins)
+- How to import shapefile into QGIS?
+- How to activate a layer?
 
 1. Download `Cambridge District Wards` data of Cambridgeshire from: [Cambridgeshire Insight Open Data](https://data.cambridgeshireinsight.org.uk/dataset/wardselectoral-divisions/resource/a5da0436-1142-48a9-8d82-d070fae138aa) and save zip file into your working directory.
 2. Import shapefile into your project:  Locate this file at your working directory through `Browser Panel` and hold the left mouse and drag the `Wards_December_2015_Generalised_Clipped_Boundaries_in_Great_Britain.shp` into the map window. Or, you can add vector file through data source manager.
@@ -49,7 +50,7 @@ Note: You may be prompted a window to conduct CRS transformation, click ok to co
 
 #### Attributes table
 - How to open attribute table?
-- How to select ploygons only in cambridge from attribute tbale?
+- How to select ploygons only from cambridge through attribute tbale?
 
 1. Select layer in layers penel, click the `open attribute table` in the `Attribut Toolbar`. You will see the attribute table with different fields including `wd15nm` (name for Ward District) and `lad12nm` (name for Local Authority District). 
 ![](statics/QGIS_table.png)
@@ -70,6 +71,9 @@ Note: You don't need to type expression manually, expand `Field and Values` opti
 
 
 #### Importing spreadsheets or CSV files
+- How to import data from spreadsheets and CSV with coordinates?
+- How to display coordinates from spreadsheets and CSV in QGIS?
+
 1. Download `Cambridge local services` data of Cambridgeshire from: [Cambridgeshire Insight Open Data](https://data.cambridgeshireinsight.org.uk/dataset/cambridge-local-services/resource/af2c41d1-c8a0-46cf-ab77-ca407732e060) and save into your working directory. This is a set of data to be used to geo-locate a short list of agencies and facilities around Cambridge.
 2. Nevigate to menu bar click `Layer` > `Add Layer` > `Add Delimited Text Layer`. Browse the `cambridge-services-geolocated-csv-2-standardized.csv` just dowloaded and change the layer name to `Cam_Services`. In the section of File Format, choose CSV. In the Geometry Definition section, choose `Point coordinates` and select `Longitude` and `Latitude` fields as X Y fields respectively. Normally the Geometry definition secction will be auto-populated if it finds a suitable X and Y coordinate fields. Then choose the right CRS (EPSG: 4277 - OSGB 1936) for this file. Finally, click add and you will find a point layer 
 ![](statics/QGIS_csv.png)
@@ -83,58 +87,53 @@ Note: You don't need to type expression manually, expand `Field and Values` opti
 
 2. Check attribute table of `Joined layer` and you will find district information for each service item.
 
-### Digitizing Map Data (10 mins)
+### Digitizing Map Data (15 mins)
 #### Basemap and plugins in QGIS
-1. Extent the function of your QGIS function with plugins: open `Plugins` > `Manage and Install Plugins` on menu bar. Search `QuickMapServices` and click `Install plugin`. 
-Note: if some plugins are not showing, please allow the `experiment` option.
-2. After isntalling plugin, you can find `QuickMapServices` function in the `web` section on menu bar. Choose `OSM`-`OSM Standard` and you will add basemap in QGIS.
+- How to install a plugin in QGIS?
+- How to add basemap to QGIS?
+- How to create a new shaefile?
+- How to add new features with attributes?
+
+1. Extend functions of your QGIS with plugins: open `Plugins` > `Manage and Install Plugins` from menu bar. Search `QuickMapServices` and click `Install plugin`. 
+Note: if some plugins are not showing, please switch to `Setting tab` and trun on the `Show also experimental plugins` option.
+![](statics/QGIS_plugins.png)
+
+2. After installing the plugin, you can find `QuickMapServices` function in the `Web` section from menu bar. Choose `OSM`-`OSM Standard` and you will add basemap in QGIS.
 
 #### Create features/shapefiles in QGIS
+1.  Once you add basemap for your QGIS project, you will see a scalable map in the map window.
+Note: You computer must be connected to the internet to add basemap as the imagery is fetched from web servers.
+2.  Zoom in to the Cambridge area to find the location of your frequently visited services including cafe, restaurant, book shop, cash machines, etc. 
+3.  Create the following three shapefiles using `Layer` > `Create Layer` > `New Shapefile Layer`. Name the file as `My_POI.shp`(Point). Remember to choose the `EPSG:27700 - OSGB 1936 / British National Grid` coordinate system (select CRS > filter > Search `OSGB 1936`).  You will add two `New Fields` (`name` and `category`) to its `Fields List` to store the name  and  category of each POI.
+![](statics/QGIS_new.png)
+![](statics/QGIS_new_field.png)
 
-1.  Once you add basemap for your qgis project, you will see a scalable map in the map window.
-2.  Zoom in to the Cambridge area to find the location of your college/office.
-Note: You computer must be connected to the internet to add basemap as the imagery is fetched from web servers
-
-3.  Create the following three shapefiles using `layer` - `Create Layer` > `New Shapefile Layer`. Remember to assign the `EPSG:27700 - OSGB 1936 / British National Grid` coordinate system (select CRS > filter > Search `OSGB 1936`). Add new fields into `Fields list` with setting data type, length and precision. For instance, add `name` as new field and set length at 15.
-
-4. Select the `my_college/office` layer in layer penel, then open `Toggle editing` and select `Add Point Feature`. After pin a point feature on map winodw, a `Feature Attribute` window will pop up. Input value you want to assign to attributes of this new feature. 
+4. Select the `My_POI` layer in layer penel, then open `Toggle editing` and select `Add Point Feature`. After pin a point feature on map winodw, a `Feature Attribute` window will pop up. Input id, name and category (cafe, resturant, book shops, etc.) of this new feature. 
 ![](statics/QGIS_feature.png)
+![](statics/QGIS_add_point.png)
 
-5. After creating features in map window, click `Toggle Editing` to save the edit.
+5. After creating features in map window, click `Toggle Editing` again to save the edit.
 
+6.  Repeat above step from 4 to 5. Create another 4 points with inputing attributes.
 
-6.  The following things will be digitized in these three shapefiles:
-a.  `My_Route.shp` (Polyline)
-b.  `My_PoI.shp` (Point)
-c.  `My_Locations.shp` (Polygon)
-
-- `My_Route` – You will digitize a ‘line’ showing your daily route from your house to college/office. You will also add a Field to its Attribute Table to store the ‘distance’ of this path.
-- `My_PoI` – You will digitize your ‘points’ of interests (PoI) alongside this route. These may include locations of your favourite restaurants, coffee shops, cash machines, etc. You will add two Fields to its Attribute Table to store the ‘name’ and ‘category’ (restaurant, coffee shop, etc.) of each PoI.
-- `My_Locations` – You will digitize the spatial extent of your living place (house, flat, etc.) and your college/office in the form of ‘polygon’. You will add two Fields to its Attribute Table to store the ‘name’ and ‘area’ of each polygon.
-
-7.  After digitizing the features, open the Attribute Table of each shapefile one by one and add new fields to store data as mentioned in Task 3. Compute the distance and area using ‘Calculate Geometry’ tool.
-
-### Raster data (10 mins)
+### Raster Data (15 mins)
 - How to import raster data?
 - How to extract part of raster in Cambridge?
+- How to symbolise raster map?
 
-1. Download `Cambridge SRTM1` data of Cambridgeshire from: [Cambridge SRTM1 Data](statics/n52_e000_1arc_v3.tif) and download into your working directory.
+1. Download `Cambridge SRTM1` data of Cambridgeshire from: [Cambridge SRTM1 Data](data/n52_e000_1arc_v3.tif) into your working directory.
 
 2. Import shapefile into your project:  Locate this file at your working directory through `Browser Panel` and hold the left mouse and drag the `n52_e000_1arc_v3.tif` into the map window. Or, you can add vector file through data source manager.
 ![](statics/QGIS_raster.png)
 
+3. Before extracting from raster, we need a aggragated shapefile covering whole cambridge city. Nevigate to `Processing` > `Toolbox` and search `Dissolve` under `Vector geometry` section. In the prompted window, choose `Cam_City` as input layer and save as `Cam_City_dissolved.shp` to your working directory.
+![](statics/QGIS_dissolve.png)
+![](statics/QGIS_dissolved.png)
 
-3. Dissolve: Use the ‘Dissolve’ function in ArcToolbox to merge the spatial boundaries of all the wards in Cam_City_Pop shapefile to obtain the boundary of Cambridge City. Name this new file as ‘Cam_Boundary.shp’. Change the symbology of Cam_Boundary.shp (without fill, 1 outline width, black color).
-Hint: Use help to understand the function of Dissolve tool. You will need one field in the attribute table of Cam_City_Pop.shp. This field should contain same values for all the wards. Then use this attribute in the Dissolve function so that it spatially merges all the wards.
+4. Nevigate to `Processing` > `Toolbox` and search `Clip`. In the prompted window, choose `n52_e000_1arc_v3` as input layer and `Cam_City_dissolved` as mask layer. Save extracted raster as `Cam_Strm1.tif`.
+![](statics/QGIS_clip.png)
 
-4. Before extract from raster, we need a aggragated shapefile covering whole cambridge city. Nevigate to `Processing` > `Toolbox` and search `Dissolve`. In the prompted window, choose `Cam_City` as input layer and `Cam_City` as dissolve field. 
-![](statics/QGIS_dissove.png)
+5. Change sympology: Select `Cam_Strm1.tif` and right-click to the properties option. Switch to `Symbology` tab and change `Render type` to `Paletted/Unique values`. Expand `Color ramp` section and choose `Spectral` . Then click `Classify` button to automaticlly assign color to each value. Back to `Color ramp` section and tick `Invert Color Ramp` option. 
+![](statics/QGIS_symbology.png)
 
-4. clip: Nevigate to `Processing` > `Toolbox` and search `Clip`. In the prompted window, choose `Cam_City` as input layer and `Cam_City` as dissolve field. 
-![](statics/QGIS_Clip.png)
-
-5. sympology
-select cliped layer and right-click to the properties option. switch to symbology tab.
-
-You can check your raster map with [Camrbidge Terrain Map](https://en-gb.topographic-map.com/maps/dgf/Cambridge/)
-Note: Click ok if there is a CRS transformation window pop-up
+6.You can check your raster map with [Camrbidge Terrain Map](https://en-gb.topographic-map.com/maps/dgf/Cambridge/)
