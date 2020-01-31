@@ -22,18 +22,18 @@ In this assignment, you will familiarise yourself with geoprocessing raster data
     - `General` tab: Set your working directory as `Project Home`.
 Note: after adding project home, you can find `Project Home` directory is showing in the `Browser panel`. It is much easier to locate your data files through this panel.
 5. Drag `Urban_2018.shp` `Exclusion_2014.shp` `Road_2018.shp` `Boundary.shp` to the  `Layers panel`. Drag `Boundary.shp` to the bottom. Uncheck all layers except `Boundary.shp`.
-![](statics/Sup2_project setup.png)
+![](statics/Sup2_project setup.PNG)
 
 Note: `Urban_2018` layer is a combination of urban land-use data by parcel and building data, with the urban/non-urban information coded in the attribute `URBAN`. `Exclusion_2014` layer is a combination of river, urban parks, and development restriction zone, with the excluded/non-excluded information coded in the attribute `EXCLUSION`. `Road_2018` layer contains roads, with the road-class information coded in the attribute `road_class`.
 
 ### Using symbology to assign colour to visualize the data
 1. Right-click on `Boundary` layer > `Properties` > `Symbology` (or double-click the color box). Click `Simple fill`, change `Fill color` to `black`, change `Stroke style` to `No Pen`, click `OK`. 
 2. Check `Urban_2018` layer, double-click the color box. Click `Simple fill`, change `Fill color `to `white`, change `Stroke style` to `No Pen`, click `OK`.
-![](statics/Sup2_symbology1.png)  
+![](statics/Sup2_symbology1.PNG)  
 3. Uncheck `Urban_2018` layer, check `Exclusion_2014` layer, double-click the color box. Click `Single symbol` > `Categorized`, click `Column` > `Exclusion`, click `Classify` and change `Legend` to 0=non-excluded, 100=excluded.
 4. Double-click the color box of non-excluded, click `Simple fill`, change `Fill color` to `black`, change `Stroke style` to `No Pen`, click `OK`. Double-click the color box of excluded, click `Simple fill`, change `Fill color` to `white`, change `Stroke style` to `No Pen`, click `OK`. 
 5. Delete the third row (unnecessary) by pressing the `negative sign` next to `Classify`. Click `OK`.
-![](statics/Sup2_symbology2.png) 
+![](statics/Sup2_symbology2.PNG) 
 6. Uncheck `Exclusion_2014` layer, check `Road_2018` layer, double-click the color box. Click `Single symbol` > `Categorized`, click `Column` > `road_class`, click `Classify` and change `Legend` and `color` to the following with `No Pen`: 0=non-road (black), 25=small road (#404040), 50=medium road (#808080), 75=large road (#3a3a3a), 100=expressway (white). Click `OK`.
 ![](statics/Sup2_symbology3.png) 
 
@@ -41,7 +41,7 @@ Note: `Urban_2018` layer is a combination of urban land-use data by parcel and b
 1. Click and check `Urban_2018` layer, click `Raster` in menu bar, `Conversion` > `Rasterize`. Set `Field to use for a burn-in value` as `URBAN`, `A field value to burn` as `Not set`, `output raster size units` as `Georeferenced units`, and `Resolution` as `30` and `30`.
 2. Set `Output extent` as `211290.7980001302785240, 236760.7980001302785240, 322863.2411839000415057, 359223.2411839000415057`. Set `Nodata value` as `Not set`. Click `Run`.
 Note: Numbers of the output extent came from the layer with the largest layer extent. Keeping the output extent same for all layers is important when loading them on NetLogo.
-![](statics/Sup2_rasterize1.png) 
+![](statics/Sup2_rasterize1.PNG) 
 3. Right-click on the newly created `Rasterized` layer, click `Export` > `Save As`. Set `File name` as `Urban_2018`, click `OK`. You can now right-click `Rasterized` layer and click `Remove Layer`.
 Note: If you don't save as, these temporary files will disappear next time you open the QGIS file.
 ![](statics/Sup2_rasterize2.PNG) 
@@ -53,10 +53,10 @@ Note: If you don't save as, these temporary files will disappear next time you o
 
 4. Uncheck `Urban_2018` layer. Click and check `Excluson_2014` layer, click `Raster` in menu bar, `Conversion` > `Rasterize`. Set `Field to use for a burn-in value` as `EXCLUSION`, `A field value to burn` as `Not set`, `output raster size units` as `Georeferenced units`, and `Resolution` as `30` and `30`.
 5. Set `Output extent` as `211290.7980001302785240, 236760.7980001302785240, 322863.2411839000415057, 359223.2411839000415057`. Set `Nodata value` as `Not set`. Click `Run`.
-![](statics/Sup2_rasterize3.png) 
+![](statics/Sup2_rasterize3.PNG) 
 6. Right-click on the newly created `Rasterized` layer, click `Export` > `Save As`. Set `File name` as `Exclusion_2014`, click `OK`. You can now right-click `Rasterized` layer and click `Remove Layer`.
 7. Repeat the exact same `Rasterize` task on `Road_2018` layer using `road_class` as the `Field to use for a burn-in value`. `Save As` the temporary layer to `Road_2018` and remove the temporary layer.
 8. Repeat the exact same `Rasterize` task on `Boundary` layer using `boundary` as the `Field to use for a burn-in value`. `Save As` the temporary layer to `Boundary` and remove the temporary layer.
 9. Use `Identify Features` button on menu bar (information sign + cursor) and click on the road pixels on the map to check that the grids are coded correctly (0=non-road, 25=small road, 50=medium road, 75=large road, 100=expressway).
-![](statics/Sup2_rasterize4.png) 
+![](statics/Sup2_rasterize4.PNG) 
 10. Check the `Properties` > `Information` of all four raster layers and check that they have identical dimensions, origin, and pixel size.
