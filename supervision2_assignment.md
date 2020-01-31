@@ -59,5 +59,5 @@ Note: If you don't save as, these temporary files will disappear next time you o
 8. Repeat the exact same `Rasterize` task on `Boundary` layer using `boundary` as the `Field to use for a burn-in value`. `Save As` the temporary layer to `Boundary` and remove the temporary layer.
 9. Use `Identify Features` button on menu bar (information sign + cursor) and click on the road pixels on the map to check that the grids are coded correctly (0=non-road, 25=small road, 50=medium road, 75=large road, 100=expressway).
 ![](statics/Sup2_rasterize4.PNG) 
-10. Check the `Properties` > `Information` of all four raster layers in (`.tif`) (`Urban_2018`, `Exclusion_2014`, `Road_2018`, and `Boundary`) and check that they have identical dimensions, origin, and pixel size. We will use these layers in the Supervision 2.
+10. Check the `Properties` > `Information` of all four raster layers (`Urban_2018`, `Exclusion_2014`, `Road_2018`, and `Boundary`) and check that they have identical dimensions, origin, and pixel size. Check that these files are well present in your working directory folder in `.tif`. We will use these layers in the Supervision 2.
 11. Save your QGIS working file and close. 
