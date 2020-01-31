@@ -44,7 +44,7 @@ Note: Numbers of the output extent came from the layer with the largest layer ex
 ![](statics/Sup2_rasterize1.png) 
 3. Right-click on the newly created `Rasterized` layer, click `Export` > `Save As`. Set `File name` as `Urban_2018`, click `OK`. You can now right-click `Rasterized` layer and click `Remove Layer`.
 Note: If you don't save as, these temporary files will disappear next time you open the QGIS file.
-![](statics/Sup2_rasterize2.png) 
+![](statics/Sup2_rasterize2.PNG) 
 
 #### Question 1. Zoom into the `Urban_2018` layer. You will see that the pixels are in a grid. Check the size of the grid by right-clicking on the layer and clicking `Properties`. In the `Information` tab, what are the dimensions and pixel size? (Note: pixel size is in meters)
 
