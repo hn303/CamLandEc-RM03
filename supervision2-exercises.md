@@ -4,7 +4,7 @@
 1. The slides are available on: [CamLandEc-RM03](https://hn303.github.io/CamLandEc-RM03/).
 
 ## Instructions
-1. This supervision builds on Supervision 2 Assignment. If you haven't completed this for some reason, please open [Supervision 2 Assignment](https://hn303.github.io/CamLandEc-RM03/supervision2-assignment_.md) and ask for one of the supervisors' help.
+1. This supervision builds on Supervision 2 Assignment. If you haven't completed this for some reason, please open [Supervision 2 Assignment](https://hn303.github.io/CamLandEc-RM03/supervision2-assignment_.md) and ask for one of the supervisors' help. Additional to the four `zip` files to be downloaded for the assignment, please download the [outcomes of the assignment](data/supervision2_for_assignment_catchup.zip), and put them all unzipped in the same folder `rm03_YourCRSid_sup2` at your prefered directory on your disk.
 2. Read through the instruction carefully. You may face problems if you overlook any of the steps.
 3. Remember to save the QGIS document regularly. 
 4. When running tasks on QGIS, leave the settings as default unless instructed.
@@ -28,7 +28,7 @@ In this supervision, you will familiarise yourself with geoprocessing raster dat
 ![](statics/Sup2_slope2.PNG)
 
 #### Interpolating the DEM data
-4. On the `Menu bar`, click `Processing` > `Toolbox`, search `interpolation`, and double-click `Inverse distance weighted interpolation` under `SAGA`.
+4. On the `Menu bar`, click `Processing` > `Toolbox`, search `interpolation`, and double-click `Inverse distance weighted interpolation` under `SAGA`. Note: `IDW interpolation` under `QGIS Interpolation` in the `Processing Toolbox` does a similar job but takes much longer so we used a SAGA tool instead.
 
 ![](statics/Sup2_slope3.PNG)
 
@@ -65,14 +65,18 @@ In this supervision, you will familiarise yourself with geoprocessing raster dat
 
 ### Exercise 1: Wolf Sheep Predation (5min)
 1. Open `Wolf Sheep Predation` from `Models Library` under `Biology` folder.
+
 ![](statics/Sup2_wolfsheep1.PNG)
+
 2. Click `setup` > `go` to start the simulation, and click `go` agin to stop the simulation.
 3. Try running the model with following changes and explain what happens:
 - Change the `model-version` to `sheep-wolves-grass`.
 - Decrese wolf poplulation.
 - What other sliders/switches can you adjust to help out the sheep population?
 - Can you find any parameters that generate a stable ecosystem?
+
 ![](statics/Sup2_wolfsheep2.PNG)
+
 
 ### Exercise 2: Game of Life (10min)
 1. Open `Life` from `Models Library` under `Computer Science` > `Cellular Automata`.
