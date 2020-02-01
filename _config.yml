@@ -27,7 +27,7 @@ permalink: :title
 repository: ""
 
 # theme: jekyll-theme-cayman
-remote_theme: mmistakes/minimal-mistakes@4.18.1
+remote_theme: mmistakes/minimal-mistakes
 
 # Build settings
 plugins:
