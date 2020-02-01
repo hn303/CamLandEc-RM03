@@ -3,6 +3,9 @@ layout: default
 title: Assignment 1
 nav_order: 3
 ---
+<button class="btn js-toggle-dark-mode">Dark color scheme</button>
+
+<script type="text/javascript" src="{{ "/assets/js/dark-mode-preview.js" | absolute_url }}"></script>
 
 # Assignment for Supervision 1
 **Submission Date**: Before Supervision 2
