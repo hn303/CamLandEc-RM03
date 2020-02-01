@@ -26,8 +26,8 @@ permalink: :title
 
 repository: ""
 
-theme: jekyll-theme-cayman
-# remote_theme: dyndna/lanyon-plus
+# theme: jekyll-theme-cayman
+remote_theme: heiswayi/the-plain
 
 # Build settings
 plugins:
