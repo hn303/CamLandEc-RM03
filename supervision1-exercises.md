@@ -4,7 +4,12 @@ output:
     highlight: haddock
 layout: default
 nav_order: 2
+title: Supervision 1
 ---
+
+<button class="btn js-toggle-dark-mode">Dark color scheme</button>
+
+<script type="text/javascript" src="{{ "/assets/js/dark-mode-preview.js" | absolute_url }}"></script>
 
 # Supervision 1
 
