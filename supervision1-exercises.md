@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Supervision 1
 
 ## Instructions
@@ -56,7 +61,8 @@ Note: You may be prompted a window to conduct CRS transformation, click ok to co
 ![](statics/QGIS_table.png)
 
 2. In the attribute table of Cambridgeshire layer and double-click `lad12nm` to sort by value/content. Select all rows whose `lad12nm` value equals `cambridge` (select first one and then press SHIFT on your keyboard while selecting the last one).
-![](#statics/QGIS_select1.png)![](#statics/QGIS_select2.png)
+![](statics/QGIS_select1.png)
+![](statics/QGIS_select2.png)
 
 3.  Here is an alternative method to select elements precisely: Open attribute table of Cambridgeshire layer and Select features using an expression in QGIS. In the window of expression, input `"lad15nm" = 'Cambridge'` and click select features. 
 
@@ -109,7 +115,7 @@ Note: You computer must be connected to the internet to add basemap as the image
 ![](statics/QGIS_new.png)
 ![](statics/QGIS_new_field.png)
 
-4. Select the `My_POI` layer in layer penel, then open `Toggle editing` and select `Add Point Feature`. After pin a point feature on map winodw, a `Feature Attribute` window will pop up. Input id, name and category (cafe, resturant, book shops, etc.) of this new feature. 
+4. Select the `My_POI` layer in layer penel, then open `Toggle editing` and select `Add Point Feature`. After pin a point feature on map winodw, a `Feature Attribute` window will pop up. Input id, name and category (cafe, resturant, book shops, etc.) of this new feature. \
 ![](statics/QGIS_feature.png)
 ![](statics/QGIS_add_point.png)
 
@@ -125,6 +131,7 @@ Note: You computer must be connected to the internet to add basemap as the image
 1. Download `Cambridge SRTM1` data of Cambridgeshire from: [Cambridge SRTM1 Data](data/n52_e000_1arc_v3.tif) into your working directory.
 
 2. Import shapefile into your project:  Locate this file at your working directory through `Browser Panel` and hold the left mouse and drag the `n52_e000_1arc_v3.tif` into the map window. Or, you can add vector file through data source manager.
+
 ![](statics/QGIS_raster.png)
 
 3. Before extracting from raster, we need a aggragated shapefile covering whole cambridge city. Nevigate to `Processing` > `Toolbox` and search `Dissolve` under `Vector geometry` section. In the prompted window, choose `Cam_City` as input layer and save as `Cam_City_dissolved.shp` to your working directory.
