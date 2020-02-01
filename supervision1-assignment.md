@@ -1,5 +1,11 @@
+---
+layout: default
+title: Customization
+nav_order: 3
+---
+
 # Assignment for Supervision 1
-**Submission Date**: before Supervision 1
+**Submission Date**: Before Supervision 2
 
 ## Instructions
 1.  Please download and install QGIS standalone install version according to your platform:[link](https://qgis.org/en/site/forusers/download.html)
