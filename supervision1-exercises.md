@@ -41,7 +41,7 @@ Note: after adding project home, you can find `Project Home` directory is showin
 
 1. Download `Cambridge District Wards` data of Cambridgeshire from: [Cambridgeshire Insight Open Data](https://data.cambridgeshireinsight.org.uk/dataset/wardselectoral-divisions/resource/a5da0436-1142-48a9-8d82-d070fae138aa) and save zip file into your working directory.
 2. Import shapefile into your project:  Locate this file at your working directory through `Browser Panel` and hold the left mouse and drag the `Wards_December_2015_Generalised_Clipped_Boundaries_in_Great_Britain.shp` into the map window. Or, you can add vector file through data source manager.\
-Note: You may be prompted a window to conduct CRS transformation, click ok to continue.\ 
+Note: You may be prompted a window to conduct CRS transformation, click ok to continue.\
 ![](statics/QGIS_import.png)
 
 3: Layer ticked then can be found in `Layer Panel`. You can turn on and off layer by ticking it or not. Before you perform any action to a layer, please make sure the target layer is ticked and selected with hightlight.
