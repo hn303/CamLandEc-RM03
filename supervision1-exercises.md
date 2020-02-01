@@ -79,7 +79,7 @@ Note: You don't need to type expression manually, expand `Field and Values` opti
 - How to import data from spreadsheets and CSV with coordinates?
 - How to display coordinates from spreadsheets and CSV in QGIS?
 
-1. Download `Cambridge local services` data of Cambridgeshire from: [Cambridgeshire Insight Open Data](https://data.cambridgeshireinsight.org.uk/dataset/cambridge-local-services/resource/af2c41d1-c8a0-46cf-ab77-ca407732e060){: .btn }{:target="_blank"} and save into your working directory. This is a set of data to be used to geo-locate a short list of agencies and facilities around Cambridge.
+1. Download `Cambridge local services` data of Cambridgeshire from: [Cambridgeshire Insight Open Data](https://data.cambridgeshireinsight.org.uk/dataset/cambridge-local-services/resource/af2c41d1-c8a0-46cf-ab77-ca407732e060){:target="_blank"} and save into your working directory. This is a set of data to be used to geo-locate a short list of agencies and facilities around Cambridge.
 2. Nevigate to menu bar click `Layer` > `Add Layer` > `Add Delimited Text Layer`. Browse the `cambridge-services-geolocated-csv-2-standardized.csv` just dowloaded and change the layer name to `Cam_Services`. In the section of File Format, choose CSV. In the Geometry Definition section, choose `Point coordinates` and select `Longitude` and `Latitude` fields as X Y fields respectively. Normally the Geometry definition secction will be auto-populated if it finds a suitable X and Y coordinate fields. Then choose the right CRS (EPSG: 4277 - OSGB 1936) for this file. Finally, click add and you will find a point layer.\
 ![](statics/QGIS_csv.png)
 
@@ -127,7 +127,7 @@ Note: You computer must be connected to the internet to add basemap as the image
 - How to extract part of raster in Cambridge?
 - How to symbolise raster map?
 
-1. Download `Cambridge SRTM1` data of Cambridgeshire from: [Cambridge SRTM1 Data](data/n52_e000_1arc_v3.tif){: .btn }{:target="_blank"} into your working directory.
+1. Download `Cambridge SRTM1` data of Cambridgeshire from: [Cambridge SRTM1 Data](data/n52_e000_1arc_v3.tif){:target="_blank"} into your working directory.
 
 2. Import shapefile into your project:  Locate this file at your working directory through `Browser Panel` and hold the left mouse and drag the `n52_e000_1arc_v3.tif` into the map window. Or, you can add vector file through data source manager.\
 ![](statics/QGIS_raster.png)
