@@ -1,10 +1,3 @@
----
-layout: default
-title: Supervision 2
-nav_order: 4
-nav_exclude: true
----
-
 # Supervision 2
 
 ## Short presentation by supervisors (10min)
@@ -35,17 +28,19 @@ In this supervision, you will familiarise yourself with geoprocessing raster dat
 ![](statics/Sup2_slope2.PNG)
 
 #### Interpolating the DEM data
-4. On the `Menu bar`, click `Processing` > `Toolbox`, search `interpolation`, and double-click `Inverse distance weighted interpolation` under `SAGA`. Note: `IDW interpolation` under `QGIS Interpolation` in the `Processing Toolbox` does a similar job but takes much longer so we used a SAGA tool instead.
+4. On the `Menu bar`, click `Processing` > `Toolbox`, search `interpolation`, and double-click `Inverse distance weighted interpolation` under `SAGA`. Note: `IDW interpolation` under `QGIS Interpolation` in the `Processing Toolbox` does a similar job but takes much longer so we use a SAGA tool instead.
 
 ![](statics/Sup2_slope3.PNG)
 
-5. Set `Attribute` as `z` and `Cellsize` as `30`, and click `Run`.
+5. Set `Attribute` as `z` and `Cellsize` as `30`, and click `Run`. `Close` afterwards.
+6. The newly created `Grid` is a temporary file. Right-click and `Export` > `Save As` > `Interpolation.tif`. Leave everything else as default > `OK`. Remove the `Grid` layer.
 
 ![](statics/Sup2_slope3_1.PNG)
 ![](statics/Sup2_slope3_2.PNG)
+![](statics/Sup2_slope3_3.PNG)
 
 #### Generating slope in percent from interpolated data
-5. Click the newly created temporary layer `Grid`. On the `Menu bar`, click `Raster` > `Analysis` > `Slope`. Check `Slope expressed as percent instead of degrees` and click `Run` > `Close`.
+5. Click the `Interpolation` layer. On the `Menu bar`, click `Raster` > `Analysis` > `Slope`. Check `Slope expressed as percent instead of degrees` and click `Run` > `Close`.
 
 ![](statics/Sup2_slope4.PNG)
 
@@ -63,6 +58,7 @@ In this supervision, you will familiarise yourself with geoprocessing raster dat
 
 ![](statics/Sup2_translate1.PNG)
 
+Note: As this supervision is for introducing how QGIS and raster data can be used on NetLogo, we cannot cover many other functions available on QGIS. Please refer to [QGIS Training Manual](https://docs.qgis.org/2.8/en/docs/training_manual/create_vector_data/index.html) for more information.
 
 ### Setup work environment for NetLogo (5min)
 1. Please download and install `NetLogo (6.1.1)` according to your platform. We recommend downloading `Windows (64-bit)`, `Mac OS X`, or `Linux (64-bit)`: [NetLogo Download Page](https://ccl.northwestern.edu/netlogo/6.1.1/). 
