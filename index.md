@@ -3,14 +3,14 @@ layout: default
 title: Home
 nav_order: 1
 ---
+<button class="btn js-toggle-dark-mode">Dark color scheme</button>
+
+<script type="text/javascript" src="{{ "/assets/js/dark-mode-preview.js" | absolute_url }}"></script>
 
 # RM03: Spatial Analysis and Modelling
 Welcome to 2020 lent term module RM03 : Spatial Analysis and Modelling.  
 This repo is created by [**Haifeng Niu**](https://haifengniu.com/en/) and contributed by Heeseo Rain Kwon and Paul Scherer*. Meterials of supervision could be found here.  
 
-<button class="btn js-toggle-dark-mode">Dark color scheme</button>
-
-<script type="text/javascript" src="{{ "/assets/js/dark-mode-preview.js" | absolute_url }}"></script>
 
 ## Course outline
 
