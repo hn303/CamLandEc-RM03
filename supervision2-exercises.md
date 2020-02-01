@@ -5,7 +5,7 @@ nav_order: 4
 nav_exclude: true
 ---
 
-# Supervision 2
+# Supervision 2 (27-28 February, 2020)
 
 ## Short presentation by supervisors (10min)
 1. The slides are available on: [CamLandEc-RM03](https://hn303.github.io/CamLandEc-RM03/).
@@ -80,7 +80,7 @@ Note: As this supervision is for introducing how QGIS and raster data can be use
 
 2. Click `setup` > `go` to start the simulation, and click `go` agin to stop the simulation.
 3. Try running the model with following changes and explain what happens:
-- Change the `model-version` to `sheep-wolves-grass`.
+- Change the `model-version` to `sheep-wolves-grass`. Sheep and wolves are the moving agents (turtles in NetLogo), and grass form a grid of stationary agents (patches).
 - Decrese wolf poplulation.
 - What other sliders/switches can you adjust to help out the sheep population?
 - Can you find any parameters that generate a stable ecosystem?
@@ -90,5 +90,12 @@ Note: As this supervision is for introducing how QGIS and raster data can be use
 
 ### Exercise 2: Game of Life (10min)
 1. Open `Life` from `Models Library` under `Computer Science` > `Cellular Automata`.
-2. Game of Life is a simple cellular automata (CA) model where the state of the cells change according to behavioral rules. As the simulation runs, you can find recurring shapes like gliders and blinkers. Note: You can refer to [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) for more detailed information.
+2. Game of Life is a simple cellular automata (CA) model where the state of the cells (patches) change according to behavioral rules. As the simulation runs, you can find recurring shapes like gliders and blinkers. Note: You can refer to [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) for more detailed information.
 3. Click `setup-random` > `go-forever` to start the simulation, and click `go-forever` again to stop the simulation.
+
+![](statics/Sup2_gameoflife1.PNG)
+
+4. Let's check the `Code` tab. On line 8, `ask patches [ cell-death ]` means to [ask](http://ccl.northwestern.edu/netlogo/docs/dict/ask.html) patches to run the `[ cell-death ]` command. On line 26, `[ cell-death ]` command sets `living?` as false, and sets patch color as foreground color. `[ cell-birth ]` command does the opposite.
+5. Line 14 means "ask patches to run the [ifelse](http://ccl.northwestern.edu/netlogo/docs/dict/ifelse.html) command. ifelse commands are very important in language-based rules. Line 15-17 means "if `random-float 100 < initial-density` reports true (in other words, "if a `random floating point number >= 0 but less than 100` is less than the `initial density (default=35)`"), run the `[ cell-death ]` command, and otherwise, run the `[ cell-birth ]` command.
+
+![](statics/Sup2_gameoflife2.PNG)
