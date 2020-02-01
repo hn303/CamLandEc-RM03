@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Customization
+title: Assignment 1
 nav_order: 3
 ---
 
