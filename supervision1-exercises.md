@@ -2,7 +2,10 @@
 output:
   pdf_document:
     highlight: haddock
+layout: default
+nav_order: 2
 ---
+
 # Supervision 1
 
 ## Instructions
