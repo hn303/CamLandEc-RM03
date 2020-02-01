@@ -19,9 +19,7 @@ In this exercise, you will familialise youself with basic features of QGIS softw
 1. Please download and install `QGIS standalone install version` according to your platform: [QGIS Download Page](https://qgis.org/en/site/forusers/download.html). 
 2. It is suggested to create a folder and name it as `rm03_YourCRSid_sup1`, at your prefered directory on your disk. This folder will be the working directory for all datasets and QGIS project file in this supervision.
 3. Launch QGIS: Start QGIS Desktop and check interface (menu bar, toolbar, brower panel, layer panerl and map window)
-
-Note: if some panels or toolbars are not showing, nevigate to menu bar  `View` > `Panels` or `Toolbars` to switch on.
-
+- Note: if some panels or toolbars are not showing, nevigate to menu bar  `View` > `Panels` or `Toolbars` to switch on.
 ![](statics/QGIS_start.png)
 
 ### QGIS Project Setup (5 mins)
@@ -31,9 +29,7 @@ Note: if some panels or toolbars are not showing, nevigate to menu bar  `View` >
     - `General` tab: in the general settings, set your working directory as `Project Home`, change the unit for distance measurement you prefer and also display coordinates units.
     - `Metadata` tab: It is suggested to input title, author, creation date and a short abstract in the identification tab.
     - `CRS` tab: this tab provide coordinate reference system (CRS) setting for the project file. Be aware that CRS setting in the `Project Properties` is just for the project (called as `Data Frame setting` in ArcGIS). CRS setting for layers will be introduced later.
-
-Note: after adding project home, you can find `Project Home` directory is showing in the `Browser panel`. It is much easier to locate your data files through this panel.
-
+- Note: after adding project home, you can find `Project Home` directory is showing in the `Browser panel`. It is much easier to locate your data files through this panel.
 ![](statics/QGIS_general.png)
 ![](statics/QGIS_metadata.png)
 ![](statics/QGIS_crs.png) 
@@ -46,9 +42,7 @@ Note: after adding project home, you can find `Project Home` directory is showin
 
 1. Download `Cambridge District Wards` data of Cambridgeshire from: [Cambridgeshire Insight Open Data](https://data.cambridgeshireinsight.org.uk/dataset/wardselectoral-divisions/resource/a5da0436-1142-48a9-8d82-d070fae138aa) and save zip file into your working directory.
 2. Import shapefile into your project:  Locate this file at your working directory through `Browser Panel` and hold the left mouse and drag the `Wards_December_2015_Generalised_Clipped_Boundaries_in_Great_Britain.shp` into the map window. Or, you can add vector file through data source manager.
-
-Note: You may be prompted a window to conduct CRS transformation, click ok to continue. 
-
+- Note: You may be prompted a window to conduct CRS transformation, click ok to continue. 
 ![](statics/QGIS_import.png)
 
 3: Layer ticked then can be found in `Layer Panel`. You can turn on and off layer by ticking it or not. Before you perform any action to a layer, please make sure the target layer is ticked and selected with hightlight.
@@ -67,7 +61,6 @@ Note: You may be prompted a window to conduct CRS transformation, click ok to co
 3.  Here is an alternative method to select elements precisely: Open attribute table of Cambridgeshire layer and Select features using an expression in QGIS. In the window of expression, input `"lad15nm" = 'Cambridge'` and click select features. 
 
 Note: You don't need to type expression manually, expand `Field and Values` option in the right panel and  double click `lad15nm`. The field name will show in the expression window. Once you select the field `lad15nm`, click `All Unique` button on the right, it will show a list of unique values from the field of `lad15nm`. Double click it to finish the expression.
-
 ![](statics/QGIS_select3.png)
 
 4. Once select elements you need, right-click this layer and nevigative to `Export` > `Save Selected Features As`. Name this file as `Cam_City.shp`. This shapefile will include these wards: Abbey, Arbury, Castle, Cherry Hinton, Coleridge, East Chesterton, King’s Hedges, Market, Newnham, Petersfield, Queen Edith’s, Romsey, Trumpington and West Chesterton. 
@@ -102,7 +95,7 @@ Note: You don't need to type expression manually, expand `Field and Values` opti
 #### Basemap and plugins in QGIS
 
 1. Extend functions of your QGIS with plugins: open `Plugins` > `Manage and Install Plugins` from menu bar. Search `QuickMapServices` and click `Install plugin`. 
-Note: if some plugins are not showing, please switch to `Setting tab` and trun on the `Show also experimental plugins` option.
+- Note: if some plugins are not showing, please switch to `Setting tab` and trun on the `Show also experimental plugins` option.
 ![](statics/QGIS_plugins.png)
 
 2. After installing the plugin, you can find `QuickMapServices` function in the `Web` section from menu bar. Choose `OSM`-`OSM Standard` and you will add basemap in QGIS.
@@ -119,9 +112,9 @@ Note: You computer must be connected to the internet to add basemap as the image
 ![](statics/QGIS_feature.png)
 ![](statics/QGIS_add_point.png)
 
-5. After creating features in map window, click `Toggle Editing` again to save the edit.
+5. After creating features in map window, click `Toggle Editing` again and save changes.
 
-6.  Repeat above step from 4 to 5. Create another 4 points with inputing attributes.
+6. Repeat above step from 4 to 5. Create another 4 points with inputing attributes.
 
 ### Raster Data (15 mins)
 - How to import raster data?
@@ -142,6 +135,8 @@ Note: You computer must be connected to the internet to add basemap as the image
 ![](statics/QGIS_clip.png)
 
 5. Change sympology: Select `Cam_Strm1.tif` and right-click to the properties option. Switch to `Symbology` tab and change `Render type` to `Paletted/Unique values`. Expand `Color ramp` section and choose `Spectral` . Then click `Classify` button to automaticlly assign color to each value. Back to `Color ramp` section and tick `Invert Color Ramp` option. 
+- Note: if your layer is not showing, change order of layers in `Layer Panel`.
 ![](statics/QGIS_symbology.png)
+![](statics/QGIS_cam_dem.png)
 
-6.You can check your raster map with [Camrbidge Terrain Map](https://en-gb.topographic-map.com/maps/dgf/Cambridge/)
+6. Check your raster map with [Camrbidge Terrain Map](https://en-gb.topographic-map.com/maps/dgf/Cambridge/)
