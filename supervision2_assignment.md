@@ -1,3 +1,10 @@
+---
+layout: default
+title: Supervision 2
+nav_order: 5
+nav_exclude: true
+---
+
 # Assignment for Supervision 2
 **Submission Date**: before Supervision 2
 
