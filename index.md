@@ -1,3 +1,8 @@
+---
+layout: default
+nav_order: 1
+---
+
 # RM03: Spatial Analysis and New Technologies in Planning
 Welcome to RM03: Spatial Analysis and New Technologies in Planning.  
 This repo is created by [**Haifeng Niu**](https://haifengniu.com/en/) and contributed by Heeseo Rain Kwon and Paul Scherer. Meterials of supervision could be found here.  
