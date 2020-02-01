@@ -1,3 +1,10 @@
+---
+layout: default
+title: Supervision 2
+nav_order: 3
+nav_exclude: true
+---
+
 # Supervision 2
 
 ## Short presentation by supervisors (10min)
