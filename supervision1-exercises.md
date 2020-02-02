@@ -65,7 +65,7 @@ Note: You may be prompted a window to conduct CRS transformation, click ok to co
 ![](statics/QGIS_select1.png)
 ![](statics/QGIS_select2.png)
 
-3.  Here is an alternative method to select elements precisely: Open attribute table of Cambridgeshire layer and Select features using an expression in QGIS. In the window of expression, input `"lad15nm" = 'Cambridge'` and click select features. \
+3.  Here is an alternative method to select elements precisely: Open attribute table of Cambridgeshire layer and `Select features using an expression` in QGIS. In the window of expression, input `"lad15nm" = 'Cambridge'` and click select features. \
 Note: You don't need to type expression manually, expand `Field and Values` option in the right panel and  double click `lad15nm`. The field name will show in the expression window. Once you select the field `lad15nm`, click `All Unique` button on the right, it will show a list of unique values from the field of `lad15nm`. Double click it to finish the expression.\
 ![](statics/QGIS_select3.png)
 
