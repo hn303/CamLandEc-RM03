@@ -4,7 +4,7 @@ output:
     highlight: haddock
 layout: default
 nav_order: 2
-title: Supervision 1
+title: Supervision 1 (12-13 February, 2020)
 ---
 
 <button class="btn js-toggle-dark-mode">Dark color scheme</button>
