@@ -24,7 +24,7 @@ In this assignment, you will familiarise yourself with geoprocessing raster data
 ### QGIS project setup
 1. Click `Project` > `New`.
 2. Click `Project` > `Save As`, and save as `supervision2.qgz` to the working directory. 
-3. Download dataset (sample data of Sejong, South Korea): [Urban_2018.zip](data/Urban_2018.zip), [Exclusion_2014.zip](data/Exclusion_2014.zip), [Road_2018.zip](data/Road_2018.zip), and [Boundary.zip](data/Boundary.zip). Unzip and put all the files in the working directory.
+3. Download dataset (sample data of Sejong, South Korea): [Urban_2018.zip](data/Urban_2018.zip), [Exclusion_2014.zip](data/Exclusion_2014.zip), [Road_2018.zip](data/Road_2018.zip), and [Boundary.zip](data/Boundary.zip) in the working directory (you don't need to unzip).
 4. Go to `Project` >  `Properties` in menu bar and open the `Project Properties` window.
     - `General` tab: Set your working directory as `Project Home`.
 Note: after adding project home, you can find `Project Home` directory is showing in the `Browser panel`. It is much easier to locate your data files through this panel.
