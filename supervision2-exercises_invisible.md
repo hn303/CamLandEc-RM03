@@ -175,7 +175,41 @@ Note: You can refer to [NetLogo Dictionary](http://ccl.northwestern.edu/netlogo/
 12. In line 108, change `urban = 2` to `urban > 0` because urban cells in Santa Fe raster are coded 2 while in Sejong, 100. This model can be extended to include urban data as continuous (e.g. urban intensity) rather than binary, therefore, `urban > 0` is used rather than `urban = 100`. 
 13. Add in line 116, `gis:apply-raster boundary-dataset boundary`
 14. Add in line 117, `ask patches [if boundary = 0 [set pcolor black]]
-15. Disable `gis:apply-raster landuse-dataset landuse` by putting `;;` in front.
+15. In line 119, disable `gis:apply-raster landuse-dataset landuse` by putting `;;` in front.
 
 ![](statics/Sup2_sleuth4.PNG)
 
+16. In line 170, 171 and 186, change `road = 1` to `road > 0`.
+
+![](statics/Sup2_sleuth4_1.PNG)
+
+17. In line 210, change `excluded = 0` to `excluded = 100`. 
+18. Add in line 211 `if boundary = 0 [set suitable 0]`.
+
+![](statics/Sup2_sleuth4_2.PNG)
+
+19. In line 240, change `road = 1` to `road > 0`.
+
+![](statics/Sup2_sleuth4_3.PNG)
+
+19. These do not affect the simulation, for optionally: In line 258, change `531` to `849`.
+20. In line 259, change `394` to `1212`.
+21. In line 260, change `-901575` to `211290.798000130308`
+22. In line 261, change `1442925` to `322863.241183900100`.
+23. Click `Check` bottom next to `Find`. If an error occurs for some reason, it is usually due to typo, etc. If this happened to you, in the interest of time, download the completed file [Urbanization_sejong.nlogo](data/Urbanization_sejong.nlogo) so that we can carry on. You can either put this file in the same working directory, or you can copy-paste this file's code to the NetLogo file that you have been working on.
+
+![](statics/Sup2_sleuth4_4.PNG)
+
+### Changinng the model settings and running the simulation
+
+1. Go back to `Interface` tab, click `setup`. You will see that the Sejong data have been loaded.
+2. Click `go` and a few ticks and click `go` again. What happens?
+3. Turn on the `road_influence` switch and run the model again. How is it different from before?
+4. Right-click on the map and click `Edit`. Change `max-pxcor` to `848` and `max-pycor` to `1211`. You will see that the Box is now changed to Sejong's raster dimension: 849 x 1212. Set patch size as `0.3` (or `0.5` and `1` depending on your screen resolution. Try several.) so that we can see the whole screen. (Note: If an error message comes up for some reason, click `Dismiss` and try again twice. On the third go, the map will be loaded fine.)
+
+![](statics/Sup2_sleuth5.PNG)
+![](statics/Sup2_sleuth6.PNG)
+
+5. The Sejong masterplan sets that development is not possible on land with a slope greater than 20 degrees. 20 degrees slope equates to 36.4 percent slope. (Note: a simple degree to percent slope can be found online, for example [Calcunation.com](https://www.calcunation.com/calculator/degrees-to-percent.php). Move the `critical_slope` bar to `36` and see what changes.
+6. The best-fit of five coefficients can be calculated through calibration which requires `extensions [r]` and many more. For more information on these coefficients, you can look at [Project Gigapolis webpage](http://www.ncgia.ucsb.edu/projects/gig/About/gwCoef.htm).
+7. 
