@@ -32,9 +32,7 @@ Data required:
 Tasks
 1. Download `Cambridge District Wards` data of Cambridgeshire from: [Cambridgeshire Insight Open Data](https://data.cambridgeshireinsight.org.uk/dataset/wardselectoral-divisions/resource/a5da0436-1142-48a9-8d82-d070fae138aa) and import into QGIS.
 
-2.  By using `selec`create a new shapefile for the wards of Cambridge City. This shapefile will include these wards: Abbey, Arbury, Castle, Cherry Hinton, Coleridge, East Chesterton, King's Hedges, Market, Newnham, Petersfield, Queen Edith's, Romsey, Trumpington and West Chesterton. Name this file as `Cam_City.shp’ with choosing CRS EPSG:27700.
-
-Hint: Use `Select features` or `Selection using expression` command to export the data to a new shapefile. 
+2.  By using `selec`create a new shapefile for the wards of Cambridge City. This shapefile will include these wards: Abbey, Arbury, Castle, Cherry Hinton, Coleridge, East Chesterton, King's Hedges, Market, Newnham, Petersfield, Queen Edith's, Romsey, Trumpington and West Chesterton. Name this file as `Cam_City.shp’ with choosing CRS EPSG:27700.\Hint: Use `Select features` or `Selection using expression` command to export the data to a new shapefile. 
 ![](statics/Assignment1_cambridge.png)
 
 3.  Download Cambridge population estimates data 2015 (csv) from:[2015-based population forecasts for Cambridge](https://data.cambridgeshireinsight.org.uk/dataset/2015-based-population-and-dwelling-stock-forecasts-cambridgeshire-and-peterborough-0)
