@@ -97,24 +97,25 @@ Note: As this supervision is for introducing how QGIS and raster data can be use
 
 ![](statics/Sup2_gameoflife1.PNG)
 
-4. Let's check the `Code` tab. In line 2-3, `living?` and `live-neighbors` are variables. In line 8, `ask patches [ cell-death ]` means to [ask](http://ccl.northwestern.edu/netlogo/docs/dict/ask.html) patches to run the `[ cell-death ]` command. In line 26, `[ cell-death ]` command sets `living?` as false, and sets patch color as foreground color. `[ cell-birth ]` command does the opposite.
-5. Line 14 means "ask patches to run the [ifelse](http://ccl.northwestern.edu/netlogo/docs/dict/ifelse.html) command. ifelse commands are very important in language-based rules. Line 15-17 means "if `random-float 100 < initial-density` reports true (in other words, "if a `random floating point number >= 0 but less than 100` is less than the `initial density (default=35)`"), run the `[ cell-death ]` command, and otherwise, run the `[ cell-birth ]` command. This part makes each cell to check the state of itself.
+4. Let's check the `Code` tab. (Note: If you don't see line numbers, for Windows users, on the `Menu bar`, click `Tools` > `Preferences` and check `Show Line Numbers`. For Mac users, on the `Menu bar`, click `NetLogo` > `Preferences` and check `Show Line Numbers`.) 
+5. In line 2-3, `living?` and `live-neighbors` are variables. In line 8, `ask patches [ cell-death ]` means to [ask](http://ccl.northwestern.edu/netlogo/docs/dict/ask.html) patches to run the `[ cell-death ]` command. In line 26, `[ cell-death ]` command sets `living?` as false, and sets patch color as foreground color. `[ cell-birth ]` command does the opposite.
+6. Line 14 means "ask patches to run the [ifelse](http://ccl.northwestern.edu/netlogo/docs/dict/ifelse.html) command. ifelse commands are very important in language-based rules. Line 15-17 means "if `random-float 100 < initial-density` reports true (in other words, "if a `random floating point number >= 0 but less than 100` is less than the `initial density (default=35)`"), run the `[ cell-death ]` command, and otherwise, run the `[ cell-birth ]` command. This part makes each cell to check the state of itself.
 Note: You can refer to [NetLogo Dictionary](http://ccl.northwestern.edu/netlogo/docs/index2.html) when trying to understand the codes.
 
 ![](statics/Sup2_gameoflife2.PNG)
 
-5. Line 33 means "set the variable `live-neighbors` to `count how many neighboring cells are alive`" and line 32 asks patches to run this command. This part makes each cell to check the state of its eight surrounding neighbors. Note: [neighbors](http://ccl.northwestern.edu/netlogo/docs/dict/neighbors.html).
-6. Line 38 asks patches to run another ifelse command. The rule is:
+7. Line 33 means "set the variable `live-neighbors` to `count how many neighboring cells are alive`" and line 32 asks patches to run this command. This part makes each cell to check the state of its eight surrounding neighbors. Note: [neighbors](http://ccl.northwestern.edu/netlogo/docs/dict/neighbors.html).
+8. Line 38 asks patches to run another ifelse command. The rule is:
 - If there is exactly 3 alive neighbors, the cell becomes alive. (birth)
 - If there are less than 2 alive neighbors, the cell dies. (under-population)
 - If there are more than 3 alive neighbors, the cell dies. (over-population)
 - If there are 2 alive neighbors, the cell remains in the state it is in. (sustainable life)
-7. Try writing this rule into a code, as it is. See how this can be shorted to the code written in the model.
+9. Try writing this rule into a code, as it is. See how this can be shorted to the code written in the model.
 
 ![](statics/Sup2_gameoflife3.PNG)
 
-8. In line 33, try changing `neighbors` to `neighbors4` and see how this affects the simulation.
-9. Let's add one more command to the model. Add the following lines below the `to cell-death` part. This command makes this cell colored in green to kill the four surrounding patches.
+10. In line 33, try changing `neighbors` to `neighbors4` and see how this affects the simulation.
+11. Let's add one more command to the model. Add the following lines below the `to cell-death` part. This command makes this cell colored in green to kill the four surrounding patches.
 
 `to wild-birth`  
   `;; kills all of its neighbours`  
@@ -123,7 +124,7 @@ Note: You can refer to [NetLogo Dictionary](http://ccl.northwestern.edu/netlogo/
   `set pcolor green`  
 `end`
 
-10. Also, let's add a new rule for `wild-birth`. Add the following lines below the `ask patches [ ifelse ]` part. This rule runs the same ifelse command on the 1,000 randomly chosen patches, this time for `wild-birth`. (Note: [n-of](http://ccl.northwestern.edu/netlogo/docs/dict/n-of.html)). What happens to the simulation this time?
+12. Also, let's add a new rule for `wild-birth`. Add the following lines below the `ask patches [ ifelse ]` part. This rule runs the same ifelse command on the 1,000 randomly chosen patches, this time for `wild-birth`. (Note: [n-of](http://ccl.northwestern.edu/netlogo/docs/dict/n-of.html)). What happens to the simulation this time?
 
 `ask n-of 1000 patches`  
   `[ ifelse live-neighbors = 3`  
@@ -162,3 +163,8 @@ Note: You can refer to [NetLogo Dictionary](http://ccl.northwestern.edu/netlogo/
 
 10. In line 81 and 85, change `urban = 1` to `urban = 100`. 
 11. In line 83, change `road = 1` to `road > 0`.
+12. In the `to load_data` section, change the Santa Fe data to `Urban_2018.asc`, `Slope_2014.asc`, `Road_2018.asc`, and `Exclusion_2014.asc`. Disable the `set landuse-dataset` row by putting `;;` in front as we will not include this for this exercise (landuse data is not crucial for SLEUTH growth rules).
+
+![](statics/Sup2_sleuth3.PNG)
+
+13. 
