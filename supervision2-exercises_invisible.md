@@ -197,7 +197,10 @@ Note: You can refer to [NetLogo Dictionary](http://ccl.northwestern.edu/netlogo/
 22. In line 259, change `394` to `1212`.
 23. In line 260, change `-901575` to `211290.798000130308`
 24. In line 261, change `1442925` to `322863.241183900100`.
-25. Click `Check` bottom next to `Find`. If an error occurs for some reason, it is usually due to typo, etc. If this happened to you, in the interest of time, download the completed file [Urbanization_sejong.nlogo](data/Urbanization_sejong.nlogo) so that we can carry on. You can either put this file in the same working directory, or you can copy-paste this file's code to the NetLogo file that you have been working on.
+25. Add in line 279 `to-report tenpercent_urban`
+26. Add in line 280 `report (round (count patches with [urban = 1] * 0.10))`
+27. Add in line 281 `end`. This is to define the value `tenpercent_urban` introduced earlier.
+28. Click `Check` bottom next to `Find`. (Note: If an error message comes up for some reason, click `Dismiss` and try again twice. On the third go, the map will be loaded fine. If it still occurs, it might be due to typo, etc. Let one of the supervisors know, and in the interest of time, download the completed file [Urbanization_sejong.nlogo](data/Urbanization_sejong.nlogo) so that we can carry on. You can either put this file in the same working directory, or you can copy-paste this file's code to the NetLogo file that you have been working on.
 
 ![](statics/Sup2_sleuth4_4.PNG)
 
@@ -213,5 +216,12 @@ Note: You can refer to [NetLogo Dictionary](http://ccl.northwestern.edu/netlogo/
 
 5. The Sejong masterplan sets that development is not possible on land with a slope greater than 20 degrees. 20 degrees slope equates to 36.4 percent slope. (Note: a simple degree to percent slope can be found online, for example [Calcunation.com](https://www.calcunation.com/calculator/degrees-to-percent.php). Move the `critical_slope` bar to `36` and see what changes.
 6. The best-fit of five coefficients can be calculated through calibration which requires `extensions [r]` and many more. For more information on these coefficients, you can look at [Project Gigapolis webpage](http://www.ncgia.ucsb.edu/projects/gig/About/gwCoef.htm).
-7. 
-(count patches with [urban = 1 and boundary = 1]) / (count patches with [boundary = 1]) * 100
+7. Right-click anywhere on the map and click `inspect patch` You will see the properties of the selected cell e.g. urban, road, slope, excluded...
+
+![](statics/Sup2_sleuth7.PNG)
+
+8. You can right-click on the `Percentage urbanized` chart and monitor and the `export_data` button along with the information and move this closer to the map.
+9. Currently, `Percentage urbanized` is set without the boundary in consideration. Right-click on the `Percentage urbanized` monitor and change the reporter to `(count patches with [urban = 1 and boundary = 1]) / (count patches with [boundary = 1]) * 100`. Make necessary change to the chart too (e.g. change the reporter similarly to the monitor, and change the maximum values from 10 to 100).
+10. In a short period of time, you have been introduced to the concept of NetLogo, how to load your own raster data into an existing model that uses the GIS extension, as well as making changes to the code. If you are more interested, there are many more resources available on the [NetLogo website](https://ccl.northwestern.edu/netlogo/), for example, in `Help`, `Resources` and tabs under `Models` and `User Manuals`. Please feel free to reach out to Rain (hk394@cam.ac.uk) for any specific advise!
+
+![](statics/Sup2_sleuth8.PNG)
