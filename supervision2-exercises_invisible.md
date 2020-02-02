@@ -147,30 +147,31 @@ Note: You can refer to [NetLogo Dictionary](http://ccl.northwestern.edu/netlogo/
 
 ![](statics/Sup2_sleuth0.PNG)
 
-5. Go to the `code` tab. `extensions [gis]` is used for this model. (Note: More information on [NetLogo GIS extension](https://ccl.northwestern.edu/netlogo/docs/gis.html). `globals` outlines the global variables accessible by all agents. 
-6. `patches-own` outlines the variables that all patches can use. 
+### Editing the code to suit our data
+1. Go to the `code` tab. `extensions [gis]` is used for this model. (Note: More information on [NetLogo GIS extension](https://ccl.northwestern.edu/netlogo/docs/gis.html). `globals` outlines the global variables accessible by all agents. 
+2. `patches-own` outlines the variables that all patches can use. 
 - In line 22, for `urban`, change the description to: `;;binary, 0=non-urban, 100=urban
 - In line 24, for `road`, change the description to: `;;discrete, 0=non-road, 25=small road, 50=medium road, 75=large road, 100=expressway`. 
 - In line 25, for `road1`, change the description to: `;;used to set run_value for road influenced growth. same properties as road.`
 - In line 32, for `excluded`, change the description to: `;;binary, 0=non-excluded, 100=excluded. The excluded image defines all locations that are resistant to urbanization.`
 - Add `boundary ;;binary, 0=outside boundary, 1=within boundary`
-Note: You can load the Santa Fe `asc` files on QGIS to see which code refers to what. In Santa Fe files,
+3. You can load the Santa Fe `asc` files on QGIS to see which code refers to what. In Santa Fe files,
 - Urban: 1 = non-urban, 2 = urban
 - Road: 1 = small road, 2 = medium road, 3 = large road, 4 = expressway
 - Exclusion: 0=excluded
-
-7. In the `to setup` section, `ca` means `clear all`. We cannot go through all codes one by one due to time limitation, so you can refer to [NetLogo Dictionary] (http://ccl.northwestern.edu/netlogo/docs/index2.html) in your free time. Also, the setting of values and growth rules etc. are based on the original SLEUTH model (details can be seen in [Project Gigapolis website](http://www.ncgia.ucsb.edu/projects/gig/About/bkOverview.html) so we won't go through in detail. The objective of this exercise in this supervision is to introduce how raster maps generated in QGIS can be loaded on NetLogo and how a model directly applicable to urban planning like SLEUTH urban growth model can run on NetLogo based on a set of rules.
-8. Line 62 asks road patches to set run_value. Change `road = 1` to `road > 0` and `road1 / 4` to `road1 / 100` since in the raster data for Sejong, 0=non-road and road value ranges up to 100.
-9. In line 65, also change `road = 1` to `road > 0`.
+- Slope: Discrete. Whole number between 1 and 21.
+4. In the `to setup` section, `ca` means `clear all`. We cannot go through all codes one by one due to time limitation, so you can refer to [NetLogo Dictionary] (http://ccl.northwestern.edu/netlogo/docs/index2.html) in your free time. Also, the setting of values and growth rules etc. are based on the original SLEUTH model (details can be seen in [Project Gigapolis website](http://www.ncgia.ucsb.edu/projects/gig/About/bkOverview.html) so we won't go through in detail. The objective of this exercise in this supervision is to introduce how raster maps generated in QGIS can be loaded on NetLogo and how a model directly applicable to urban planning like SLEUTH urban growth model can run on NetLogo based on a set of rules.
+5. Line 62 asks road patches to set run_value. Change `road = 1` to `road > 0` and `road1 / 4` to `road1 / 100` since in the raster data for Sejong, 0=non-road and road value ranges up to 100.
+6. In line 65, also change `road = 1` to `road > 0`.
 
 ![](statics/Sup2_sleuth1.PNG)
 ![](statics/Sup2_sleuth2.PNG)
 
-10. In line 81 and 85, change `urban = 1` to `urban = 0`. 
-11. In line 83, change `road = 1` to `road > 0`.
-12. In the `to load_data` section, change the Santa Fe data to `Urban_2018.asc`, `Slope_2014.asc`, `Road_2018.asc`, and `Exclusion_2014.asc`. Disable the `set landuse-dataset` row by putting `;;` in front as we will not include this for this exercise (landuse data is not crucial for SLEUTH growth rules).
+7. In line 81 and 85, change `urban = 1` to `urban = 0`. 
+8. In line 83, change `road = 1` to `road > 0`.
+9. In the `to load_data` section, change the Santa Fe data to `Urban_2018.asc`, `Slope_2014.asc`, `Road_2018.asc`, and `Exclusion_2014.asc`. Disable the `set landuse-dataset` row by putting `;;` in front as we will not include this for this exercise (landuse data is not crucial for SLEUTH growth rules).
 
 ![](statics/Sup2_sleuth3.PNG)
 
-13. Add `gis:set-world-envelope gis:envelope-of urban-dataset` in line 105.
-14. In line 107, change `urban = 2` to `urban = 100`
+10. Add `gis:set-world-envelope gis:envelope-of urban-dataset` in line 105.
+11. In line 107, change `urban = 2` to `urban = 100`
