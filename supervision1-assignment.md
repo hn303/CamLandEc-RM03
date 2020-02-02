@@ -23,12 +23,7 @@ Note: functions and filename are `highlighted` in this document.
 
 
 ## Assignment overview
-In this assignment, you will extract the wards in the Cambridge city area using the Cambridgeshire data. After that, you will link the population data to the respective wards, and compute population density of each ward. You will also examine other datasets to assess the number of car parks in Cambridge city, as well as in a specific ward. Lastly, you will make a map with essential elements in the Layout View.
-
-By the end of this exercise, you will be able to import shapefile data using QGIS, extract data from a larger dataset through selection by expression, spatially join tabular data to the shapefile, delete field from attribute table of a shapefile, use calculate geometry and field calculator tools, use the dissolve function, and use the select by location tool. 
-Data required:
-1.  Cambridgeshire district wards (polygon)
-2.  Cambridgeshire population (table)
+In this assignment, you will extract the wards in the Cambridge city area using the Cambridgeshire data. After that, you will link the population data to the respective wards, and compute population density of each ward. Lastly, you will symbolize population density in cambridge.
 
 ## Tasks
 1. Download `Cambridge District Wards` data of Cambridgeshire from: [Cambridgeshire Insight Open Data](https://data.cambridgeshireinsight.org.uk/dataset/wardselectoral-divisions/resource/a5da0436-1142-48a9-8d82-d070fae138aa) and import into QGIS.
@@ -53,11 +48,11 @@ Data required:
 7.  Use the `Export` command to create a new shapefile, name it as `Cam_City_Pop.shp’. The Attribute Table of this shapefile must be showing the ward names as well as the corresponding population in 2011, 2016 and 2021.
 hint: right-click to export
 
-8.  In the Attribute Table of `Cam_City_Pop` shapefile, click `Open field calculator`. Create a new field named as `Ward_Area` and set the output field type to ‘Decimal number (real)’, Precision = 4 and Scale = 2. In the expression window, input `$area/1000000` and We will compute the area of each ward in km2 (sq kilometre).\
+8.  In the Attribute Table of `Cam_City_Pop` shapefile, click `Open field calculator`. Create a new field named as `Ward_Area` and set the output field type to ‘Decimal number (real)’, Precision = 4 and Scale = 2. In the expression window, input `$area/1000000` and We will compute the area of each ward in km2 (sq kilometre).<br>
 Note: you can find `$area` in the right list under `Geometry` section.
 ![](statics/Assignment1_area.png)
 
-**Question B: Why did we use ‘Double’ as the data type while adding the field ‘Ward_Area’ in the Attribute Table of Cam_City_Pop shapefile? What is the purpose of setting the ‘Precision’ and ‘Scale’ values?**
+**Question B: Why did we use `Double` as the data type while adding the field `Ward_Area` in the Attribute Table of `Cam_City_Pop` shapefile? What is the purpose of setting the `Precision` and `Scale` values?**
 
 **Question C: Which ward is the largest and smallest in terms of area? Also note their areas in km2.**
 
@@ -68,5 +63,5 @@ Note: you can find `$area` in the right list under `Geometry` section.
 **Question D: Which ward has the highest and lowest population densities in 2011, 2012 and 2013? Tabulate and also write respective population densities.**
 
 10. Symbolised cambridge map in Categorized color` by population density (persons/km2) of 2021 and export the map.
-Hint: nevigate to `Project` > `Import/Export` > `Export Map to Image` in menu bar and set `Extent` by `Calculate from layer`(Cam_City_Pop).
+Hint: nevigate to `Project` > `Import/Export` > `Export Map to Image` in menu bar and set `Extent` by `Calculate from layer`(Cam_City_Pop).<br>
 ![](statics/Assignment1_final.png)
