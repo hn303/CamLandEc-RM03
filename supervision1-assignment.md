@@ -11,12 +11,13 @@ nav_order: 3
 **Submission Date**: Before Supervision 2
 
 ## Instructions
-1.  Please download and install QGIS standalone install version according to your platform:[link](https://qgis.org/en/site/forusers/download.html)
-2.  Read through the tasks carefully. You may face problems if you overlook any of the steps.
-3.  Remember to save the QGIS document regularly. 
-4.  Save all the files used or prepared in your assignment (kml, shapefiles, map document, etc.).
-5.  Go through the tutorial on converting spreadsheet or csv file to shapefile using QGIS:[link](https://www.qgistutorials.com/en/docs/importing_spreadsheets_csv.html)
-6.  All figures in the assignment are for illustration purpose only and do not necessarily depict the actual data
+1. If you missed supervision for some reason, please check Supervision 1[supervsion_exercies.md].
+2. Please download and install QGIS standalone install version according to your platform:[Download QGIS](https://qgis.org/en/site/forusers/download.html)
+3. Read through the tasks carefully. You may face problems if you overlook any of the steps.
+4. Remember to save the QGIS document regularly. 
+5. Save all the files used or prepared in your assignment (kml, shapefiles, map document, etc.).
+6. Go through the tutorial on converting spreadsheet or csv file to shapefile using QGIS:[link](https://www.qgistutorials.com/en/docs/importing_spreadsheets_csv.html)
+7. All figures in the assignment are for illustration purpose only and do not necessarily depict the actual data
 
 Note: functions and filename are `highlighted` in this document.
 
@@ -29,7 +30,7 @@ Data required:
 1.  Cambridgeshire district wards (polygon)
 2.  Cambridgeshire population (table)
 
-Tasks
+## Tasks
 1. Download `Cambridge District Wards` data of Cambridgeshire from: [Cambridgeshire Insight Open Data](https://data.cambridgeshireinsight.org.uk/dataset/wardselectoral-divisions/resource/a5da0436-1142-48a9-8d82-d070fae138aa) and import into QGIS.
 
 2.  By using `selec`create a new shapefile for the wards of Cambridge City. This shapefile will include these wards: Abbey, Arbury, Castle, Cherry Hinton, Coleridge, East Chesterton, King's Hedges, Market, Newnham, Petersfield, Queen Edith's, Romsey, Trumpington and West Chesterton. Name this file as `Cam_City.shp’ with choosing CRS EPSG:27700.\Hint: Use `Select features` or `Selection using expression` command to export the data to a new shapefile. 
@@ -45,14 +46,14 @@ Tasks
 
 **Question A: Which ward has the highest and lowest population in 2011, 2016 and 2021? Tabulate and also write respective population.**
 
-5.  Right-click the `Cam_City` and click `Properties` option. Use the `Join` function on the side to join the population table to the `Cam_City` shapefile that was created in above. Once this is done, the Attribute Table of `Cam_City` shapefile should show the Ward name and the population of each ward in 2011, 2016 and 2021.
+6.  Right-click the `Cam_City` and click `Properties` option. Use the `Join` function on the side to join the population table to the `Cam_City` shapefile that was created in above. Once this is done, the Attribute Table of `Cam_City` shapefile should show the Ward name and the population of each ward in 2011, 2016 and 2021.
 ![](statics/Assignment1_join.png)
 ![](statics/Assignment1_joined.png)
 
-6.  Use the `Export` command to create a new shapefile, name it as `Cam_City_Pop.shp’. The Attribute Table of this shapefile must be showing the ward names as well as the corresponding population in 2011, 2016 and 2021.
+7.  Use the `Export` command to create a new shapefile, name it as `Cam_City_Pop.shp’. The Attribute Table of this shapefile must be showing the ward names as well as the corresponding population in 2011, 2016 and 2021.
 hint: right-click to export
 
-7.  In the Attribute Table of `Cam_City_Pop` shapefile, click `Open field calculator`. Create a new field named as `Ward_Area` and set the output field type to ‘Decimal number (real)’, Precision = 4 and Scale = 2. In the expression window, input `$area/1000000` and We will compute the area of each ward in km2 (sq kilometre). 
+8.  In the Attribute Table of `Cam_City_Pop` shapefile, click `Open field calculator`. Create a new field named as `Ward_Area` and set the output field type to ‘Decimal number (real)’, Precision = 4 and Scale = 2. In the expression window, input `$area/1000000` and We will compute the area of each ward in km2 (sq kilometre).\
 Note: you can find `$area` in the right list under `Geometry` section.
 ![](statics/Assignment1_area.png)
 
@@ -60,7 +61,7 @@ Note: you can find `$area` in the right list under `Geometry` section.
 
 **Question C: Which ward is the largest and smallest in terms of area? Also note their areas in km2.**
 
-8.  In the Attribute Table of `Cam_City_Pop` shapefile, click `Open field calculator`. Create another new field named as `Pop_Den11` and set the output field type to ‘Decimal number (real)’, Precision = 7 and Scale = 2. In the expression window, input `Pop_Y2011/Ward_Area` and We will compute population density, number of popuation per km2 in each ward. Repeat this step to create  `Pop_Den16` and `Pop_Den21`. 
+9.  In the Attribute Table of `Cam_City_Pop` shapefile, click `Open field calculator`. Create another new field named as `Pop_Den11` and set the output field type to ‘Decimal number (real)’, Precision = 7 and Scale = 2. In the expression window, input `Pop_Y2011/Ward_Area` and We will compute population density, number of popuation per km2 in each ward. Repeat this step to create  `Pop_Den16` and `Pop_Den21`. 
 ![](statics/Assignment1_density.png)
 
 
