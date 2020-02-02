@@ -67,15 +67,15 @@ In this supervision, you will familiarise yourself with geoprocessing raster dat
 
 Note: As this supervision is for introducing how QGIS and raster data can be used on NetLogo, we cannot cover many other functions available on QGIS. Please refer to [QGIS Training Manual](https://docs.qgis.org/2.8/en/docs/training_manual/create_vector_data/index.html) for more information.
 
-### Introducing NetLogo with two exercises
+### Introducing NetLogo with two exercises (15min)
 
-#### Setup work environment for NetLogo (5min)
+#### Setup work environment for NetLogo
 1. Please download and install `NetLogo (6.1.1)` according to your platform. We recommend downloading `Windows (64-bit)`, `Mac OS X`, or `Linux (64-bit)`: [NetLogo Download Page](https://ccl.northwestern.edu/netlogo/6.1.1/). 
 2. Continue using `rm03_YourCRSid_sup2` as your working directory.
 3. Launch NetLogo. The interface will be explained along with exercises. Note: You can refer to [NetLogo User Manual (6.1.1)](https://ccl.northwestern.edu/netlogo/docs/) for more detailed information.
 4. In `File` > `Models Library`, you can find a collection of sample models to explore. There are many sample models available on the User Community Models web page.
 
-#### Exercise 1: Wolf Sheep Predation (5min)
+#### Exercise 1: Wolf Sheep Predation
 1. Open `Wolf Sheep Predation` from `Models Library` under `Biology` folder.
 
 ![](statics/Sup2_wolfsheep1.PNG)
@@ -90,7 +90,7 @@ Note: As this supervision is for introducing how QGIS and raster data can be use
 ![](statics/Sup2_wolfsheep2.PNG)
 
 
-#### Exercise 2: Game of Life (10min)
+#### Exercise 2: Game of Life (if you have time, go through this at the supervision, if not, at your free time)
 1. Open `Life` from `Models Library` under `Computer Science` > `Cellular Automata`.
 2. Game of Life is a simple cellular automata (CA) model where the state of the cells (patches) change according to behavioral rules. As the simulation runs, you can find recurring shapes like gliders and blinkers. Note: You can refer to [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) for more detailed information.
 3. Click `setup-random` > `go-forever` to start the simulation, and click `go-forever` again to stop the simulation.
@@ -144,7 +144,7 @@ Note: You can refer to [NetLogo Dictionary](http://ccl.northwestern.edu/netlogo/
 3. Click `setup` > `go` to try out. Inside `urban model` folder, open `data` folder, and you will see the asc files of Santa Fe, New Mexico. Copy-paste the five asc raster files that we created for Sejong: `Slope_2014.asc`, `Urban_2018.asc`, `Exclusion_2014.asc`, `Road_2018.asc` and `Boundary.asc`.
 4. `File` > `Save As` the netlogo file to `Urbanization_sejong.nlogo`. We will make changes to the code to suit our Sejong data. 
 
-![](statics/Sup2_sleuth1.PNG)
+![](statics/Sup2_sleuth0.PNG)
 
 5. Go to the `code` tab. `extensions [gis]` is used for this model. (Note: More information on [NetLogo GIS extension](https://ccl.northwestern.edu/netlogo/docs/gis.html). `globals` outlines the global variables accessible by all agents. 
 6. `patches-own` outlines the variables that all patches can use. 
@@ -153,5 +153,12 @@ Note: You can refer to [NetLogo Dictionary](http://ccl.northwestern.edu/netlogo/
 - In line 25, for `road1`, change the description to: `;;used to set run_value for road influenced growth. same properties as road.`
 - In line 32, for `excluded`, change the description to: `;;binary, 0=non-excluded, 100=excluded. The excluded image defines all locations that are resistant to urbanization.`
 - Add `boundary ;;binary, 0=outside boundary, 1=within boundary`
-7. In the `to setup` section, `ca` means `clear all`. We cannot go through all codes one by one due to time limitation, so you can refer to [NetLogo Dictionary] (http://ccl.northwestern.edu/netlogo/docs/index2.html) in your free time. Also, the setting of values and growth rules etc. are based on the original SLEUTH model (details can be seen in [Project Gigapolis website](http://www.ncgia.ucsb.edu/projects/gig/About/bkOverview.html) so we won't go through in detail. The objective of this exercise in this supervision is to introduce how raster maps generated in QGIS can be loaded on NetLogo 
+7. In the `to setup` section, `ca` means `clear all`. We cannot go through all codes one by one due to time limitation, so you can refer to [NetLogo Dictionary] (http://ccl.northwestern.edu/netlogo/docs/index2.html) in your free time. Also, the setting of values and growth rules etc. are based on the original SLEUTH model (details can be seen in [Project Gigapolis website](http://www.ncgia.ucsb.edu/projects/gig/About/bkOverview.html) so we won't go through in detail. The objective of this exercise in this supervision is to introduce how raster maps generated in QGIS can be loaded on NetLogo and how a model directly applicable to urban planning like SLEUTH urban growth model can run on NetLogo based on a set of rules.
+8. Line 62 asks road patches to set run_value. Change `road = 1` to `road > 0` and `road1 / 4` to `road1 / 100` since in the raster data for Sejong, 0=non-road and road value ranges up to 100.
+9. In line 65, also change `road = 1` to `road > 0`.
 
+![](statics/Sup2_sleuth1.PNG)
+![](statics/Sup2_sleuth2.PNG)
+
+10. In line 81 and 85, change `urban = 1` to `urban = 100`. 
+11. In line 83, change `road = 1` to `road > 0`.
