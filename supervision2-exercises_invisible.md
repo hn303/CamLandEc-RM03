@@ -153,4 +153,5 @@ Note: You can refer to [NetLogo Dictionary](http://ccl.northwestern.edu/netlogo/
 - In line 25, for `road1`, change the description to: `;;used to set run_value for road influenced growth. same properties as road.`
 - In line 32, for `excluded`, change the description to: `;;binary, 0=non-excluded, 100=excluded. The excluded image defines all locations that are resistant to urbanization.`
 - Add `boundary ;;binary, 0=outside boundary, 1=within boundary`
-7. We cannot go through all codes one by one, so you can refer to [NetLogo Dictionary](http://ccl.northwestern.edu/netlogo/docs/index2.html) 
+7. In the `to setup` section, `ca` means `clear all`. We cannot go through all codes one by one due to time limitation, so you can refer to [NetLogo Dictionary] (http://ccl.northwestern.edu/netlogo/docs/index2.html) in your free time. Also, the setting of values and growth rules etc. are based on the original SLEUTH model (details can be seen in [Project Gigapolis website](http://www.ncgia.ucsb.edu/projects/gig/About/bkOverview.html) so we won't go through in detail. The objective of this exercise in this supervision is to introduce how raster maps generated in QGIS can be loaded on NetLogo 
+
