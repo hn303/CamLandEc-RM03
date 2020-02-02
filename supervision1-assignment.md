@@ -34,7 +34,6 @@ In this assignment, you will extract the wards in the Cambridge city area using 
 3.  Download Cambridge population estimates data 2015 (csv) from:[2015-based population forecasts for Cambridge](https://data.cambridgeshireinsight.org.uk/dataset/2015-based-population-and-dwelling-stock-forecasts-cambridgeshire-and-peterborough-0)
 
 4.  Open it in excel and comprise only one sheet, containing five columns, Ward Code, Ward name, Y2011, Y2016 and Y2021.
-
 ![](statics/Assignment1_pop.png)
 
 5. import comprised csv file into QGIS.
@@ -45,8 +44,8 @@ In this assignment, you will extract the wards in the Cambridge city area using 
 ![](statics/Assignment1_join.png)
 ![](statics/Assignment1_joined.png)
 
-7.  Use the `Export` command to create a new shapefile, name it as `Cam_City_Pop.shp’. The Attribute Table of this shapefile must be showing the ward names as well as the corresponding population in 2011, 2016 and 2021.
-hint: right-click to export
+7.  Use the `Export` command to create a new shapefile, name it as `Cam_City_Pop.shp`. The Attribute Table of this shapefile must be showing the ward names as well as the corresponding population in 2011, 2016 and 2021.<br>
+Hint: right-click to export
 
 8.  In the Attribute Table of `Cam_City_Pop` shapefile, click `Open field calculator`. Create a new field named as `Ward_Area` and set the output field type to ‘Decimal number (real)’, Precision = 4 and Scale = 2. In the expression window, input `$area/1000000` and We will compute the area of each ward in km2 (sq kilometre).<br>
 Note: you can find `$area` in the right list under `Geometry` section.
@@ -62,6 +61,6 @@ Note: you can find `$area` in the right list under `Geometry` section.
 
 **Question D: Which ward has the highest and lowest population densities in 2011, 2012 and 2013? Tabulate and also write respective population densities.**
 
-10. Symbolised cambridge map in Categorized color` by population density (persons/km2) of 2021 and export the map.
+10. Symbolised cambridge map in Categorized color` by population density (persons/km2) of 2021 and export the map.<br>
 Hint: nevigate to `Project` > `Import/Export` > `Export Map to Image` in menu bar and set `Extent` by `Calculate from layer`(Cam_City_Pop).<br>
 ![](statics/Assignment1_final.png)
