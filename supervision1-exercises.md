@@ -1,10 +1,13 @@
 ---
 output:
   pdf_document:
+    latex_engine: xelatex
     highlight: haddock
 layout: default
 nav_order: 2
 title: Supervision 1
+mainfont: Arial
+
 ---
 
 <button class="btn js-toggle-dark-mode">Dark color scheme</button>
