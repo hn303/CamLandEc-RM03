@@ -143,9 +143,14 @@ Note: You can refer to [NetLogo Dictionary](http://ccl.northwestern.edu/netlogo/
 2. Unzip `Urban_Growth_Model-master.zip` and further unzip `urban_growth_model.zip`. In the `urban_growth_model` > `urban model` folder, open `Urbanization.nlogo`. 
 3. Click `setup` > `go` to try out. Inside `urban model` folder, open `data` folder, and you will see the asc files of Santa Fe, New Mexico. Copy-paste the five asc raster files that we created for Sejong: `Slope_2014.asc`, `Urban_2018.asc`, `Exclusion_2014.asc`, `Road_2018.asc` and `Boundary.asc`.
 4. `File` > `Save As` the netlogo file to `Urbanization_sejong.nlogo`. We will make changes to the code to suit our Sejong data. 
-5. Go to the `code` tab. `extensions [gis]` is used for this model. (Note: More information on [NetLogo GIS extension](https://ccl.northwestern.edu/netlogo/docs/gis.html). `globals` outlines the global variables accessible by all agents. `patches-own` outlines the variables that all patches can use. 
+
+![](statics/Sup2_sleuth1.PNG)
+
+5. Go to the `code` tab. `extensions [gis]` is used for this model. (Note: More information on [NetLogo GIS extension](https://ccl.northwestern.edu/netlogo/docs/gis.html). `globals` outlines the global variables accessible by all agents. 
+6. `patches-own` outlines the variables that all patches can use. 
 - In line 22, for `urban`, change the description to: `;;binary, 0=non-urban, 100=urban
 - In line 24, for `road`, change the description to: `;;discrete, 0=non-road, 25=small road, 50=medium road, 75=large road, 100=expressway`. 
 - In line 25, for `road1`, change the description to: `;;used to set run_value for road influenced growth. same properties as road.`
 - In line 32, for `excluded`, change the description to: `;;binary, 0=non-excluded, 100=excluded. The excluded image defines all locations that are resistant to urbanization.`
 - Add `boundary ;;binary, 0=outside boundary, 1=within boundary`
+7. We cannot go through all codes one by one, so you can refer to [NetLogo Dictionary](http://ccl.northwestern.edu/netlogo/docs/index2.html) 
