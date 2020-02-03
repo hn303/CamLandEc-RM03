@@ -83,10 +83,7 @@ Note: You don't need to type expression manually, expand `Field and Values` opti
 2. Navigate to menu bar click `Layer` > `Add Layer` > `Add Delimited Text Layer`. Browse the `cambridge-services-geolocated-csv-2-standardized.csv` just downloaded and change the layer name to `Cam_Services`. In the section of File Format, choose CSV. In the Geometry Definition section, choose `Point coordinates` and select `Longitude` and `Latitude` fields as X Y fields respectively. Normally the Geometry definition section will be auto-populated if it finds a suitable X and Y coordinate fields. Then choose the right CRS (EPSG: 4277 - OSGB 1936) for this file. Finally, click add and you will find a point layer.<br>
 ![](statics/QGIS_csv.png)
 
-{{% alert note %}}
-When you finished the above parts, please inform supervisors.
-{{% /alert %}}
-
+> When you finished the above parts, please inform supervisors.
 
 **Join layer**
 - How can we link Cambridge local services with district information?
