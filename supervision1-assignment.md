@@ -58,6 +58,6 @@ Note: you can find `$area` in the right list under `Geometry` section.<br>
 
 **Question D: Which ward has the highest and lowest population densities in 2011, 2012 and 2013? Tabulate and also write respective population densities.**
 
-10.Symbolised cambridge map in Categorized color` by population density (persons/km2) of 2021 and export the map.<br>
+10.Symbolised cambridge map in `Categorized color` by population density (persons/km2) of 2021 and export the map.<br>
 Hint: nevigate to `Project` > `Import/Export` > `Export Map to Image` in menu bar and set `Extent` by `Calculate from layer`(Cam_City_Pop)`.<br>
 ![](statics/Assignment1_final.png)
