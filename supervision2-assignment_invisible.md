@@ -2,8 +2,13 @@
 title: "Supervision 2"
 nav_exclude: yes
 nav_order: 5
+<<<<<<< HEAD
 output: pdf_document
 layout: default
+=======
+nav_exclude: true
+search_exclude: true
+>>>>>>> b624a6cde91bcba402ea630af3f46a58697dfd90
 ---
 
 # Assignment for Supervision 2
@@ -25,7 +30,7 @@ In this assignment, you will familiarise yourself with geoprocessing raster data
 ### QGIS project setup
 1. Click `Project` > `New`.
 2. Click `Project` > `Save As`, and save as `supervision2.qgz` to the working directory. 
-3. Download dataset (sample data of Sejong, South Korea): [Urban_2018.zip](data/Urban_2018.zip), [Exclusion_2014.zip](data/Exclusion_2014.zip), [Road_2018.zip](data/Road_2018.zip), and [Boundary.zip](data/Boundary.zip). Unzip and put all the files in the working directory.
+3. Download dataset (sample data of Sejong, South Korea): [Urban_2018.zip](data/Urban_2018.zip), [Exclusion_2014.zip](data/Exclusion_2014.zip), [Road_2018.zip](data/Road_2018.zip), and [Boundary.zip](data/Boundary.zip) in the working directory (you don't need to unzip).
 4. Go to `Project` >  `Properties` in menu bar and open the `Project Properties` window.
     - `General` tab: Set your working directory as `Project Home`.
 Note: after adding project home, you can find `Project Home` directory is showing in the `Browser panel`. It is much easier to locate your data files through this panel.
@@ -47,13 +52,13 @@ Note: `Urban_2018` layer is a combination of urban land-use data by parcel and b
 
 ![](statics/Sup2_symbology2.PNG) 
 
-6. Uncheck `Exclusion_2014` layer, check `Road_2018` layer, double-click the color box. Click `Single symbol` > `Categorized`, click `Column` > `road_class`, click `Classify` and change `Legend` and `color` to the following with `No Pen`: 0=non-road (black), 25=small road (#404040), 50=medium road (#808080), 75=large road (#3a3a3a), 100=expressway (white). Click `OK`.
+6. Uncheck `Exclusion_2014` layer, check `Road_2018` layer, double-click the color box. Click `Single symbol` > `Categorized`, click `Column` > `road_class`, click `Classify` and change `Legend` and `color` to the following with `No Pen`: 25=small road (#404040), 50=medium road (#808080), 75=large road (#3a3a3a), 100=expressway (white). Click `OK`. Note: The road classifications are coded from 25 because we want to have 0=non-road.
 
 ![](statics/Sup2_symbology3.PNG) 
 
 
 ### Converting vector to raster (rasterize)
-1. Click and check `Urban_2018` layer, click `Raster` in menu bar, `Conversion` > `Rasterize`. Set `Field to use for a burn-in value` as `URBAN`, `A field value to burn` as `Not set`, `output raster size units` as `Georeferenced units`, and `Resolution` as `30` and `30`.
+1. Click and check `Urban_2018` layer, click `Raster` in menu bar, `Conversion` > `Rasterize`. Set `Field to use for a burn-in value` as `URBAN`, `A fixed value to burn` as `Not set`, `output raster size units` as `Georeferenced units`, and `Resolution` as `30` and `30`.
 2. Set `Output extent` as `211290.7980001302785240, 236760.7980001302785240, 322863.2411839000415057, 359223.2411839000415057`. Set `Nodata value` as `Not set`. Click `Run`.
 Note: Numbers of the output extent came from the layer with the largest layer extent. Keeping the output extent same for all layers is important when loading them on NetLogo.
 
@@ -64,15 +69,15 @@ Note: If you don't save as, these temporary files will disappear next time you o
 
 ![](statics/Sup2_rasterize2.PNG) 
 
-#### Question 1. Uncheck all layers except two `Urban_2018` layers and `Boundary`. Compare `Urban_2018.tif` with `Urban_2018.shp` by turning on and off the check of the raster layer. How is the raster data different from vector data?
+#### Question 1. Uncheck all layers except two `Urban_2018` layers and `Boundary`. Compare `Urban_2018.tif` with `Urban_2018.shp` by turning on and off the check of the raster layer. Zoom into the layer. How is the raster data different from vector data?
 
-#### Question 2. Zoom into the `Urban_2018` layer. You will see that the pixels are in a grid. Check the size of the grid by right-clicking on the layer and clicking `Properties`. In the `Information` tab, what are the dimensions and pixel size? (Note: pixel size is in meters)
+#### Question 2. Zoom into the `Urban_2018.tif` layer. You will see that the pixels are in a grid. Check the size of the grid by right-clicking on the layer and clicking `Properties`. In the `Information` tab, what are the dimensions and pixel size? (Note: pixel size is in meters)
 
 #### Question 3. In real life, what would be the dimension (width and length on a map) of this city of Sejong, South Korea in kilometers? (hint: real distance = dimension * pixel size). Find this city on [Google Map](https://www.google.com/maps/place/Sejong+City+Hall/@36.5675237,127.1919615,11z/data=!4m5!3m4!1s0x357ad2abe6c47565:0x4da638f5f9f95e37!8m2!3d36.4800984!4d127.2890354) to see whether your calculation makes sense. You can search Sejong City Hall, and refer to the grey dotted line as the city boundary.
 
 ![](statics/Sup2_google_map.PNG) 
 
-4. Uncheck `Urban_2018` layer. Click and check `Excluson_2014` layer, click `Raster` in menu bar, `Conversion` > `Rasterize`. Set `Field to use for a burn-in value` as `EXCLUSION`, `A field value to burn` as `Not set`, `output raster size units` as `Georeferenced units`, and `Resolution` as `30` and `30`.
+4. Uncheck `Urban_2018` layer. Click and check `Excluson_2014` layer, click `Raster` in menu bar, `Conversion` > `Rasterize`. Set `Field to use for a burn-in value` as `EXCLUSION`, `A fixed value to burn` as `Not set`, `output raster size units` as `Georeferenced units`, and `Resolution` as `30` and `30`.
 5. Set `Output extent` as `211290.7980001302785240, 236760.7980001302785240, 322863.2411839000415057, 359223.2411839000415057`. Set `Nodata value` as `Not set`. Click `Run`.
 
 ![](statics/Sup2_rasterize3.PNG) 
