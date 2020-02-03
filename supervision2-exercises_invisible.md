@@ -3,6 +3,7 @@ layout: default
 title: Supervision 2
 nav_order: 4
 nav_exclude: true
+search_exclude: true
 ---
 
 # Supervision 2 (27-28 February, 2020)
