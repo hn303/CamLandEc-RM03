@@ -1,16 +1,7 @@
 ---
-output:
-<<<<<<< HEAD
-  pdf_document: default
-  html_document: default
-=======
-  pdf_document:
-    latex_engine: xelatex
-    highlight: haddock
 layout: default
 nav_order: 2
 title: Supervision 1
->>>>>>> b624a6cde91bcba402ea630af3f46a58697dfd90
 ---
 
 
