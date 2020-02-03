@@ -1,5 +1,4 @@
 ---
----
 title: "Supervision 2"
 nav_exclude: yes
 nav_order: 5
