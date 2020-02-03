@@ -66,6 +66,7 @@ exclude:
 
 
 show_excerpts: true
+search_enabled: true
 
 highlighter: rouge
 
