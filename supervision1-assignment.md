@@ -8,9 +8,9 @@ nav_order: 3
 <script type="text/javascript" src="{{ "/assets/js/dark-mode-preview.js" | absolute_url }}"></script>
 
 # Assignment for Supervision 1
-**Submission Dealine: 20 Feb(Thursday) 12:00pm 2020**
+**Submission Dealine: 20 Feb(Thursday) 12:00pm, 2020**
 
-Please answer following question in a new .doc file (with numbering) and sent the digital file to hn303@cam.ac.uk by the deadline.
+Please numbering your answer for following questiones in a new .doc file and sent the digital file to hn303@cam.ac.uk by the deadline.
 
 ## Instructions
 1. If you missed supervision for some reason, please check Supervision 1[supervsion_exercies.md]. Instructions covered in the supervision are not fully explained in this assignment document. Please review supervision exercises if you have trouble with some tasks.
