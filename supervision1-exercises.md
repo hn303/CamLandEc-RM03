@@ -53,7 +53,7 @@ Note: after adding `Project home`, you can find `Project Home` directory showing
 Note: You may be prompted a window to conduct CRS transformation, click ok to continue.<br>
 ![](statics/QGIS_import.png)
 
-3: Check added layer in `Layer Panel`. You can turn on and off layer by checking or unchecking it. Before you perform any action to a layer, please make sure the target layer is ticked and selected with hightlight.
+3: Check added layer in `Layer Panel`. You can turn on and off layer by checking or unchecking it. Before you perform any action to a layer, please make sure the target layer is checked and selected with hightlight.
 
 **Attributes table**
 - How to open attribute table?
@@ -69,9 +69,9 @@ Note: You may be prompted a window to conduct CRS transformation, click ok to co
 Note: You don't need to type expression manually, expand `Field and Values` option in the right panel and  double click `lad15nm`. The field name will show in the expression window. Once you select the field `lad15nm`, click `All Unique` button on the right, it will show a list of unique values from the field of `lad15nm`. Double click it to add to your expression.<br>
 ![](statics/QGIS_select3.png)
 
-4. Once select elements you need, right-click this layer and nevigative to `Export` > `Save Selected Features As`. Name this file as `Cam_City.shp`. This exported shapefile should include these wards: Abbey, Arbury, Castle, Cherry Hinton, Coleridge, East Chesterton, King’s Hedges, Market, Newnham, Petersfield, Queen Edith’s, Romsey, Trumpington and West Chesterton. 
+4. Once select elements you need, right-click this layer and click `Export` > `Save Selected Features As`. Name this file as `Cam_City.shp`. This exported shapefile should include these wards: Abbey, Arbury, Castle, Cherry Hinton, Coleridge, East Chesterton, King’s Hedges, Market, Newnham, Petersfield, Queen Edith’s, Romsey, Trumpington and West Chesterton. 
 
-5. Check other functions in attribute table: `select all`, `invert selection`, `deselect all`
+5. Try other functions in attribute table: `select all`, `invert selection`, `deselect all`
 
 
 
@@ -83,6 +83,9 @@ Note: You don't need to type expression manually, expand `Field and Values` opti
 2. Nevigate to menu bar click `Layer` > `Add Layer` > `Add Delimited Text Layer`. Browse the `cambridge-services-geolocated-csv-2-standardized.csv` just dowloaded and change the layer name to `Cam_Services`. In the section of File Format, choose CSV. In the Geometry Definition section, choose `Point coordinates` and select `Longitude` and `Latitude` fields as X Y fields respectively. Normally the Geometry definition secction will be auto-populated if it finds a suitable X and Y coordinate fields. Then choose the right CRS (EPSG: 4277 - OSGB 1936) for this file. Finally, click add and you will find a point layer.<br>
 ![](statics/QGIS_csv.png)
 
+```
+When you finished above parts, please inform superviors.
+```
 
 **Join layer**
 - How can we link cambridge local services with district information?
@@ -90,7 +93,7 @@ Note: You don't need to type expression manually, expand `Field and Values` opti
 1. Nevigate to `Processing` > `Toolbox` and search `Join  attributes by location`. In the prompted window, choose `Cam_Services` as input layer and `Cam_City` as join layer. In the geometric predicate stection, choose `intersects`. In the join type section, choose `create seperate feature for each located feature (one-to-many)`.<br>
 ![](statics/QGIS_join.png)
 
-2. Check attribute table of `Joined layer` and you will find district information for each service item.
+2. Open attribute table of `Joined layer` and you will find district information for each service item.
 
 ### Digitizing Map Data (15 mins)
 - How to install a plugin in QGIS?
@@ -139,7 +142,7 @@ Note: You computer must be connected to the internet to add basemap as the image
 4. Nevigate to `Processing` > `Toolbox` and search `Clip`. In the prompted window, choose `n52_e000_1arc_v3` as input layer and `Cam_City_dissolved` as mask layer. Save extracted raster as `Cam_Strm1.tif`.<br>
 ![](statics/QGIS_clip.png)
 
-5. Change sympology: Select `Cam_Strm1.tif` and right-click to the properties option. Switch to `Symbology` tab and change `Render type` to `Paletted/Unique values`. Expand `Color ramp` section and choose `Spectral` . Then click `Classify` button to automaticlly assign color to each value. Back to `Color ramp` section and tick `Invert Color Ramp` option. <br>
+5. Change sympology: Select `Cam_Strm1.tif` and right-click to the properties option. Switch to `Symbology` tab and change `Render type` to `Paletted/Unique values`. Expand `Color ramp` section and choose `Spectral` . Then click `Classify` button to automaticlly assign color to each value. Back to `Color ramp` section and check `Invert Color Ramp` option. <br>
 Note: if your layer is not showing, change order of layers in `Layer Panel`.<br>
 ![](statics/QGIS_symbology.png)
 ![](statics/QGIS_cam_dem.png)
