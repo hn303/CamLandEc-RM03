@@ -4,7 +4,6 @@
 .Rproj
 
 # Files
-*.pdf
 dataset/
 
 # Session Data files
