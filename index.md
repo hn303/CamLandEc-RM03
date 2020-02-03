@@ -9,8 +9,7 @@ nav_order: 1
 
 # RM03: Spatial Analysis and Modelling
 Welcome to 2020 lent term module RM03 : Spatial Analysis and Modelling.  
-This repo is created by [**Haifeng Niu**](https://haifengniu.com/en/) and contributed by Heeseo Rain Kwon and Paul Scherer*. Meterials of supervision could be found here.  
-
+Meterials of supervision could be found below.
 
 ## Course outline
 
@@ -30,3 +29,4 @@ This repo is created by [**Haifeng Niu**](https://haifengniu.com/en/) and contri
 |Revision Supervision|TBC||
 
 
+This repo is created by [**Haifeng Niu**](https://haifengniu.com/en/) and contributed by Heeseo Rain Kwon, Paul Scherer* and Yiqiao Chen*.   
