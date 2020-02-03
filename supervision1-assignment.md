@@ -11,7 +11,7 @@ nav_order: 3
 **Submission Date**: Before Supervision 2
 
 ## Instructions
-1. If you missed supervision for some reason, please check Supervision 1[supervsion_exercies.md]. Intructions covered in the supervision are not fullly expaned in assginment document. Please review supervision exercises if you have trouble with some tasks.
+1. If you missed supervision for some reason, please check Supervision 1[supervsion_exercies.md]. Instructions covered in the supervision are not fully explained in this assignment document. Please review supervision exercises if you have trouble with some tasks.
 2. Please download and install QGIS standalone install version according to your platform:[Download QGIS](https://qgis.org/en/site/forusers/download.html)
 3. Read through the tasks carefully. You may face problems if you overlook any of the steps.
 4. Remember to save the QGIS document regularly. 
@@ -20,10 +20,10 @@ Note: functions and filename are `highlighted` in this document.
 
 
 ## Assignment overview
-In this assignment, you will extract the wards in the Cambridge city area using the Cambridgeshire data. After that, you will link the population data to the respective wards, and compute population density of each ward. Lastly, you will symbolize population density in cambridge.
+In this assignment, you will extract the wards in the Cambridge city area using the Cambridgeshire data. After that, you will link the population data to the respective wards, and compute the population density of each ward. Lastly, you will symbolize population density in Cambridge.
 
 ## Tasks
-1. Download `Cambridge District Wards` data of Cambridgeshire from: [Cambridgeshire Insight Open Data](https://data.cambridgeshireinsight.org.uk/dataset/wardselectoral-divisions/resource/a5da0436-1142-48a9-8d82-d070fae138aa) and import into QGIS.
+1. Download `Cambridge District Wards` data of Cambridgeshire from [Cambridgeshire Insight Open Data](https://data.cambridgeshireinsight.org.uk/dataset/wardselectoral-divisions/resource/a5da0436-1142-48a9-8d82-d070fae138aa) and import into QGIS.
 
 2. By using `Select features` or `Select features using an expression` to create a new shapefile for the wards of Cambridge City. This shapefile will include these wards: Abbey, Arbury, Castle, Cherry Hinton, Coleridge, East Chesterton, King's Hedges, Market, Newnham, Petersfield, Queen Edith's, Romsey, Trumpington and West Chesterton. Name this file as `Cam_City.shp` with choosing CRS EPSG:27700.<br>
 Hint: Use `Select features` or `Selection using expression` command to export the data to a new shapefile.<br>
@@ -34,17 +34,17 @@ Hint: Use `Select features` or `Selection using expression` command to export th
 4. Open it in excel and comprise only one sheet, containing five columns, Ward Code, Ward name, Y2011, Y2016 and Y2021.<br>
 ![](statics/Assignment1_pop.png)
 
-5. Import comprised csv file into QGIS.
+5. Import comprised CSV file into QGIS.
 
 **Question A: Which ward has the highest and lowest population in 2011, 2016 and 2021? Tabulate and also write respective population.**
 
-6. Right-click the `Cam_City` and click `Properties` option. Switch to the `Join` section on the side and click `add` button to join the population table `2015-based population forecasts for Cambridge` to the `Cam_City` shapefile. Select `Ward name` as Join field and `wd15nm` as Target field. Once this is done, the Attribute Table of `Cam_City` shapefile should show the Ward name and the population of each ward in 2011, 2016 and 2021.<br>
+6. Right-click the `Cam_City` and click the `Properties` option. Switch to the `Join` section on the side and click the `Add` button to join the population table `2015-based population forecasts for Cambridge` to the `Cam_City` shapefile. Select `Ward name` as Join field and `wd15nm` as Target field. Once this is done, the Attribute Table of `Cam_City` shapefile should show the Ward name and the population of each ward in 2011, 2016 and 2021.<br>
 ![](statics/Assignment1_join.png)
 ![](statics/Assignment1_joined.png)
 
 7. Use the `Export` command to create a new shapefile, name it as `Cam_City_Pop.shp`. The Attribute Table of this shapefile must be showing the ward names as well as the corresponding population in 2011, 2016 and 2021.<br>
 
-8. In the Attribute Table of `Cam_City_Pop` shapefile, click `Open field calculator`. Create a new field named as `Ward_Area` and set the output field type to ‘Decimal number (real)’, Precision = 4 and Scale = 2. In the expression window, input `$area/1000000` and We will compute the area of each ward in km2 (sq kilometre).<br>
+8. In the Attribute Table of `Cam_City_Pop` shapefile, click `Open field calculator`. Create a new field named as `Ward_Area` and set the output field type to ‘Decimal number (real)’, Precision = 4 and Scale = 2. In the expression window, input `$area/1000000` and We will compute the area of each ward in km2 (sq kilometres).<br>
 Note: you can find `$area` in the right list under `Geometry` section.<br>
 ![](statics/Assignment1_area.png)
 
@@ -52,7 +52,7 @@ Note: you can find `$area` in the right list under `Geometry` section.<br>
 
 **Question C: Which ward is the largest and smallest in terms of area? Also note their areas in km2.**
 
-9. In the Attribute Table of `Cam_City_Pop` shapefile, click `Open field calculator`. Create another new field named as `Pop_Den11` and set the output field type to ‘Decimal number (real)’, Precision = 7 and Scale = 2. In the expression window, input `Pop_Y2011/Ward_Area` and We will compute population density, number of popuation per km2 in each ward. Repeat this step to create  `Pop_Den16` and `Pop_Den21`.<br> 
+9. In the Attribute Table of `Cam_City_Pop` shapefile, click `Open field calculator`. Create another new field named as `Pop_Den11` and set the output field type to ‘Decimal number (real)’, Precision = 7 and Scale = 2. In the expression window, input `Pop_Y2011/Ward_Area` and We will compute population density, number of population per km2 in each ward. Repeat this step to create  `Pop_Den16` and `Pop_Den21`.<br> 
 ![](statics/Assignment1_density.png)
 
 
