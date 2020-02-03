@@ -1,15 +1,9 @@
 ---
-title: "Supervision 2"
-nav_exclude: yes
-nav_order: 4
-<<<<<<< HEAD
-output: pdf_document
-layout: default
-=======
-nav_exclude: true
-search_exclude: true
->>>>>>> b624a6cde91bcba402ea630af3f46a58697dfd90
+output:
+  pdf_document: default
+  html_document: default
 ---
+
 
 # Supervision 2 (27-28 February, 2020)
 
