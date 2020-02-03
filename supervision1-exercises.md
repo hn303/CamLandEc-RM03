@@ -145,4 +145,4 @@ Note: if your layer is not showing, change the order of layers in `Layer Panel`.
 ![](statics/QGIS_symbology.png)
 ![](statics/QGIS_cam_dem.png)
 
-6. Check your raster map with [Camrbidge Terrain Map](https://en-gb.topographic-map.com/maps/dgf/Cambridge/)
+6. Check your raster map with [Camrbidge Terrain Map](https://en-gb.topographic-map.com/maps/dgf/Cambridge/){:target="_blank"}
