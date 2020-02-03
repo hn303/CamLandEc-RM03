@@ -12,7 +12,7 @@ nav_order: 3
 
 ## Instructions
 1. If you missed supervision for some reason, please check Supervision 1[supervsion_exercies.md]. Instructions covered in the supervision are not fully explained in this assignment document. Please review supervision exercises if you have trouble with some tasks.
-2. Please download and install QGIS standalone install version according to your platform:[Download QGIS](https://qgis.org/en/site/forusers/download.html)
+2. Please download and install QGIS standalone install version according to your platform:[Download QGIS](https://qgis.org/en/site/forusers/download.html){:target="_blank"}
 3. Read through the tasks carefully. You may face problems if you overlook any of the steps.
 4. Remember to save the QGIS document regularly. 
 5. All figures in the assignment are for illustration purpose only and do not necessarily depict the actual data.<br>
@@ -23,13 +23,13 @@ Note: functions and filename are `highlighted` in this document.
 In this assignment, you will extract the wards in the Cambridge city area using the Cambridgeshire data. After that, you will link the population data to the respective wards, and compute the population density of each ward. Lastly, you will symbolize population density in Cambridge.
 
 ## Tasks
-1. Download `Cambridge District Wards` data of Cambridgeshire from [Cambridgeshire Insight Open Data](https://data.cambridgeshireinsight.org.uk/dataset/wardselectoral-divisions/resource/a5da0436-1142-48a9-8d82-d070fae138aa) and import into QGIS.
+1. Download `Cambridge District Wards` data of Cambridgeshire from [Cambridgeshire Insight Open Data](https://data.cambridgeshireinsight.org.uk/dataset/wardselectoral-divisions/resource/a5da0436-1142-48a9-8d82-d070fae138aa){:target="_blank"} and import into QGIS.
 
 2. By using `Select features` or `Select features using an expression` to create a new shapefile for the wards of Cambridge City. This shapefile will include these wards: Abbey, Arbury, Castle, Cherry Hinton, Coleridge, East Chesterton, King's Hedges, Market, Newnham, Petersfield, Queen Edith's, Romsey, Trumpington and West Chesterton. Name this file as `Cam_City.shp` with choosing CRS EPSG:27700.<br>
 Hint: Use `Select features` or `Selection using expression` command to export the data to a new shapefile.<br>
 ![](statics/Assignment1_cambridge.png)
 
-3. Download Cambridge population estimates data(2015) from:[2015-based population forecasts for Cambridge](https://data.cambridgeshireinsight.org.uk/dataset/2015-based-population-and-dwelling-stock-forecasts-cambridgeshire-and-peterborough-0)
+3. Download Cambridge population estimates data(2015) from:[2015-based population forecasts for Cambridge](https://data.cambridgeshireinsight.org.uk/dataset/2015-based-population-and-dwelling-stock-forecasts-cambridgeshire-and-peterborough-0){:target="_blank"}
 
 4. Open it in excel and comprise only one sheet, containing five columns, Ward Code, Ward name, Y2011, Y2016 and Y2021.<br>
 ![](statics/Assignment1_pop.png)
