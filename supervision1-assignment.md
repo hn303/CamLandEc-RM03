@@ -2,6 +2,8 @@
 layout: default
 title: Assignment 1
 nav_order: 3
+nav_exclude: true
+search_exclude: true
 ---
 <button class="btn js-toggle-dark-mode">Dark color scheme</button>
 
