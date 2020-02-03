@@ -8,7 +8,7 @@ nav_order: 3
 <script type="text/javascript" src="{{ "/assets/js/dark-mode-preview.js" | absolute_url }}"></script>
 
 # Assignment for Supervision 1
-**Submission Date**: Before Supervision 2
+**Submission Dealine**: 20 Feb(Thursday) 12:00pm
 
 ## Instructions
 1. If you missed supervision for some reason, please check Supervision 1[supervsion_exercies.md]. Instructions covered in the supervision are not fully explained in this assignment document. Please review supervision exercises if you have trouble with some tasks.
