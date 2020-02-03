@@ -1,18 +1,9 @@
 ---
 output:
-  pdf_document:
-    latex_engine: xelatex
-    highlight: haddock
-layout: default
-nav_order: 2
-<<<<<<< HEAD
-title: Supervision 1
-mainfont: Arial
-
-=======
-title: Supervision 1 (12-13 February, 2020)
->>>>>>> a0a97dac56d9d13a47acf80f13737a2f79ac3962
+  pdf_document: default
+  html_document: default
 ---
+
 
 <button class="btn js-toggle-dark-mode">Dark color scheme</button>
 
