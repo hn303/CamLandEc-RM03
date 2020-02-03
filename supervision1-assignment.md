@@ -40,7 +40,7 @@ Hint: Use `Select features` or `Selection using expression` command to export th
 
 **Question A: Which ward has the highest and lowest population in 2011, 2016 and 2021? Tabulate and also write respective population.**
 
-6. Right-click the `Cam_City` and click the `Properties` option. Switch to the `Join` section on the side and click the `Add` button to join the population table `2015-based population forecasts for Cambridge` to the `Cam_City` shapefile. Select `Ward name` as Join field and `wd15nm` as Target field. Once this is done, the Attribute Table of `Cam_City` shapefile should show the Ward name and the population of each ward in 2011, 2016 and 2021.<br>
+6. Right-click the `Cam_City` and click the `Properties` option. Switch to the `Joins` section on the side and click the `Add` button to join the population table `2015-based population forecasts for Cambridge` to the `Cam_City` shapefile. Select `Ward name` as Join field and `wd15nm` as Target field. Once this is done, the Attribute Table of `Cam_City` shapefile should show the Ward name and the population of each ward in 2011, 2016 and 2021.<br>
 ![](statics/Assignment1_join.png)
 ![](statics/Assignment1_joined.png)
 
