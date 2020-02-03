@@ -1,8 +1,9 @@
 ---
-layout: default
-title: Supervision 2
+title: "Supervision 2"
+nav_exclude: yes
 nav_order: 5
-nav_exclude: true
+output: pdf_document
+layout: default
 ---
 
 # Assignment for Supervision 2
