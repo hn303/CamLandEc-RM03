@@ -3,6 +3,7 @@ layout: default
 title: Supervision 2
 nav_order: 5
 nav_exclude: true
+search_exclude: true
 ---
 
 # Assignment for Supervision 2
