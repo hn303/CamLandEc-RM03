@@ -2,8 +2,13 @@
 title: "Supervision 2"
 nav_exclude: yes
 nav_order: 4
+<<<<<<< HEAD
 output: pdf_document
 layout: default
+=======
+nav_exclude: true
+search_exclude: true
+>>>>>>> b624a6cde91bcba402ea630af3f46a58697dfd90
 ---
 
 # Supervision 2 (27-28 February, 2020)
@@ -68,15 +73,15 @@ In this supervision, you will familiarise yourself with geoprocessing raster dat
 
 Note: As this supervision is for introducing how QGIS and raster data can be used on NetLogo, we cannot cover many other functions available on QGIS. Please refer to [QGIS Training Manual](https://docs.qgis.org/2.8/en/docs/training_manual/create_vector_data/index.html) for more information.
 
-### Introducing NetLogo with two exercises
+### Introducing NetLogo with two exercises (15min)
 
-#### Setup work environment for NetLogo (5min)
+#### Setup work environment for NetLogo
 1. Please download and install `NetLogo (6.1.1)` according to your platform. We recommend downloading `Windows (64-bit)`, `Mac OS X`, or `Linux (64-bit)`: [NetLogo Download Page](https://ccl.northwestern.edu/netlogo/6.1.1/). 
 2. Continue using `rm03_YourCRSid_sup2` as your working directory.
 3. Launch NetLogo. The interface will be explained along with exercises. Note: You can refer to [NetLogo User Manual (6.1.1)](https://ccl.northwestern.edu/netlogo/docs/) for more detailed information.
 4. In `File` > `Models Library`, you can find a collection of sample models to explore. There are many sample models available on the User Community Models web page.
 
-#### Exercise 1: Wolf Sheep Predation (5min)
+#### Exercise 1: Wolf Sheep Predation
 1. Open `Wolf Sheep Predation` from `Models Library` under `Biology` folder.
 
 ![](statics/Sup2_wolfsheep1.PNG)
@@ -91,31 +96,32 @@ Note: As this supervision is for introducing how QGIS and raster data can be use
 ![](statics/Sup2_wolfsheep2.PNG)
 
 
-#### Exercise 2: Game of Life (10min)
+#### Exercise 2: Game of Life (if you have time, go through this at the supervision, if not, at your free time)
 1. Open `Life` from `Models Library` under `Computer Science` > `Cellular Automata`.
 2. Game of Life is a simple cellular automata (CA) model where the state of the cells (patches) change according to behavioral rules. As the simulation runs, you can find recurring shapes like gliders and blinkers. Note: You can refer to [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) for more detailed information.
 3. Click `setup-random` > `go-forever` to start the simulation, and click `go-forever` again to stop the simulation.
 
 ![](statics/Sup2_gameoflife1.PNG)
 
-4. Let's check the `Code` tab. In line 2-3, `living?` and `live-neighbors` are variables. In line 8, `ask patches [ cell-death ]` means to [ask](http://ccl.northwestern.edu/netlogo/docs/dict/ask.html) patches to run the `[ cell-death ]` command. In line 26, `[ cell-death ]` command sets `living?` as false, and sets patch color as foreground color. `[ cell-birth ]` command does the opposite.
-5. Line 14 means "ask patches to run the [ifelse](http://ccl.northwestern.edu/netlogo/docs/dict/ifelse.html) command. ifelse commands are very important in language-based rules. Line 15-17 means "if `random-float 100 < initial-density` reports true (in other words, "if a `random floating point number >= 0 but less than 100` is less than the `initial density (default=35)`"), run the `[ cell-death ]` command, and otherwise, run the `[ cell-birth ]` command. This part makes each cell to check the state of itself.
+4. Let's check the `Code` tab. (Note: If you don't see line numbers, for Windows users, on the `Menu bar`, click `Tools` > `Preferences` and check `Show Line Numbers`. For Mac users, on the `Menu bar`, click `NetLogo` > `Preferences` and check `Show Line Numbers`.) 
+5. In line 2-3, `living?` and `live-neighbors` are variables. In line 8, `ask patches [ cell-death ]` means to [ask](http://ccl.northwestern.edu/netlogo/docs/dict/ask.html) patches to run the `[ cell-death ]` command. In line 26, `[ cell-death ]` command sets `living?` as false, and sets patch color as foreground color. `[ cell-birth ]` command does the opposite.
+6. Line 14 means "ask patches to run the [ifelse](http://ccl.northwestern.edu/netlogo/docs/dict/ifelse.html) command. ifelse commands are very important in language-based rules. Line 15-17 means "if `random-float 100 < initial-density` reports true (in other words, "if a `random floating point number >= 0 but less than 100` is less than the `initial density (default=35)`"), run the `[ cell-death ]` command, and otherwise, run the `[ cell-birth ]` command. This part makes each cell to check the state of itself.
 Note: You can refer to [NetLogo Dictionary](http://ccl.northwestern.edu/netlogo/docs/index2.html) when trying to understand the codes.
 
 ![](statics/Sup2_gameoflife2.PNG)
 
-5. Line 33 means "set the variable `live-neighbors` to `count how many neighboring cells are alive`" and line 32 asks patches to run this command. This part makes each cell to check the state of its eight surrounding neighbors. Note: [neighbors](http://ccl.northwestern.edu/netlogo/docs/dict/neighbors.html).
-6. Line 38 asks patches to run another ifelse command. The rule is:
+7. Line 33 means "set the variable `live-neighbors` to `count how many neighboring cells are alive`" and line 32 asks patches to run this command. This part makes each cell to check the state of its eight surrounding neighbors. Note: [neighbors](http://ccl.northwestern.edu/netlogo/docs/dict/neighbors.html).
+8. Line 38 asks patches to run another ifelse command. The rule is:
 - If there is exactly 3 alive neighbors, the cell becomes alive. (birth)
 - If there are less than 2 alive neighbors, the cell dies. (under-population)
 - If there are more than 3 alive neighbors, the cell dies. (over-population)
 - If there are 2 alive neighbors, the cell remains in the state it is in. (sustainable life)
-7. Try writing this rule into a code, as it is. See how this can be shorted to the code written in the model.
+9. Try writing this rule into a code, as it is. See how this can be shorted to the code written in the model.
 
 ![](statics/Sup2_gameoflife3.PNG)
 
-8. In line 33, try changing `neighbors` to `neighbors4` and see how this affects the simulation.
-9. Let's add one more command to the model. Add the following lines below the `to cell-death` part. This command makes this cell colored in green to kill the four surrounding patches.
+10. In line 33, try changing `neighbors` to `neighbors4` and see how this affects the simulation.
+11. Let's add one more command to the model. Add the following lines below the `to cell-death` part. This command makes this cell colored in green to kill the four surrounding patches.
 
 `to wild-birth`  
   `;; kills all of its neighbours`  
@@ -124,7 +130,7 @@ Note: You can refer to [NetLogo Dictionary](http://ccl.northwestern.edu/netlogo/
   `set pcolor green`  
 `end`
 
-10. Also, let's add a new rule for `wild-birth`. Add the following lines below the `ask patches [ ifelse ]` part. This rule runs the same ifelse command on the 1,000 randomly chosen patches, this time for `wild-birth`. (Note: [n-of](http://ccl.northwestern.edu/netlogo/docs/dict/n-of.html)). What happens to the simulation this time?
+12. Also, let's add a new rule for `wild-birth`. Add the following lines below the `ask patches [ ifelse ]` part. This rule runs the same ifelse command on the 1,000 randomly chosen patches, this time for `wild-birth`. (Note: [n-of](http://ccl.northwestern.edu/netlogo/docs/dict/n-of.html)). What happens to the simulation this time?
 
 `ask n-of 1000 patches`  
   `[ ifelse live-neighbors = 3`  
@@ -144,9 +150,84 @@ Note: You can refer to [NetLogo Dictionary](http://ccl.northwestern.edu/netlogo/
 2. Unzip `Urban_Growth_Model-master.zip` and further unzip `urban_growth_model.zip`. In the `urban_growth_model` > `urban model` folder, open `Urbanization.nlogo`. 
 3. Click `setup` > `go` to try out. Inside `urban model` folder, open `data` folder, and you will see the asc files of Santa Fe, New Mexico. Copy-paste the five asc raster files that we created for Sejong: `Slope_2014.asc`, `Urban_2018.asc`, `Exclusion_2014.asc`, `Road_2018.asc` and `Boundary.asc`.
 4. `File` > `Save As` the netlogo file to `Urbanization_sejong.nlogo`. We will make changes to the code to suit our Sejong data. 
-5. Go to the `code` tab. `extensions [gis]` is used for this model. (Note: More information on [NetLogo GIS extension](https://ccl.northwestern.edu/netlogo/docs/gis.html). `globals` outlines the global variables accessible by all agents. `patches-own` outlines the variables that all patches can use. 
-- In line 22, for `urban`, change the description to: `;;binary, 0=non-urban, 100=urban
-- In line 24, for `road`, change the description to: `;;discrete, 0=non-road, 25=small road, 50=medium road, 75=large road, 100=expressway`. 
-- In line 25, for `road1`, change the description to: `;;used to set run_value for road influenced growth. same properties as road.`
-- In line 32, for `excluded`, change the description to: `;;binary, 0=non-excluded, 100=excluded. The excluded image defines all locations that are resistant to urbanization.`
+
+![](statics/Sup2_sleuth0.PNG)
+
+### Editing the code to suit our data
+1. Go to the `code` tab. `extensions [gis]` is used for this model. (Note: More information on [NetLogo GIS extension](https://ccl.northwestern.edu/netlogo/docs/gis.html). `globals` outlines the global variables accessible by all agents. 
+2. `patches-own` outlines the variables that all patches can use. 
+- In line 25, for `road1`, change `from 1 to 4` to `from 25 to 100`.
+- In line 32, for `excluded`, change `0 if excluded` to `0=non-excluded, 100=excluded`.
 - Add `boundary ;;binary, 0=outside boundary, 1=within boundary`
+3. Optional: You can load the Santa Fe `asc` files on QGIS to see which code refers to what. In Santa Fe raster files,
+- Urban: 1 = non-urban, 2 = urban
+- Road: 1 = small road, 2 = medium road, 3 = large road, 4 = expressway
+- Exclusion: 0=excluded
+- Slope: Discrete. Whole number between 1 and 21.
+4.Back to the `Code` tab, in the `to setup` section, `ca` means `clear all`. We cannot go through all codes one by one due to time limitation, so you can refer to [NetLogo Dictionary] (http://ccl.northwestern.edu/netlogo/docs/index2.html) in your free time. Also, the setting of values and growth rules etc. are based on the original SLEUTH model (details can be seen in [Project Gigapolis website](http://www.ncgia.ucsb.edu/projects/gig/About/bkOverview.html) so we won't go through in detail. The objective of this exercise in this supervision is to introduce how raster maps generated in QGIS can be loaded on NetLogo and how a model directly applicable to urban planning like SLEUTH urban growth model can run on NetLogo based on a set of rules.
+5. Line 62 asks road patches to set run_value. Change `road = 1` to `road > 0` and `road1 / 4` to `road1 / 100` since in the raster data for Sejong, 0=non-road and road value ranges up to 100.
+6. In line 65, also change `road = 1` to `road > 0`.
+
+![](statics/Sup2_sleuth1.PNG)
+![](statics/Sup2_sleuth2.PNG)
+
+7. In line 83, change `road = 1` to `road > 0`.
+9. In the `to load_data` section, change the Santa Fe data to `Urban_2018.asc`, `Slope_2014.asc`, `Road_2018.asc`, and `Exclusion_2014.asc`. 
+
+![](statics/Sup2_sleuth3.PNG)
+
+10. In line 101, disable the `set landuse-dataset` row by putting `;;` in front as we will not include this for this exercise (landuse data is not crucial for SLEUTH growth rules).
+11. Add in line 103, `set boundary_dataset gis:load-dataset "data/Boundary.asc"`. This is because Sejong data uses the administrative boundary while Santa Fe data uses the whole of the rectangular extent.
+12. In line 108, change `urban = 2` to `urban > 0` because urban cells in Santa Fe raster are coded 2 while in Sejong, 100. This model can be extended to include urban data as continuous (e.g. urban intensity) rather than binary, therefore, `urban > 0` is used rather than `urban = 100`. 
+13. Add in line 116, `gis:apply-raster boundary-dataset boundary`
+14. Add in line 117, `ask patches [if boundary = 0 [set pcolor black]]
+15. In line 119, disable `gis:apply-raster landuse-dataset landuse` by putting `;;` in front.
+
+![](statics/Sup2_sleuth4.PNG)
+
+16. In line 161, change to `ask n-of tenpercent_urban (patches with [urban = 1])`. This is to fasten this procedure.
+17. In line 170, 171 and 186, change `road = 1` to `road > 0`.
+
+![](statics/Sup2_sleuth4_1.PNG)
+
+18. In line 210, change `excluded = 0` to `excluded = 100`. 
+19. Add in line 211 `if boundary = 0 [set suitable 0]`.
+
+![](statics/Sup2_sleuth4_2.PNG)
+
+20. In line 240, change `road = 1` to `road > 0`.
+
+![](statics/Sup2_sleuth4_3.PNG)
+
+21. These do not affect the simulation, for optionally: In line 258, change `531` to `849`.
+22. In line 259, change `394` to `1212`.
+23. In line 260, change `-901575` to `211290.798000130308`
+24. In line 261, change `1442925` to `322863.241183900100`.
+25. Add in line 279 `to-report tenpercent_urban`
+26. Add in line 280 `report (round (count patches with [urban = 1] * 0.10))`
+27. Add in line 281 `end`. This is to define the value `tenpercent_urban` introduced earlier.
+28. Click `Check` bottom next to `Find`. (Note: If an error message comes up for some reason, click `Dismiss` and try again twice. On the third go, the map will be loaded fine. If it still occurs, it might be due to typo, etc. Let one of the supervisors know, and in the interest of time, download the completed file [Urbanization_sejong.nlogo](data/Urbanization_sejong.nlogo) so that we can carry on. You can either put this file in the same working directory, or you can copy-paste this file's code to the NetLogo file that you have been working on.
+
+![](statics/Sup2_sleuth4_4.PNG)
+
+### Changinng the model settings and running the simulation
+
+1. Go back to `Interface` tab, click `setup`. You will see that the Sejong data have been loaded.
+2. Click `go` and a few ticks and click `go` again. What happens?
+3. Turn on the `road_influence` switch and run the model again. (Note: this may  How is it different from before?
+4. Right-click on the map and click `Edit`. Change `max-pxcor` to `848` and `max-pycor` to `1211`. You will see that the Box is now changed to Sejong's raster dimension: 849 x 1212. Set patch size as `0.3` (or `0.2` and `0.1` depending on your screen resolution. Try several.) so that we can see the whole screen. (Note: If an error message comes up for some reason, click `Dismiss` and try again twice. On the third go, the map will be loaded fine.)
+
+![](statics/Sup2_sleuth5.PNG)
+![](statics/Sup2_sleuth6.PNG)
+
+5. The Sejong masterplan sets that development is not possible on land with a slope greater than 20 degrees. 20 degrees slope equates to 36.4 percent slope. (Note: a simple degree to percent slope can be found online, for example [Calcunation.com](https://www.calcunation.com/calculator/degrees-to-percent.php). Move the `critical_slope` bar to `36` and see what changes.
+6. The best-fit of five coefficients can be calculated through calibration which requires `extensions [r]` and many more. For more information on these coefficients, you can look at [Project Gigapolis webpage](http://www.ncgia.ucsb.edu/projects/gig/About/gwCoef.htm).
+7. Right-click anywhere on the map and click `inspect patch` You will see the properties of the selected cell e.g. urban, road, slope, excluded...
+
+![](statics/Sup2_sleuth7.PNG)
+
+8. You can right-click on the `Percentage urbanized` chart and monitor and the `export_data` button along with the information and move this closer to the map.
+9. Currently, `Percentage urbanized` is set without the boundary in consideration. Right-click on the `Percentage urbanized` monitor and change the reporter to `(count patches with [urban = 1 and boundary = 1]) / (count patches with [boundary = 1]) * 100`. Make necessary change to the chart too (e.g. change the reporter similarly to the monitor, and change the maximum values from 10 to 100).
+10. In a short period of time, you have been introduced to the concept of NetLogo, how to load your own raster data into an existing model that uses the GIS extension, as well as making changes to the code. If you are more interested, there are many more resources available on the [NetLogo website](https://ccl.northwestern.edu/netlogo/), for example, in `Help`, `Resources` and tabs under `Models` and `User Manuals`. Please feel free to reach out to Rain (hk394@cam.ac.uk) for any specific advise!
+
+![](statics/Sup2_sleuth8.PNG)
