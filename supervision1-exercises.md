@@ -133,11 +133,11 @@ Note: You computer must be connected to the internet to add base map as the imag
 2. Import shapefile into your project:  Locate this file at your working directory through `Browser Panel` and hold the left mouse and drag the `n52_e000_1arc_v3.tif` into the map window. Or, you can add vector file through data source manager.<br>
 ![](statics/QGIS_raster.png)
 
-3. Before extracting from raster, we need an aggragated shapefile covering whole Cambridge city. Navigate to `Processing` > `Toolbox` and search `Dissolve` under `Vector geometry` section. In the prompted window, choose `Cam_City` as input layer and save as `Cam_City_dissolved.shp` to your working directory.<br>
+3. Before extracting from raster, we need an aggragated shapefile covering whole Cambridge city (called `mask layer` in raster clipping). Navigate to `Processing` > `Toolbox` and search `Dissolve` under `Vector geometry` section. In the prompted window, choose `Cam_City` as input layer and save as `Cam_City_dissolved.shp` to your working directory.<br>
 ![](statics/QGIS_dissolve.png)
 ![](statics/QGIS_dissolved.png)
 
-4. Nevigate to `Processing` > `Toolbox` and search `Clip`. In the prompted window, choose `n52_e000_1arc_v3` as input layer and `Cam_City_dissolved` as mask layer. Save extracted raster as `Cam_Strm1.tif`.<br>
+4. Nevigate to `Processing` > `Toolbox` and search `Clip raster by mask layer`. In the prompted window, choose `n52_e000_1arc_v3` as input layer and `Cam_City_dissolved` as mask layer. Save extracted raster as `Cam_Strm1.tif`.<br>
 ![](statics/QGIS_clip.png)
 
 5. Change symbology: Select `Cam_Strm1.tif` and right-click to the properties option. Switch to `Symbology` tab and change `Render type` to `Paletted/Unique values`. Expand the `Color ramp` section and choose `Spectral`. Then click `Classify` button to automatically assign a colour to each value. Back to `Color ramp` section and check `Invert Color Ramp` option. <br>
