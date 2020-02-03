@@ -2,13 +2,8 @@
 title: "Supervision 2"
 nav_exclude: yes
 nav_order: 5
-<<<<<<< HEAD
-output: pdf_document
-layout: default
-=======
 nav_exclude: true
 search_exclude: true
->>>>>>> b624a6cde91bcba402ea630af3f46a58697dfd90
 ---
 
 # Assignment for Supervision 2
