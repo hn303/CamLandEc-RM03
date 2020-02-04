@@ -3,7 +3,7 @@
 
 ## Instructions
 1. Read through the instruction carefully. You may face problems if you overlook any of the steps.
-2. Please write your answers in a word document and submit on Moodle. You can use this [template.docx](data/Sup2_word_template.docx) if you wish.
+2. Please write your answers in a new blank word document and submit on Moodle. You can add screen captures to aid your explanation if you wish.
 
 Note: functions and filename are `highlighted` in this document.
 
