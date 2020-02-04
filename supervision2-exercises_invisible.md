@@ -65,7 +65,7 @@ In this supervision, you will familiarise yourself with geoprocessing raster dat
 5. Check and click on `Boundary.tif` layer and uncheck all other layers. On the `Menu bar`, click `Raster` > `Conversion` > `Translate`. Under `Converted`, click `Save to File` and save as `Boundary.asc`.
 6. Check in your working directory that we have the five `asc` files. We are now ready to import them to NetLogo! Don't close QGIS yet.
 
-![](statics/Sup2_translate1.PNG)
+![](statics/Sup2_translate1.png)
 
 Note: As this supervision is for introducing how QGIS and raster data can be used on NetLogo, we cannot cover many other functions available on QGIS. Please refer to [QGIS Training Manual](https://docs.qgis.org/2.8/en/docs/training_manual/create_vector_data/index.html) for more information.
 
