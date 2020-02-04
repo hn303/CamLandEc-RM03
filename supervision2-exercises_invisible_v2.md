@@ -242,7 +242,10 @@ Note: As this supervision is for introducing how QGIS and raster data can be use
 
 8. You can right-click on the `Percentage urbanized` chart and monitor and the `export_data` button along with the information and move this closer to the map.
 9. Currently, `Percentage urbanized` is set without the boundary in consideration. Right-click on the `Percentage urbanized` monitor and change the reporter to `(count patches with [urban = 1 and boundary = 1]) / (count patches with [boundary = 1]) * 100`. Make necessary change to the chart too (e.g. change the reporter similarly to the monitor, and change the maximum values from 10 to 100).
-10. In a short period of time, you have been introduced to the concept of NetLogo, how to load your own raster data into an existing model that uses the GIS extension, as well as making changes to the code. If you are more interested, there are many more resources available on the [NetLogo website](https://ccl.northwestern.edu/netlogo/), for example, in `Help`, `Resources` and tabs under `Models` and `User Manuals`. Please feel free to reach out to Rain (hk394@cam.ac.uk) for any specific advise!
-11. Also, there is an assignment [Supervision 2 Assignment](CamLandEc-RM03/supervision2-assignment_invisible_v2.md) which will allow you to explore more of the codes on NetLogo using the Game of Life model. 
 
 ![](statics/Sup2_sleuth8.PNG)
+
+## Closing
+
+10. In a short period of time, you have been introduced to the concept of NetLogo, how to load your own raster data into an existing model that uses the GIS extension, as well as making changes to the code. If you are more interested, there are many more resources available on the [NetLogo website](https://ccl.northwestern.edu/netlogo/), for example, in `Help`, `Resources` and tabs under `Models` and `User Manuals`. Please feel free to reach out to Rain (hk394@cam.ac.uk) for any specific advise!
+11. Also, there is an assignment [Supervision 2 Assignment](CamLandEc-RM03/supervision2-assignment_invisible_v2.md) which will allow you to explore more of the codes on NetLogo using the Game of Life model. Thanks for your concentration!
