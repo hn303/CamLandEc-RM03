@@ -229,7 +229,7 @@ Note: As this supervision is for introducing how QGIS and raster data can be use
 
 1. Go back to `Interface` tab, click `setup`. You will see that the Sejong data have been loaded.
 2. Click `go` and a few ticks and click `go` again. What happens?
-3. Turn on the `road_influence` switch and run the model again. (Note: this may  How is it different from before?
+3. Turn on the `road_influence` switch and run the model again. What difference do you see in the simulation?
 4. Right-click on the map and click `Edit`. Change `max-pxcor` to `848` and `max-pycor` to `1211`. You will see that the Box is now changed to Sejong's raster dimension: 849 x 1212. Set patch size as `0.3` (or `0.2` and `0.1` depending on your screen resolution. Try several.) so that we can see the whole screen. (Note: If an error message comes up for some reason, click `Dismiss` and try again twice. On the third go, the map will be loaded fine.)
 
 ![](statics/Sup2_sleuth5.PNG)
