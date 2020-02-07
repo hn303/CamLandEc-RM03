@@ -225,7 +225,7 @@ Note: As this supervision is for introducing how QGIS and raster data can be use
 
 ![](statics/Sup2_sleuth4_4.PNG)
 
-### Changinng the model settings and running the simulation
+### Changing the model settings and running the simulation
 
 1. Go back to `Interface` tab, click `setup`. You will see that the Sejong data have been loaded.
 2. Click `go` and a few ticks and click `go` again. What happens?
