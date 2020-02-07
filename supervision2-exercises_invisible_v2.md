@@ -170,6 +170,7 @@ Note: As this supervision is for introducing how QGIS and raster data can be use
 ### Editing the code to suit our data
 1. Go to the `code` tab. `extensions [gis]` is used for this model. (Note: More information on [NetLogo GIS extension](https://ccl.northwestern.edu/netlogo/docs/gis.html). `globals` outlines the global variables accessible by all agents. 
 2. `patches-own` outlines the variables that all patches can use. (Note: If you don't see line numbers, for Windows users, on the `Menu bar`, click `Tools` > `Preferences` and check `Show Line Numbers`. For Mac users, on the `Menu bar`, click `NetLogo` > `Preferences` and check `Show Line Numbers`.) 
+- In line 18, add `boundary_dataset`.
 - In line 25, for `road1`, change `from 1 to 4` to `from 25 to 100`.
 - In line 32, for `excluded`, change `0 if excluded` to `0=non-excluded, 100=excluded`.
 - Add `boundary ;;binary, 0=outside boundary, 1=within boundary`
