@@ -1,3 +1,11 @@
+---
+title: "Supervision 2"
+nav_exclude: yes
+nav_order: 7
+nav_exclude: true
+search_exclude: true
+---
+
 # Assignment for Supervision 2
 **Submission Dealine: 5 Mar(Thursday) 12:00pm, 2020**
 
