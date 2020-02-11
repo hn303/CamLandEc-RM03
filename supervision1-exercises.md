@@ -56,10 +56,10 @@ Note: You may be prompted a window to conduct CRS transformation, click ok to co
 - How to open the attribute table?
 - How to select polygons only from Cambridge through the attribute table?
 
-1. Select layer in layers panel, click the `open attribute table` in the `Attribute Toolbar`. You will see the attribute table with different fields including `wd15nm` (the name of Ward District) and `lad12nm` (the name of Local Authority District).<br>
+1. Select layer in layers panel, click the `open attribute table` in the `Attribute Toolbar`. You will see the attribute table with different fields including `wd15nm` (the name of Ward District) and `lad15nm` (the name of Local Authority District).<br>
 ![](statics/QGIS_table.png)
 
-2. In the attribute table of the Cambridgeshire layer and double-click `lad12nm` to sort by value/content. Select all rows whose `lad12nm` value equal `Cambridge` (select first one and then press SHIFT on your keyboard while selecting the last one). The selected elements will be highlighted in the map view.<br>
+2. In the attribute table of the Cambridgeshire layer and double-click `lad15nm` to sort by value/content. Select all rows whose `lad15nm` value equal `Cambridge` (select first one and then press SHIFT on your keyboard while selecting the last one). The selected elements will be highlighted in the map view.<br>
 ![](statics/QGIS_select2.png)
 
 3.  Here is an alternative method to select elements precisely: Open attribute table of Cambridgeshire layer and `Select features using an expression` in QGIS. In the window of expression, input `"lad15nm" = 'Cambridge'` and click select features. <br>
