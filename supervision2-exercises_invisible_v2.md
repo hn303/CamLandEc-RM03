@@ -9,15 +9,16 @@ search_exclude: true
 
 # Supervision 2 (27-28 February, 2020)
 
+Note: This page is NOT an assignment - we will go through this together at the Supervision 2 (27-28 February). All you need to have is NetLogo installed in your laptop. If you haven't done so already, please download and install `NetLogo (6.1.1)` according to your platform. We recommend downloading `Windows (64-bit)`, `Mac OS X`, or `Linux (64-bit)`: [NetLogo Download Page](https://ccl.northwestern.edu/netlogo/6.1.1/). See you at the Supervision 2!
+
 ## Short presentation by supervisors (10min)
 1. The slides are available on: [CamLandEc-RM03](https://hn303.github.io/CamLandEc-RM03/).
 
 ## Instructions
-1. We will go through this together at the Supervision 2 (27-28 February). All you need to have is NetLogo installed in your laptop. If you haven't done so already, please download and install `NetLogo (6.1.1)` according to your platform. We recommend downloading `Windows (64-bit)`, `Mac OS X`, or `Linux (64-bit)`: [NetLogo Download Page](https://ccl.northwestern.edu/netlogo/6.1.1/). 
-2. Read through the instruction carefully. You may face problems if you overlook any of the steps.
-3. Remember to save the QGIS document regularly. 
-4. When running tasks on QGIS, leave the settings as default unless instructed.
-5. Some parts are labeled as `optional` which you can try in your own time at home if you wish.
+1. Read through the instruction carefully. You may face problems if you overlook any of the steps.
+2. Remember to save the QGIS document regularly. 
+3. When running tasks on QGIS, leave the settings as default unless instructed.
+4. Some parts are labeled as `optional` which you can try in your own time at home if you wish.
 
 Note: functions and filename are `highlighted` in this document.
 
