@@ -13,10 +13,11 @@ search_exclude: true
 1. The slides are available on: [CamLandEc-RM03](https://hn303.github.io/CamLandEc-RM03/).
 
 ## Instructions
-1. Read through the instruction carefully. You may face problems if you overlook any of the steps.
-2. Remember to save the QGIS document regularly. 
-3. When running tasks on QGIS, leave the settings as default unless instructed.
-4. Some parts are labeled as `optional` which you can try in your own time at home if you wish.
+1. We will go through this together at the Supervision 2 (27-28 February). All you need to have is NetLogo installed in your laptop. If you haven't done so already, please download and install `NetLogo (6.1.1)` according to your platform. We recommend downloading `Windows (64-bit)`, `Mac OS X`, or `Linux (64-bit)`: [NetLogo Download Page](https://ccl.northwestern.edu/netlogo/6.1.1/). 
+2. Read through the instruction carefully. You may face problems if you overlook any of the steps.
+3. Remember to save the QGIS document regularly. 
+4. When running tasks on QGIS, leave the settings as default unless instructed.
+5. Some parts are labeled as `optional` which you can try in your own time at home if you wish.
 
 Note: functions and filename are `highlighted` in this document.
 
@@ -138,10 +139,9 @@ Note: As this supervision is for introducing how QGIS and raster data can be use
 ## Introducing NetLogo (10min)
 
 ### Setup work environment for NetLogo
-1. Please download and install `NetLogo (6.1.1)` according to your platform. We recommend downloading `Windows (64-bit)`, `Mac OS X`, or `Linux (64-bit)`: [NetLogo Download Page](https://ccl.northwestern.edu/netlogo/6.1.1/). 
-2. Continue using `rm03_YourCRSid_sup2` as your working directory.
-3. Launch NetLogo. The interface will be explained along with exercises. Note: You can refer to [NetLogo User Manual (6.1.1)](https://ccl.northwestern.edu/netlogo/docs/) for more detailed information.
-4. In `File` > `Models Library`, you can find a collection of sample models to explore. There are many sample models available on the User Community Models web page.
+1. Continue using `rm03_YourCRSid_sup2` as your working directory.
+2. Launch NetLogo. The interface will be explained along with exercises. Note: You can refer to [NetLogo User Manual (6.1.1)](https://ccl.northwestern.edu/netlogo/docs/) for more detailed information.
+3. In `File` > `Models Library`, you can find a collection of sample models to explore. There are many sample models available on the User Community Models web page.
 
 ### Exercise 1: Wolf Sheep Predation
 1. Open `Wolf Sheep Predation` from `Models Library` under `Biology` folder.
