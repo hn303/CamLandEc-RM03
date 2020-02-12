@@ -66,7 +66,7 @@ Note: You may be prompted a window to conduct CRS transformation, click ok to co
 Note: You don't need to type expression manually, expand `Field and Values` option in the right panel and double click `lad15nm`. The field name will show in the expression window. Once you select the field `lad15nm`, click `All Unique` button on the right, it will show a list of unique values from the field of `lad15nm`. Double click it to add to your expression.<br>
 ![](statics/QGIS_select3.png)
 
-4. Once select elements you need, right-click this layer and click `Export` > `Save Selected Features As`. Name this file as `Cam_City.shp`. This exported shapefile should include these wards: Abbey, Arbury, Castle, Cherry Hinton, Coleridge, East Chesterton, King’s Hedges, Market, Newnham, Petersfield, Queen Edith’s, Romsey, Trumpington and West Chesterton. 
+4. Once select elements you need, right-click this layer and click `Export` > `Save Selected Features As`. Please change the format to `ESRI Shapfile`. Name this file as `Cam_City`. This exported shapefile should include these wards: Abbey, Arbury, Castle, Cherry Hinton, Coleridge, East Chesterton, King’s Hedges, Market, Newnham, Petersfield, Queen Edith’s, Romsey, Trumpington and West Chesterton. 
 
 5. Try other functions in attribute table: `select all`, `invert selection`, `deselect all`
 
