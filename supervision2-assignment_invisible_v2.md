@@ -55,7 +55,7 @@ Note: You can refer to `NetLogo Dictionary` (http://ccl.northwestern.edu/netlogo
 `to zombie-birth`  
   `;; kills all of its neighbours`  
   `set living? true`  
-  `ask neighbors4 [ cell-death ]`  
+  `ask neighbors [ cell-death ]`  
   `set pcolor green`  
 `end`
 
