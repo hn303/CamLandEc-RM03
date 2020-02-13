@@ -14,7 +14,7 @@ search_exclude: true
 
 
 ## Instructions
-1. Please download and install QGIS standalone install version (3.4) according to your platform: [Download QGIS](https://qgis.org/en/site/forusers/download.html){:target="_blank"}
+1. Please download and install QGIS standalone install version according to your platform: [Download QGIS](https://qgis.org/en/site/forusers/download.html){:target="_blank"}
 2. Read through the tasks carefully. You may face problems if you overlook any of the steps.
 3. Remember to save the QGIS document regularly. 
 4. Read through the instruction carefully. You may face problems if you overlook any of the steps.
