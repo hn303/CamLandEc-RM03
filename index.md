@@ -29,4 +29,4 @@ Meterials of supervision could be found below.
 |Revision Supervision|TBC||
 
 
-This repo is created by [**Haifeng Niu**](https://haifengniu.com/en/){:target="_blank"} and contributed by Heeseo Rain Kwon, Paul Scherer* and Yiqiao Chen*.   
+This repo is created by [**Haifeng Niu**](https://haifengniu.com/en/){:target="_blank"} and contributed by Heeseo Rain Kwon, Paul Scherer and Yiqiao Chen.   
