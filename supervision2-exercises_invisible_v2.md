@@ -187,6 +187,7 @@ Note: As this supervision is for introducing how QGIS and raster data can be use
 ![](statics/Sup2_sleuth2.PNG)
 
 7. In line 83, change `road = 1` to `road > 0`.
+8. In Lines 84 and 91, add `ask patches [if boundary = 0 [set pcolor black]]`. This is necessary for the map to draw the boundaries in the next iterations.
 9. In the `to load_data` section, change the Santa Fe data to `Urban_2018.asc`, `Slope_2014.asc`, `Road_2018.asc`, and `Exclusion_2014.asc`. 
 
 ![](statics/Sup2_sleuth3.PNG)
@@ -205,23 +206,25 @@ Note: As this supervision is for introducing how QGIS and raster data can be use
 
 ![](statics/Sup2_sleuth4_1.PNG)
 
-18. In line 210, change `excluded = 0` to `excluded = 100`. 
-19. Add in line 211 `if boundary = 0 [set suitable 0]`.
+18. In the first line of the `check_suitability` add:
+- `set max_slope (max [slope] of patches with [( (slope <= 0) or (slope >= 0) )])`
+19. In line 210, change `excluded = 0` to `excluded = 100`. 
+20. Add in line 211 `if boundary = 0 [set suitable 0]`.
 
 ![](statics/Sup2_sleuth4_2.PNG)
 
-20. In line 240, change `road = 1` to `road > 0`.
+21. In line 240, change `road = 1` to `road > 0`.
 
 ![](statics/Sup2_sleuth4_3.PNG)
 
-21. These do not affect the simulation, for optionally: In line 258, change `531` to `849`.
-22. In line 259, change `394` to `1212`.
-23. In line 260, change `-901575` to `211290.798000130308`
-24. In line 261, change `1442925` to `322863.241183900100`.
-25. Add in line 279 `to-report tenpercent_urban`
-26. Add in line 280 `report (round (count patches with [urban = 1] * 0.10))`
-27. Add in line 281 `end`. This is to define the value `tenpercent_urban` introduced earlier.
-28. Click `Check` bottom next to `Find`. (Note: If an error message comes up for some reason, click `Dismiss` and try again twice. On the third go, the map will be loaded fine. If it still occurs, it might be due to typo, etc. Let one of the supervisors know, and in the interest of time, download the completed file [Urbanization_sejong.nlogo](data/Urbanization_sejong.nlogo) so that we can carry on. You can either put this file in the same working directory, or you can copy-paste this file's code to the NetLogo file that you have been working on.
+22. These do not affect the simulation, for optionally: In line 258, change `531` to `849`.
+23. In line 259, change `394` to `1212`.
+24. In line 260, change `-901575` to `211290.798000130308`
+25. In line 261, change `1442925` to `322863.241183900100`.
+26. Add in line 279 `to-report tenpercent_urban`
+27. Add in line 280 `report (round (count patches with [urban = 1] * 0.10))`
+28. Add in line 281 `end`. This is to define the value `tenpercent_urban` introduced earlier.
+29. Click `Check` bottom next to `Find`. (Note: If an error message comes up for some reason, click `Dismiss` and try again twice. On the third go, the map will be loaded fine. If it still occurs, it might be due to typo, etc. Let one of the supervisors know, and in the interest of time, download the completed file [Urbanization_sejong.nlogo](data/Urbanization_sejong.nlogo) so that we can carry on. You can either put this file in the same working directory, or you can copy-paste this file's code to the NetLogo file that you have been working on.
 
 ![](statics/Sup2_sleuth4_4.PNG)
 
