@@ -38,11 +38,13 @@ Note: You can refer to `NetLogo Dictionary` (http://ccl.northwestern.edu/netlogo
 4. Line 33 means "set the variable `live-neighbors` to `count how many neighboring cells are alive`" and line 32 asks patches to run this command. This part makes each cell to check the state of its eight surrounding neighbors. Note: Refer to `neighbors` (http://ccl.northwestern.edu/netlogo/docs/dict/neighbors.html).
 5. Line 38 asks patches to run another ifelse command. 
 
-#### Question 1. Click the `Info` tab below the `Menu bar`. You can see that the rules can be summarised as the four sentences below. Try writing these into NetLogo code using `if` (http://ccl.northwestern.edu/netlogo/docs/dict/if.html) statement, one line of code for each sentence. Explain how these four lines of code can be shorted to line 39-42 written in the model.
-- If there is exactly 3 alive neighbors, the cell becomes alive. (birth)
-- If there are less than 2 alive neighbors, the cell dies. (under-population)
-- If there are more than 3 alive neighbors, the cell dies. (over-population)
-- If there are 2 alive neighbors, the cell remains in the state it is in. (sustainable life)
+#### Question 1. Click the `Info` tab below the `Menu bar`. Under `HOW IT WORKS`, you can find the rules of the game. Rules can be summarised as the four points below. 
+1. If there is exactly 3 alive neighbors, the cell becomes alive. (birth)
+2. If there are less than 2 alive neighbors, the cell dies. (under-population)
+3. If there are more than 3 alive neighbors, the cell dies. (over-population)
+4. If there are 2 alive neighbors, the cell remains in the state it is in. (sustainable life)
+#### 1-1. Try writing these into NetLogo code using `if` (http://ccl.northwestern.edu/netlogo/docs/dict/if.html) statement, one line of code for the first three points (Note: You don't need to worry about the 4th point because the cell is unaffected). 
+#### 1.2. Explain how these four lines of code can be shorted to line 39-42 written in the model.
 
 ![](statics/Sup2_gameoflife3.PNG)
 
