@@ -53,7 +53,6 @@ Note: You can refer to `NetLogo Dictionary` (http://ccl.northwestern.edu/netlogo
 #### Question 3. Let's add one additional command to the model. Add the following lines below the `to cell-death` part. This command makes this cell colored in green to kill the four surrounding patches. Explain this rule in your own words.
 
 `to zombie-birth`  
-  `;; kills all of its neighbours`  
   `set living? true`  
   `ask neighbors [ cell-death ]`  
   `set pcolor green`  
