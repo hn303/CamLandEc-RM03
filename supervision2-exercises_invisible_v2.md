@@ -86,7 +86,7 @@ Note: If you don't save as, these temporary files will disappear next time you o
 ### Converting GeoTIFF (.tif) to ASCII (.asc) to load on NetLogo
 
 1. Check and click on `Urban_2018.tif` layer and uncheck all other layers. On the `Menu bar`, click `Raster` > `Conversion` > `Translate`. Under `Converted`, click `Save to File` and save as `Urban_2018.asc`. (Note: This is because the SLEUTH model we will be using on NetLogo accepts ASCII files)
-5. In the interest of time, please download the `asc` files for other layers: [SLEUTH_asc_files.asc](https://github.com/hn303/CamLandEc-RM03/blob/master/data/five_asc_files.asc). Move `Road_2018.asc`, `Slope_2014.asc` and `Exclusion_2014.asc` to your QGIS working file.
+5. In the interest of time, please download the `asc` files for other three layers: [Boundary_Exclusion_Road.zip](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Boundary_Exclusion_Road.zip). Unzip and move `Boundary.asc`, `Exclusion_2014.asc` and `Road_2018.asc` to your QGIS working file.
 
 ### OPTIONAL 2: Converting vector to raster (rasterize)
 4. You can rasterise the other layers yourself too if you wish. Uncheck `Urban_2018` layer. Click and check `Excluson_2014` layer, click `Raster` in menu bar, `Conversion` > `Rasterize`. Set `Field to use for a burn-in value` as `EXCLUSION`, `A fixed value to burn` as `Not set`, `output raster size units` as `Georeferenced units`, and `Resolution` as `30` and `30`.
