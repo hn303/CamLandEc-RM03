@@ -86,7 +86,7 @@ Note: If you don't save as, these temporary files will disappear next time you o
 ### Converting GeoTIFF (.tif) to ASCII (.asc) to load on NetLogo
 
 1. Check and click on `Urban_2018.tif` layer and uncheck all other layers. On the `Menu bar`, click `Raster` > `Conversion` > `Translate`. Under `Converted`, click `Save to File` and save as `Urban_2018.asc`. (Note: This is because the SLEUTH model we will be using on NetLogo accepts ASCII files)
-5. In the interest of time, please download the `asc` files for other three layers: [asc_and_csv.zip](https://github.com/hn303/CamLandEc-RM03/blob/master/data/asc_and_csv.zip). This `zip` file also contains `Slope_2014.csv` for next step of the exercise. Unzip and move the four files: `Boundary.asc`, `Exclusion_2014.asc`, `Road_2018.asc` and `Slope_2014.csv` to your QGIS working directory.
+5. In the interest of time, please download the `asc` files for other three layers: [asc_and_csv.zip](https://github.com/hn303/CamLandEc-RM03/blob/master/data/asc_and_csv.zip). This `zip` file also contains `Slope_2014.csv` for next step of the exercise. Unzip and move the four files: `Boundary.asc`, `Exclusion_2014.asc`, `Road_2018.asc` and `Slope_2014.csv` to your QGIS working directory. (Note: The original data is from the Korea National Spatial Infrastructure Portal.)
 
 ### OPTIONAL 2: Converting vector to raster (rasterize)
 4. You can rasterise the other layers yourself too if you wish. Uncheck `Urban_2018` layer. Click and check `Excluson_2014` layer, click `Raster` in menu bar, `Conversion` > `Rasterize`. Set `Field to use for a burn-in value` as `EXCLUSION`, `A fixed value to burn` as `Not set`, `output raster size units` as `Georeferenced units`, and `Resolution` as `30` and `30`.
@@ -102,12 +102,11 @@ Note: If you don't save as, these temporary files will disappear next time you o
 ![](statics/Sup2_rasterize4.PNG) 
 
 ### Importing DEM data in `csv` as delimited text layer
-1. Download [Slope_2014.csv](data/Slope_2014.csv) in the working directory. (Note: The original data is from the Korea National Spatial Infrastructure Portal.)
-2. On the `Menu bar`, click `Layer` > `Add Layer` > `Add Delimited Text Layer`. Add `Slope_2014.csv` with  `Point coordinates`. 
+1. On the `Menu bar`, click `Layer` > `Add Layer` > `Add Delimited Text Layer`. Add `Slope_2014.csv` with  `Point coordinates`. 
 
 ![](statics/Sup2_slope1.PNG)
 
-3. Right-click on `Slope_2014` layer (this is a temporary layer) > `Export` > `Save Feature As`. Set `File name`as `Slope_2014.shp` > `OK`. Remove the other temporary `Slope_2014` layer. Note: You can check the file type of the layers by lingering the cursor on the layer name, or by right-clicking > `Properties` > `Information tab`.
+2. Right-click on `Slope_2014` layer (this is a temporary layer) > `Export` > `Save Feature As`. Set `File name`as `Slope_2014.shp` > `OK`. Remove the other temporary `Slope_2014` layer. Note: You can check the file type of the layers by lingering the cursor on the layer name, or by right-clicking > `Properties` > `Information tab`.
 
 ![](statics/Sup2_slope2.PNG)
 
