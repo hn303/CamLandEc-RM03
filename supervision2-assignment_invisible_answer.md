@@ -18,8 +18,8 @@ search_exclude: true
 2. `if live-neighbors < 2 [ cell-death ]`
 3. `if live-neighbors > 3 [ cell-death ]`
 
-#### 1.2. Explain how these three lines of code can be shorted to line 39-42 written in the model.
-- If 
+#### 1.2. Explain how these three lines of code can be shortened to line 39-42 written in the model.
+- `if live-neighbors < 2 [ cell-death ]` and `if live-neighbors > 3 [ cell-death ]` can be combined to `if live-neighbors != 2 [ cell-death ]` as `[ elsecommands ]` of the `ifelse` command.
 
 ![](statics/Sup2_gameoflife3.PNG)
 
