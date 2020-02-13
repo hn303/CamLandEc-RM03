@@ -19,9 +19,10 @@ Note: functions and filename are `highlighted` in this document.
 In this assignment, you will familiarise yourself with changing the codes on NetLogo using the Game of Life model.
 
 ### Setup work environment
-1. Open `Life` from `Models Library` under `Computer Science` > `Cellular Automata`.
-2. Game of Life is a simple cellular automata (CA) model where the state of the cells (patches) change according to behavioral rules. As the simulation runs, you can find recurring shapes like gliders and blinkers. Note: You can refer to [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) for more detailed information.
-3. Click `setup-random` > `go-forever` to start the simulation, and click `go-forever` again to stop the simulation.
+1. Open `NetLogo 6.1.1` (NOT `NetLogo 3D 6.1.1`).
+2. Open `Life` from `Models Library` under `Sample Models` > `Computer Science` > `Cellular Automata`.
+3. Game of Life is a simple cellular automata (CA) model where the state of the cells (patches) change according to behavioral rules. As the simulation runs, you can find recurring shapes like gliders and blinkers. Note: You can refer to [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) for more detailed information.
+4. Click `setup-random` > `go-forever` to start the simulation, and click `go-forever` again to stop the simulation.
 
 ![](statics/Sup2_gameoflife1.PNG)
 
