@@ -206,8 +206,8 @@ Note: As this supervision is for introducing how QGIS and raster data can be use
 
 ![](statics/Sup2_sleuth4_1.PNG)
 
-18. In the first line of the `check_suitability` add:
-- `set max_slope (max [slope] of patches with [( (slope <= 0) or (slope >= 0) )])`
+18. In the first line of the `check_suitability` remove the current :`set max_slope max [slope] of patches` and add:
+- `set max_slope (max [slope] of patches with [( (slope <= 0) or (slope >= 0) )])` instead.
 19. In line 210, change `excluded = 0` to `excluded = 100`. 
 20. Add in line 211 `if boundary = 0 [set suitable 0]`.
 
