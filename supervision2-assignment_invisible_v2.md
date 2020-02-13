@@ -44,7 +44,7 @@ Note: You can refer to `NetLogo Dictionary` (http://ccl.northwestern.edu/netlogo
 3. If there are more than 3 alive neighbors, the cell dies. (over-population)
 4. If there are 2 alive neighbors, the cell remains in the state it is in. (sustainable life)
 #### 1-1. Try writing these rules into NetLogo code using `if` (http://ccl.northwestern.edu/netlogo/docs/dict/if.html) statement, one line of code for the first three points (Note: You don't need to worry about the 4th point because it doesn't change the cell state). 
-#### 1.2. Explain how these three lines of code can be shorted to line 39-42 written in the model.
+#### 1.2. Explain how these three lines of code can be shorted to line 39-42 written in the model using the `ifelse` (http://ccl.northwestern.edu/netlogo/docs/dict/ifelse.html) command.
 
 ![](statics/Sup2_gameoflife3.PNG)
 
