@@ -86,7 +86,7 @@ Note: If you don't save as, these temporary files will disappear next time you o
 ### Converting GeoTIFF (.tif) to ASCII (.asc) to load on NetLogo
 
 1. Check and click on `Urban_2018.tif` layer and uncheck all other layers. On the `Menu bar`, click `Raster` > `Conversion` > `Translate`. Under `Converted`, click `Save to File` and save as `Urban_2018.asc`. (Note: This is because the SLEUTH model we will be using on NetLogo accepts ASCII files)
-5. In the interest of time, please download the `asc` files for other layers: [Exclusion_2014.asc](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Exclusion_2014.asc), [Road_2018.asc](data/Road_2018.asc), and [Boundary.asc](data/Boundary.asc). Load them onto your QGIS working file.
+5. In the interest of time, please download the `asc` files for other three layers: [asc_and_csv.zip](https://github.com/hn303/CamLandEc-RM03/blob/master/data/asc_and_csv.zip). This `zip` file also contains `Slope_2014.csv` for next step of the exercise. Unzip and move the four files: `Boundary.asc`, `Exclusion_2014.asc`, `Road_2018.asc` and `Slope_2014.csv` to your QGIS working directory. (Note: The original data is from the Korea National Spatial Infrastructure Portal.)
 
 ### OPTIONAL 2: Converting vector to raster (rasterize)
 4. You can rasterise the other layers yourself too if you wish. Uncheck `Urban_2018` layer. Click and check `Excluson_2014` layer, click `Raster` in menu bar, `Conversion` > `Rasterize`. Set `Field to use for a burn-in value` as `EXCLUSION`, `A fixed value to burn` as `Not set`, `output raster size units` as `Georeferenced units`, and `Resolution` as `30` and `30`.
@@ -102,12 +102,11 @@ Note: If you don't save as, these temporary files will disappear next time you o
 ![](statics/Sup2_rasterize4.PNG) 
 
 ### Importing DEM data in `csv` as delimited text layer
-1. Download [Slope_2014.csv](data/Slope_2014.csv) in the working directory. (Note: The original data is from the Korea National Spatial Infrastructure Portal.)
-2. On the `Menu bar`, click `Layer` > `Add Layer` > `Add Delimited Text Layer`. Add `Slope_2014.csv` with  `Point coordinates`. 
+1. On the `Menu bar`, click `Layer` > `Add Layer` > `Add Delimited Text Layer`. Add `Slope_2014.csv` with  `Point coordinates`. 
 
 ![](statics/Sup2_slope1.PNG)
 
-3. Right-click on `Slope_2014` layer (this is a temporary layer) > `Export` > `Save Feature As`. Set `File name`as `Slope_2014.shp` > `OK`. Remove the other temporary `Slope_2014` layer. Note: You can check the file type of the layers by lingering the cursor on the layer name, or by right-clicking > `Properties` > `Information tab`.
+2. Right-click on `Slope_2014` layer (this is a temporary layer) > `Export` > `Save Feature As`. Set `File name`as `Slope_2014.shp` > `OK`. Remove the other temporary `Slope_2014` layer. Note: You can check the file type of the layers by lingering the cursor on the layer name, or by right-clicking > `Properties` > `Information tab`.
 
 ![](statics/Sup2_slope2.PNG)
 
@@ -188,6 +187,7 @@ Note: As this supervision is for introducing how QGIS and raster data can be use
 ![](statics/Sup2_sleuth2.PNG)
 
 7. In line 83, change `road = 1` to `road > 0`.
+8. In Lines 84 and 91, add `ask patches [if boundary = 0 [set pcolor black]]`. This is necessary for the map to draw the boundaries in the next iterations.
 9. In the `to load_data` section, change the Santa Fe data to `Urban_2018.asc`, `Slope_2014.asc`, `Road_2018.asc`, and `Exclusion_2014.asc`. 
 
 ![](statics/Sup2_sleuth3.PNG)
@@ -206,23 +206,25 @@ Note: As this supervision is for introducing how QGIS and raster data can be use
 
 ![](statics/Sup2_sleuth4_1.PNG)
 
-18. In line 210, change `excluded = 0` to `excluded = 100`. 
-19. Add in line 211 `if boundary = 0 [set suitable 0]`.
+18. In the first line of the `check_suitability` remove the current :`set max_slope max [slope] of patches` and add:
+- `set max_slope (max [slope] of patches with [( (slope <= 0) or (slope >= 0) )])` instead.
+19. In line 210, change `excluded = 0` to `excluded = 100`. 
+20. Add in line 211 `if boundary = 0 [set suitable 0]`.
 
 ![](statics/Sup2_sleuth4_2.PNG)
 
-20. In line 240, change `road = 1` to `road > 0`.
+21. In line 240, change `road = 1` to `road > 0`.
 
 ![](statics/Sup2_sleuth4_3.PNG)
 
-21. These do not affect the simulation, for optionally: In line 258, change `531` to `849`.
-22. In line 259, change `394` to `1212`.
-23. In line 260, change `-901575` to `211290.798000130308`
-24. In line 261, change `1442925` to `322863.241183900100`.
-25. Add in line 279 `to-report tenpercent_urban`
-26. Add in line 280 `report (round (count patches with [urban = 1] * 0.10))`
-27. Add in line 281 `end`. This is to define the value `tenpercent_urban` introduced earlier.
-28. Click `Check` bottom next to `Find`. (Note: If an error message comes up for some reason, click `Dismiss` and try again twice. On the third go, the map will be loaded fine. If it still occurs, it might be due to typo, etc. Let one of the supervisors know, and in the interest of time, download the completed file [Urbanization_sejong.nlogo](data/Urbanization_sejong.nlogo) so that we can carry on. You can either put this file in the same working directory, or you can copy-paste this file's code to the NetLogo file that you have been working on.
+22. These do not affect the simulation, for optionally: In line 258, change `531` to `849`.
+23. In line 259, change `394` to `1212`.
+24. In line 260, change `-901575` to `211290.798000130308`
+25. In line 261, change `1442925` to `322863.241183900100`.
+26. Add in line 279 `to-report tenpercent_urban`
+27. Add in line 280 `report (round (count patches with [urban = 1] * 0.10))`
+28. Add in line 281 `end`. This is to define the value `tenpercent_urban` introduced earlier.
+29. Click `Check` bottom next to `Find`. (Note: If an error message comes up for some reason, click `Dismiss` and try again twice. On the third go, the map will be loaded fine. If it still occurs, it might be due to typo, etc. Let one of the supervisors know, and in the interest of time, download the completed file [Urbanization_sejong.nlogo](data/Urbanization_sejong.nlogo) so that we can carry on. You can either put this file in the same working directory, or you can copy-paste this file's code to the NetLogo file that you have been working on.
 
 ![](statics/Sup2_sleuth4_4.PNG)
 
@@ -231,7 +233,7 @@ Note: As this supervision is for introducing how QGIS and raster data can be use
 1. Go back to `Interface` tab, click `setup`. You will see that the Sejong data have been loaded.
 2. Click `go` and a few ticks and click `go` again. What happens?
 3. Turn on the `road_influence` switch and run the model again. What difference do you see in the simulation?
-4. Right-click on the map and click `Edit`. Change `max-pxcor` to `848` and `max-pycor` to `1211`. You will see that the Box is now changed to Sejong's raster dimension: 849 x 1212. Set patch size as `0.3` (or `0.2` and `0.1` depending on your screen resolution. Try several.) so that we can see the whole screen. (Note: If an error message comes up for some reason, click `Dismiss` and try again twice. On the third go, the map will be loaded fine.)
+4. Right-click on the map and click `Edit`. Change `max-pxcor` to `848` and `max-pycor` to `1211`. You will see that the Box is now changed to Sejong's raster dimension: 849 x 1212. Set patch size as `0.5` (or `0.3` and `0.1` depending on your screen resolution. Try several.) so that we can see the whole screen. (Note: If an error message comes up for some reason, click `Dismiss` and try again twice. On the third go, the map will be loaded fine.)
 
 ![](statics/Sup2_sleuth5.PNG)
 ![](statics/Sup2_sleuth6.PNG)

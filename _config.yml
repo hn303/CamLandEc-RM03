@@ -25,7 +25,7 @@ github_username:  hn303
 permalink: :title
 
 # Enable or disable the site search
-# search_enabled: True
+search_enabled: False
 
 # Set the search token separator for hyphenated-word search:
 # search_tokenizer_separator: /[\s/]+/

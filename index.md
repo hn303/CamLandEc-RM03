@@ -19,7 +19,7 @@ Meterials of supervision could be found below.
 |Lecture 2|Data types of data, data collection and processing: from census to new live data harvesting in a digital age of big data |(Elisabete A. Silva)|
 |Lecture 3|GIS and Data Processing: vector/raster/image data sets |(Elisabete A. Silva)|
 |Lecture 4|Spatial metrics & analysis: static and dynamic environments |(Elisabete A. Silva & José Reis) |
-|Supervision 1| Introduction of spatial analysis using Quantum GIS(QGIS) [[Slides]](./RM03_supervision1_slides.pdf) [[Exercises]](supervision1-exercises.md)|(H. Niu, H. R. Kwon)|
+|Supervision 1| Introduction of spatial analysis using Quantum GIS(QGIS) [[Slides]](./RM03_supervision1_slides.pdf) [[Exercises]](supervision1-exercises.md)[[Assignment]](supervision1-assignment.md)|(H. Niu, H. R. Kwon)|
 |Lecture 5|Urban and Environmental Dynamic Modelling |(Elisabete A. Silva )|
 |Lecture 6|Dynamic simulation models SA, MCA, ABM, CA, GA and NN: development, calibration, validation |(Elisabete Silva)|
 |Supervision 2|Netlogo - urban modelling|(H. R. Kwon, P. M. Scherer)|
@@ -29,4 +29,4 @@ Meterials of supervision could be found below.
 |Revision Supervision|TBC||
 
 
-This repo is created by [**Haifeng Niu**](https://haifengniu.com/en/){:target="_blank"} and contributed by Heeseo Rain Kwon, Paul Scherer* and Yiqiao Chen*.   
+This repo is created by [**Haifeng Niu**](https://haifengniu.com/en/){:target="_blank"} and contributed by Heeseo Rain Kwon, Paul Scherer and Yiqiao Chen.   
