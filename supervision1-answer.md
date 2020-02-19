@@ -1,7 +1,7 @@
 ---
 layout: default
 nav_order: 4
-title: Assigment 1 Answers&Instruction
+title: Assignment 1 Answers&Instruction
 ---
 
 <button class="btn js-toggle-dark-mode">Dark color scheme</button>
