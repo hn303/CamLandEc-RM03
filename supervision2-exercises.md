@@ -6,7 +6,7 @@ nav_exclude: false
 search_exclude: true
 ---
 
-Dark color scheme
+<button class="btn js-toggle-dark-mode">Dark color scheme</button>
 
 <script type="text/javascript" src="{{ "/assets/js/dark-mode-preview.js" | absolute_url }}"></script>
 
