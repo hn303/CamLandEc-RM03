@@ -14,23 +14,25 @@ nav_exclude: true
 
 **Answer for Qeustion A:**
 
-|2011|2016|2021|
-|-------------|:-------------:| -----:|
-|Abbey&Castle|Trumpington|Trumpington|
+||2011 | 2016 | 2021|
+|:----|-------------:|-------------:| -----:|
+|Highest (People)|Abbey&Castle (9850)| Trumpington (13220)| Trumpington(16620)|
+|Lowest (People)|Market (7150)|Market (7960)|Newnham (8170)|
 
 **Answer for Question B:**
-The value stored in `ward_area` field should be numeric. The type of `Decimal number` of field can store numeric values. The setting for field length (the maximum length of the field) of 4 and a field precision (the maximum number of decimal places) of 2 allow the inputted value has 1 digit before the dot, then the dot and another 2 digits for the precision. When you are processing large dataset, defining the right field type and length will reduce the size of your file.
+The value stored in `ward_area` field should be numeric. The type of `Decimal number` of field can store numeric values. The setting for field length (the maximum length of the field) of 4 and a field precision (the maximum number of decimal places) of 2 allows the inputted value has 1 digit before the dot, then the dot and another 2 digits for the precision. When you are processing large dataset, defining the right field type and length will reduce the size of your file.
 
 **Answer for Question C:**
-The largest area in Cambridge city is Trumpington.
-The smallest area in Cambridge city is Petersfield.
+The largest area in Cambridge city is Trumpington (7.34 $km^2$).
+The smallest area in Cambridge city is Petersfield (1.06
+$km^2$).
 
 **Answer for Question D**:
 
-|2011|2016|2021|
-|-------------|:-------------:| -----:|
-|Petersfield|Petersfield|Petersfield|
-|7830.19|8396.23|9018.87|
+||2011|2016|2021|
+|:---|-------------:|-------------:| ----------:|
+|Highest (People/$km^2$)|Petersfield (7830.19)|Petersfield (8396.23)|Petersfield (9018.87)|
+|Lowest (People/$km^2$)|Trumpington (1098.09)|Trumpington (1801.09)|Newham (1835.96)|
 
 # Instruction for Assignment 1
 
