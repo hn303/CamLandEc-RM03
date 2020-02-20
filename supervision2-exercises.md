@@ -6,6 +6,9 @@ nav_exclude: false
 search_exclude: true
 ---
 
+Dark color scheme
+
+<script type="text/javascript" src="{{ "/assets/js/dark-mode-preview.js" | absolute_url }}"></script>
 
 # Supervision 2 (27-28 February, 2020)
 
