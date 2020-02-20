@@ -2,7 +2,7 @@
 title: "Supervision 2"
 nav_exclude: yes
 nav_order: 6
-nav_exclude: true
+nav_exclude: false
 search_exclude: true
 ---
 
