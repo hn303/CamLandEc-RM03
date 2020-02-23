@@ -12,10 +12,10 @@ search_exclude: true
 
 # Supervision 2 (27-28 February, 2020)
 
-Note: This page is NOT an assignment - we will go through this together at the Supervision 2 (27-28 February). All you need to have is NetLogo installed in your laptop. If you haven't done so already, please download and install `NetLogo (6.1.1)` according to your platform. We recommend downloading `Windows (64-bit)`, `Mac OS X`, or `Linux (64-bit)`: [NetLogo Download Page](https://ccl.northwestern.edu/netlogo/6.1.1/). See you at the Supervision 2!
+Note: This page is NOT an assignment - we will go through this together at the Supervision 2 (27-28 February). All you need to have is NetLogo installed in your laptop. If you haven't done so already, please download and install `NetLogo (6.1.1)` according to your platform. We recommend downloading `Windows (64-bit)`, `Mac OS X`, or `Linux (64-bit)`: [NetLogo Download Page](https://ccl.northwestern.edu/netlogo/6.1.1/){:target="_blank"}. See you at the Supervision 2!
 
 ## Short presentation by supervisors (10min)
-1. The slides are available on: [CamLandEc-RM03](https://hn303.github.io/CamLandEc-RM03/).
+1. The slides are available on: [CamLandEc-RM03](https://hn303.github.io/CamLandEc-RM03/){:target="_blank"}.
 
 ## Instructions
 1. Read through the instruction carefully. You may face problems if you overlook any of the steps.
@@ -36,7 +36,7 @@ In this supervision, you will familiarise yourself with geoprocessing raster dat
 ### QGIS project setup
 1. Click `Project` > `New`.
 2. Click `Project` > `Save As`, and save as `supervision2.qgz` to the working directory. 
-3. Download dataset (sample data of Sejong, South Korea): [Urban_2018.zip](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Urban_2018.zip), [Exclusion_2014.zip](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Exclusion_2014.zip), [Road_2018.zip](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Road_2018.zip), and [Boundary.zip](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Boundary.zip) in the working directory (you don't need to unzip). (Note: The original dataset are from the Korea National Spatial Infrastructure Portal. We have simplified and edited the file contents for the supervision).
+3. Download dataset (sample data of Sejong, South Korea): [Urban_2018.zip](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Urban_2018.zip){:target="_blank"}, [Exclusion_2014.zip](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Exclusion_2014.zip){:target="_blank"}, [Road_2018.zip](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Road_2018.zip){:target="_blank"}, and [Boundary.zip](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Boundary.zip){:target="_blank"} in the working directory (you don't need to unzip). (Note: The original dataset are from the Korea National Spatial Infrastructure Portal. We have simplified and edited the file contents for the supervision).
 4. Go to `Project` >  `Properties` in menu bar and open the `Project Properties` window.
     - `General` tab: Set your working directory as `Project Home`.
 Note: after adding project home, you can find `Project Home` directory is showing in the `Browser panel`. It is much easier to locate your data files through this panel.
@@ -82,14 +82,14 @@ Note: If you don't save as, these temporary files will disappear next time you o
 
 #### Question 2. Zoom into the `Urban_2018.tif` layer. You will see that the pixels are in a grid. Check the size of the grid by right-clicking on the layer and clicking `Properties`. In the `Information` tab, what are the dimensions and pixel size? (Note: pixel size is in meters)
 
-#### Question 3. In real life, what would be the dimension (width and length on a map) of this city of Sejong, South Korea in kilometers? (hint: real distance = dimension * pixel size). Find this city on [Google Map](https://www.google.com/maps/place/Sejong+City+Hall/@36.5675237,127.1919615,11z/data=!4m5!3m4!1s0x357ad2abe6c47565:0x4da638f5f9f95e37!8m2!3d36.4800984!4d127.2890354) to see whether your calculation makes sense. You can search Sejong City Hall, and refer to the grey dotted line as the city boundary.
+#### Question 3. In real life, what would be the dimension (width and length on a map) of this city of Sejong, South Korea in kilometers? (hint: real distance = dimension * pixel size). Find this city on [Google Map](https://www.google.com/maps/place/Sejong+City+Hall/@36.5675237,127.1919615,11z/data=!4m5!3m4!1s0x357ad2abe6c47565:0x4da638f5f9f95e37!8m2!3d36.4800984!4d127.2890354){:target="_blank"} to see whether your calculation makes sense. You can search Sejong City Hall, and refer to the grey dotted line as the city boundary.
 
 ![](statics/Sup2_google_map.PNG) 
 
 ### Converting GeoTIFF (.tif) to ASCII (.asc) to load on NetLogo
 
 1. Check and click on `Urban_2018.tif` layer and uncheck all other layers. On the `Menu bar`, click `Raster` > `Conversion` > `Translate`. Under `Converted`, click `Save to File` and save as `Urban_2018.asc`. (Note: This is because the SLEUTH model we will be using on NetLogo accepts ASCII files)
-5. In the interest of time, please download the `asc` files for other three layers: [asc_and_csv.zip](https://github.com/hn303/CamLandEc-RM03/blob/master/data/asc_and_csv.zip). This `zip` file also contains `Slope_2014.csv` for next step of the exercise. Unzip and move the four files: `Boundary.asc`, `Exclusion_2014.asc`, `Road_2018.asc` and `Slope_2014.csv` to your QGIS working directory. (Note: The original data is from the Korea National Spatial Infrastructure Portal.)
+5. In the interest of time, please download the `asc` files for other three layers: [asc_and_csv.zip](https://github.com/hn303/CamLandEc-RM03/blob/master/data/asc_and_csv.zip){:target="_blank"}. This `zip` file also contains `Slope_2014.csv` for next step of the exercise. Unzip and move the four files: `Boundary.asc`, `Exclusion_2014.asc`, `Road_2018.asc` and `Slope_2014.csv` to your QGIS working directory. (Note: The original data is from the Korea National Spatial Infrastructure Portal.)
 
 ### OPTIONAL 2: Converting vector to raster (rasterize)
 4. You can rasterise the other layers yourself too if you wish. Uncheck `Urban_2018` layer. Click and check `Excluson_2014` layer, click `Raster` in menu bar, `Conversion` > `Rasterize`. Set `Field to use for a burn-in value` as `EXCLUSION`, `A fixed value to burn` as `Not set`, `output raster size units` as `Georeferenced units`, and `Resolution` as `30` and `30`.
@@ -137,13 +137,13 @@ Note: If you don't save as, these temporary files will disappear next time you o
 ![](statics/Sup2_slope5.PNG)
 ![](statics/Sup2_translate1.png)
 
-Note: As this supervision is for introducing how QGIS and raster data can be used on NetLogo, we cannot cover many other functions available on QGIS. Please refer to [QGIS Training Manual](https://docs.qgis.org/2.8/en/docs/training_manual/create_vector_data/index.html) for more information.
+Note: As this supervision is for introducing how QGIS and raster data can be used on NetLogo, we cannot cover many other functions available on QGIS. Please refer to [QGIS Training Manual](https://docs.qgis.org/2.8/en/docs/training_manual/create_vector_data/index.html){:target="_blank"} for more information.
 
 ## Introducing NetLogo (10min)
 
 ### Setup work environment for NetLogo
 1. Continue using `rm03_YourCRSid_sup2` as your working directory.
-2. Launch NetLogo. The interface will be explained along with exercises. Note: You can refer to [NetLogo User Manual (6.1.1)](https://ccl.northwestern.edu/netlogo/docs/) for more detailed information.
+2. Launch NetLogo. The interface will be explained along with exercises. Note: You can refer to [NetLogo User Manual (6.1.1)](https://ccl.northwestern.edu/netlogo/docs/){:target="_blank"} for more detailed information.
 3. In `File` > `Models Library`, you can find a collection of sample models to explore. There are many sample models available on the User Community Models web page.
 
 ### Exercise 1: Wolf Sheep Predation
@@ -163,7 +163,7 @@ Note: As this supervision is for introducing how QGIS and raster data can be use
 ## Running the SLEUTH Urban Growth Model on NetLogo using the raster data produced in QGIS (30min)
 
 ### Setting the work environment
-1. Download `ZIP` of the partial reimplementation of SLEUTH urban growth model on NetLogo and save it at your prefered directory on your disk (e.g. `rm03_YourCRSid_sup2`). : [Urban Growth Model](https://github.com/YangZhouCSS/Urban_Growth_Model).
+1. Download `ZIP` of the partial reimplementation of SLEUTH urban growth model on NetLogo and save it at your prefered directory on your disk (e.g. `rm03_YourCRSid_sup2`). : [Urban Growth Model](https://github.com/YangZhouCSS/Urban_Growth_Model){:target="_blank"}.
 2. Unzip `Urban_Growth_Model-master.zip` and further unzip `urban_growth_model.zip`. In the `urban_growth_model` > `urban model` folder, open `Urbanization.nlogo`. 
 3. Click `setup` > `go` to try out. Inside `urban model` folder, open `data` folder, and you will see the asc files of Santa Fe, New Mexico. Copy-paste the five asc raster files that we created for Sejong: `Slope_2014.asc`, `Urban_2018.asc`, `Exclusion_2014.asc`, `Road_2018.asc` and `Boundary.asc`.
 4. `File` > `Save As` the netlogo file to `Urbanization_sejong.nlogo`. We will make changes to the code to suit our Sejong data. 
@@ -171,7 +171,7 @@ Note: As this supervision is for introducing how QGIS and raster data can be use
 ![](statics/Sup2_sleuth0.PNG)
 
 ### Editing the code to suit our data
-1. Go to the `code` tab. `extensions [gis]` is used for this model. (Note: More information on [NetLogo GIS extension](https://ccl.northwestern.edu/netlogo/docs/gis.html). `globals` outlines the global variables accessible by all agents. 
+1. Go to the `code` tab. `extensions [gis]` is used for this model. (Note: More information on [NetLogo GIS extension](https://ccl.northwestern.edu/netlogo/docs/gis.html){:target="_blank"}. `globals` outlines the global variables accessible by all agents. 
 2. `patches-own` outlines the variables that all patches can use. (Note: If you don't see line numbers, for Windows users, on the `Menu bar`, click `Tools` > `Preferences` and check `Show Line Numbers`. For Mac users, on the `Menu bar`, click `NetLogo` > `Preferences` and check `Show Line Numbers`.) 
 - In line 18, add `boundary_dataset`.
 - In line 25, for `road1`, change `from 1 to 4` to `from 25 to 100`.
@@ -182,7 +182,7 @@ Note: As this supervision is for introducing how QGIS and raster data can be use
 - Road: 1 = small road, 2 = medium road, 3 = large road, 4 = expressway
 - Exclusion: 0=excluded
 - Slope: Discrete. Whole number between 1 and 21.
-4.Back to the `Code` tab, in the `to setup` section, `ca` means `clear all`. We cannot go through all codes one by one due to time limitation, so you can refer to [NetLogo Dictionary] (http://ccl.northwestern.edu/netlogo/docs/index2.html) in your free time. Also, the setting of values and growth rules etc. are based on the original SLEUTH model (details can be seen in [Project Gigapolis website](http://www.ncgia.ucsb.edu/projects/gig/About/bkOverview.html) so we won't go through in detail. The objective of this exercise in this supervision is to introduce how raster maps generated in QGIS can be loaded on NetLogo and how a model directly applicable to urban planning like SLEUTH urban growth model can run on NetLogo based on a set of rules.
+4.Back to the `Code` tab, in the `to setup` section, `ca` means `clear all`. We cannot go through all codes one by one due to time limitation, so you can refer to [NetLogo Dictionary] (http://ccl.northwestern.edu/netlogo/docs/index2.html){:target="_blank"} in your free time. Also, the setting of values and growth rules etc. are based on the original SLEUTH model (details can be seen in [Project Gigapolis website](http://www.ncgia.ucsb.edu/projects/gig/About/bkOverview.html){:target="_blank"} so we won't go through in detail. The objective of this exercise in this supervision is to introduce how raster maps generated in QGIS can be loaded on NetLogo and how a model directly applicable to urban planning like SLEUTH urban growth model can run on NetLogo based on a set of rules.
 5. Line 62 asks road patches to set run_value. Change `road = 1` to `road > 0` and `road1 / 4` to `road1 / 100` since in the raster data for Sejong, 0=non-road and road value ranges up to 100.
 6. In line 65, also change `road = 1` to `road > 0`.
 
@@ -227,7 +227,7 @@ Note: As this supervision is for introducing how QGIS and raster data can be use
 26. Add in line 279 `to-report tenpercent_urban`
 27. Add in line 280 `report (round (count patches with [urban = 1] * 0.10))`
 28. Add in line 281 `end`. This is to define the value `tenpercent_urban` introduced earlier.
-29. Click `Check` bottom next to `Find`. (Note: If an error message comes up for some reason, click `Dismiss` and try again twice. On the third go, the map will be loaded fine. If it still occurs, it might be due to typo, etc. Let one of the supervisors know, and in the interest of time, download the completed file [Urbanization_sejong.nlogo](data/Urbanization_sejong.nlogo) so that we can carry on. You can either put this file in the same working directory, or you can copy-paste this file's code to the NetLogo file that you have been working on.
+29. Click `Check` bottom next to `Find`. (Note: If an error message comes up for some reason, click `Dismiss` and try again twice. On the third go, the map will be loaded fine. If it still occurs, it might be due to typo, etc. Let one of the supervisors know, and in the interest of time, download the completed file [Urbanization_sejong.nlogo](data/Urbanization_sejong.nlogo){:target="_blank"} so that we can carry on. You can either put this file in the same working directory, or you can copy-paste this file's code to the NetLogo file that you have been working on.
 
 ![](statics/Sup2_sleuth4_4.PNG)
 
@@ -241,8 +241,8 @@ Note: As this supervision is for introducing how QGIS and raster data can be use
 ![](statics/Sup2_sleuth5.PNG)
 ![](statics/Sup2_sleuth6.PNG)
 
-5. The Sejong masterplan sets that development is not possible on land with a slope greater than 20 degrees. 20 degrees slope equates to 36.4 percent slope. (Note: a simple degree to percent slope can be found online, for example [Calcunation.com](https://www.calcunation.com/calculator/degrees-to-percent.php). Move the `critical_slope` bar to `36` and see what changes.
-6. The best-fit of five coefficients can be calculated through calibration which requires `extensions [r]` and many more. For more information on these coefficients, you can look at [Project Gigapolis webpage](http://www.ncgia.ucsb.edu/projects/gig/About/gwCoef.htm).
+5. The Sejong masterplan sets that development is not possible on land with a slope greater than 20 degrees. 20 degrees slope equates to 36.4 percent slope. (Note: a simple degree to percent slope can be found online, for example [Calcunation.com](https://www.calcunation.com/calculator/degrees-to-percent.php){:target="_blank"}. Move the `critical_slope` bar to `36` and see what changes.
+6. The best-fit of five coefficients can be calculated through calibration which requires `extensions [r]` and many more. For more information on these coefficients, you can look at [Project Gigapolis webpage](http://www.ncgia.ucsb.edu/projects/gig/About/gwCoef.htm){:target="_blank"}.
 7. Right-click anywhere on the map and click `inspect patch` You will see the properties of the selected cell e.g. urban, road, slope, excluded...
 
 ![](statics/Sup2_sleuth7.PNG)
@@ -254,5 +254,5 @@ Note: As this supervision is for introducing how QGIS and raster data can be use
 
 ## Closing
 
-10. In a short period of time, you have been introduced to the concept of NetLogo, how to load your own raster data into an existing model that uses the GIS extension, as well as making changes to the code. If you are more interested, there are many more resources available on the [NetLogo website](https://ccl.northwestern.edu/netlogo/), for example, in `Help`, `Resources` and tabs under `Models` and `User Manuals`. Please feel free to reach out to Rain (hk394@cam.ac.uk) for any specific advise!
+10. In a short period of time, you have been introduced to the concept of NetLogo, how to load your own raster data into an existing model that uses the GIS extension, as well as making changes to the code. If you are more interested, there are many more resources available on the [NetLogo website](https://ccl.northwestern.edu/netlogo/){:target="_blank"}, for example, in `Help`, `Resources` and tabs under `Models` and `User Manuals`. Please feel free to reach out to Rain (hk394@cam.ac.uk) for any specific advise!
 11. Also, there is an assignment [Supervision 2 Assignment](CamLandEc-RM03/supervision2-assignment_invisible_v2.md) which will allow you to explore more of the codes on NetLogo using the Game of Life model. Thanks for your concentration!
