@@ -24,7 +24,7 @@ dataset/
 # RStudio files
 .Rproj.user
 
-*.pdf
+# *.pdf
 pdf*.md
 
 # OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
@@ -38,3 +38,5 @@ pdf*.md
 *.utf8.md
 *.knit.md
 .DS_Store
+
+private/
