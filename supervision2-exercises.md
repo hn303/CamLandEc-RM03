@@ -36,7 +36,7 @@ In this supervision, you will familiarise yourself with geoprocessing raster dat
 ### QGIS project setup
 1. Click `Project` > `New`.
 2. Click `Project` > `Save As`, and save as `supervision2.qgz` to the working directory. 
-3. Download dataset (sample data of Sejong, South Korea): [Urban_2018.zip](../data/Urban_2018.zip), [Exclusion_2014.zip](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Exclusion_2014.zip), [Road_2018.zip](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Road_2018.zip), and [Boundary.zip](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Boundary.zip) in the working directory (you don't need to unzip). (Note: The original dataset are from the Korea National Spatial Infrastructure Portal. We have simplified and edited the file contents for the supervision).
+3. Download dataset (sample data of Sejong, South Korea): [Urban_2018.zip](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Urban_2018.zip), [Exclusion_2014.zip](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Exclusion_2014.zip), [Road_2018.zip](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Road_2018.zip), and [Boundary.zip](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Boundary.zip) in the working directory (you don't need to unzip). (Note: The original dataset are from the Korea National Spatial Infrastructure Portal. We have simplified and edited the file contents for the supervision).
 4. Go to `Project` >  `Properties` in menu bar and open the `Project Properties` window.
     - `General` tab: Set your working directory as `Project Home`.
 Note: after adding project home, you can find `Project Home` directory is showing in the `Browser panel`. It is much easier to locate your data files through this panel.
