@@ -190,7 +190,6 @@ Note: As this supervision is for introducing how QGIS and raster data can be use
 ![](statics/Sup2_sleuth2.PNG)
 
 7. In line 83, change `road = 1` to `road > 0`.
-8. In Lines 84 and 91, add `ask patches [if boundary = 0 [set pcolor black]]`. This is necessary for the map to draw the boundaries in the next iterations.
 9. In the `to load_data` section, change the Santa Fe data to `Urban_2018.asc`, `Slope_2014.asc`, `Road_2018.asc`, and `Exclusion_2014.asc`. 
 
 ![](statics/Sup2_sleuth3.PNG)
