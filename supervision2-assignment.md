@@ -52,19 +52,19 @@ Note: You can refer to `NetLogo Dictionary` [(http://ccl.northwestern.edu/netlog
 
 #### Question 3. Let's add one additional command to the model. Add the following lines below the `to cell-death` part. This command makes this cell colored in green to kill the four surrounding patches. Explain this rule in your own words.
 ```
-`to zombie-birth`  
-  `set living? true`  
-  `ask neighbors [ cell-death ]`  
-  `set pcolor green`  
-`end`
+to zombie-birth
+  set living? true
+  ask neighbors [ cell-death ]
+  set pcolor green
+end
 ```
 #### Question 4. Let's add a new rule for `zombie-birth`. Add the following lines below the `ask patches [ ifelse ]` part. This rule runs the same ifelse command on the 1,000 randomly chosen patches, this time for `zombie-birth`. (Note: `n-of`[(http://ccl.northwestern.edu/netlogo/docs/dict/n-of.html)](http://ccl.northwestern.edu/netlogo/docs/dict/n-of.html)). Run the model and explain how this change affects the simulation.
 ```
-ask n-of 1000 patches`  
-  `[ ifelse live-neighbors = 3`  
-    `[ zombie-birth ]`  
-    `[if live-neighbors != 2`  
-      `[ cell-death ] ] ]`
+ask n-of 1000 patches
+  [ ifelse live-neighbors = 3
+    [ zombie-birth ]
+    [if live-neighbors != 2
+      [ cell-death ] ] ]
 ```         
 ![](statics/Sup2_gameoflife4.PNG)
 ![](statics/Sup2_gameoflife5.PNG)
