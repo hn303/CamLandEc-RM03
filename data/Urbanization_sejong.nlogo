@@ -191,7 +191,7 @@ end
 
 to check_suitability
   ;;create lookup table
-  set max_slope max [slope] of patches
+  set max_slope (max [slope] of patches with [( (slope <= 0) or (slope >= 0) )])
   set prob_to_build []
   let i 0
   while [i <= critical_slope][
