@@ -58,6 +58,8 @@ to zombie-birth
   set pcolor green
 end
 ```
+![](statics/Sup2_gameoflife4.PNG)
+
 #### Question 4. Let's add a new rule for `zombie-birth`. Add the following lines below the `ask patches [ ifelse ]` part. This rule runs the same ifelse command on the 1,000 randomly chosen patches, this time for `zombie-birth`. (Note: `n-of`[(http://ccl.northwestern.edu/netlogo/docs/dict/n-of.html)](http://ccl.northwestern.edu/netlogo/docs/dict/n-of.html)). Run the model and explain how this change affects the simulation.
 ```
 ask n-of 1000 patches
@@ -66,7 +68,6 @@ ask n-of 1000 patches
     [if live-neighbors != 2
       [ cell-death ] ] ]
 ```         
-![](statics/Sup2_gameoflife4.PNG)
 ![](statics/Sup2_gameoflife5.PNG)
 
 
