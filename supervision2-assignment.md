@@ -20,7 +20,7 @@ In this assignment, you will familiarise yourself with changing the codes on Net
 ### Setup work environment
 1. Open `NetLogo 6.1.1` (NOT `NetLogo 3D 6.1.1`).
 2. Open `Life` from `Models Library` under `Sample Models` > `Computer Science` > `Cellular Automata`.
-3. Game of Life is a simple cellular automata (CA) model where the state of the cells (patches) change according to behavioral rules. As the simulation runs, you can find recurring shapes like gliders and blinkers. Note: You can refer to `Conway's Game of Life`[https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) for more detailed information.
+3. Game of Life is a simple cellular automata (CA) model where the state of the cells (patches) change according to behavioral rules. As the simulation runs, you can find recurring shapes like gliders and blinkers. Note: You can refer to `Conway's Game of Life`[(https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) for more detailed information.
 4. Click `setup-random` > `go-forever` to start the simulation, and click `go-forever` again to stop the simulation.
 
 ![](statics/Sup2_gameoflife1.PNG)
@@ -28,7 +28,7 @@ In this assignment, you will familiarise yourself with changing the codes on Net
 ### Understanding NetLogo codes
 
 1. Let's check the `Code` tab. (Note: If you don't see line numbers, for Windows users, on the `Menu bar`, click `Tools` > `Preferences` and check `Show Line Numbers`. For Mac users, on the `Menu bar`, click `NetLogo` > `Preferences` and check `Show Line Numbers`.) 
-2. In line 2-3, `living?` and `live-neighbors` are variables. In line 8, `ask patches [ cell-death ]` means to `ask`(http://ccl.northwestern.edu/netlogo/docs/dict/ask.html) patches to run the `[ cell-death ]` command. In line 26, `[ cell-death ]` command sets `living?` as false, and sets patch color as foreground color. `[ cell-birth ]` command does the opposite.
+2. In line 2-3, `living?` and `live-neighbors` are variables. In line 8, `ask patches [ cell-death ]` means to `ask`[(http://ccl.northwestern.edu/netlogo/docs/dict/ask.html)](http://ccl.northwestern.edu/netlogo/docs/dict/ask.html) patches to run the `[ cell-death ]` command. In line 26, `[ cell-death ]` command sets `living?` as false, and sets patch color as foreground color. `[ cell-birth ]` command does the opposite.
 3. Line 14 means "ask patches to run the `ifelse` (http://ccl.northwestern.edu/netlogo/docs/dict/ifelse.html) command. ifelse commands are very important in language-based rules. Line 15-17 means "if `random-float 100 < initial-density` reports true (in other words, "if a `random floating point number >= 0 but less than 100` is less than the `initial density (default=35)`"), run the `[ cell-birth ]` command, and otherwise, run the `[ cell-death ]` command. This part makes each cell to check the state of itself.
 Note: You can refer to `NetLogo Dictionary` (http://ccl.northwestern.edu/netlogo/docs/index2.html) when trying to understand the codes.
 
@@ -59,8 +59,8 @@ Note: You can refer to `NetLogo Dictionary` (http://ccl.northwestern.edu/netlogo
 `end`
 
 #### Question 4. Let's add a new rule for `zombie-birth`. Add the following lines below the `ask patches [ ifelse ]` part. This rule runs the same ifelse command on the 1,000 randomly chosen patches, this time for `zombie-birth`. (Note: `n-of`(http://ccl.northwestern.edu/netlogo/docs/dict/n-of.html)). Run the model and explain how this change affects the simulation.
-
-`ask n-of 1000 patches`  
+```
+ask n-of 1000 patches`  
   `[ ifelse live-neighbors = 3`  
     `[ zombie-birth ]`  
     `[if live-neighbors != 2`  
@@ -68,7 +68,7 @@ Note: You can refer to `NetLogo Dictionary` (http://ccl.northwestern.edu/netlogo
          
 ![](statics/Sup2_gameoflife4.PNG)
 ![](statics/Sup2_gameoflife5.PNG)
-
+```
 
 #### Question 5. In 500 words, explain how the concept of game of life can apply to planning-related studies. Suggested reading includes the following and you can also refer to other materials that you find. In-text citation is encouraged. 
 - Dounas, T. et al. (2017) ‘Dense Urban Typologies and the Game of Life: Evolving Cellular Automata’, in Çağdaş, G. et al. (eds) Proceedings of the 17th International Conference on Computer Aided Architectural Design Futures, Istanbul Technical. Levent, Istanbul: Cenkler Matbaa, pp. 648–666. Available at: http://papers.cumincad.org/data/works/att/cf2017_648.pdf.
