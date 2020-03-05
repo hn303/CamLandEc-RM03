@@ -50,7 +50,7 @@ Note: You can refer to `NetLogo Dictionary` [(http://ccl.northwestern.edu/netlog
 
 #### Question 2. In line 33, try changing `neighbors` to `neighbors4` and run the model. Observe and explain how this change affects the simulation. (Refer to `neighbors4`(http://ccl.northwestern.edu/netlogo/docs/dict/neighbors.html).)
 
-#### Question 3. Let's add one additional command to the model. Add the following lines below the `to cell-death` part. This command makes this cell colored in green to kill the four surrounding patches. Explain this rule in your own words. (Note: change the `neighbors4` back to `neighbors` as in the screenshot below.)
+#### Question 3. Let's add one additional command to the model. Add the following lines below the `to cell-death` part. This command makes this cell colored in green to kill the four surrounding patches. Explain this rule in your own words. (Note: In case you don't see green zombie cells appearing, you change the `neighbors4` back to `neighbors` as in the screenshot below and set the initial-density around 35% so that cells don't die out too quickly. Also, try pressing "go-once" several times rather than "go-forever".)
 ```
 to zombie-birth
   set living? true
