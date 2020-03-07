@@ -1,4 +1,4 @@
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/hn303/CamLandEc-RM03/blob/master/Supervision%203v3.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://https://colab.research.google.com/github.com/hn303/CamLandEc-RM03/blob/master/Supervision%203v3.ipynb)
 
 Remember to replace the notebook URL in this template with the notebook you want to link to.
 # Supervision 3 (12-13 March, 2020)
@@ -17,7 +17,7 @@ In this exercise, you will familiarise yourself with collect data via Applicatio
 
 # 1. Collect Tweets via API
 
-## Apply API from Twitter (5 mins)
+## Applysupervision3-exercises.md API from Twitter (5 mins)
 The Twitter API (application programming interface) is your gateway to accessing Twitter data. 
 A guidance on setting up Twitter APi: http://social-metrics.org/api-keys/
 
