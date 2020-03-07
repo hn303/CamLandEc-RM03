@@ -1,4 +1,4 @@
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://https://colab.research.google.com/github.com/hn303/CamLandEc-RM03/blob/master/Supervision%203v3.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://https://colab.research.google.com/github/hn303/CamLandEc-RM03/blob/master/Supervision%203v3.ipynb)
 
 Remember to replace the notebook URL in this template with the notebook you want to link to.
 # Supervision 3 (12-13 March, 2020)
