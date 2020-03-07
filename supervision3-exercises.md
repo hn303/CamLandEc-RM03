@@ -1,3 +1,11 @@
+---
+title: "Supervision 3"
+nav_order: 8
+nav_exclude: false
+search_exclude: true
+---
+
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hn303/CamLandEc-RM03/blob/master/supervision3-v3.ipynb)
 
 Remember to replace the notebook URL in this template with the notebook you want to link to.
