@@ -1,19 +1,5 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/hn303/CamLandEc-RM03/blob/master/Supervision%203v3.ipynb)
 
-The markdown for the above badge is the following:
-
-```markdown
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
-```
-
-The HTML equivalent is:
-
-```HTML
-<a href="https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
-```
-
 Remember to replace the notebook URL in this template with the notebook you want to link to.
 # Supervision 3 (12-13 March, 2020)
 
