@@ -5,7 +5,6 @@ nav_exclude: false
 search_exclude: true
 ---
 
-Remember to replace the notebook URL in this template with the notebook you want to link to.
 # Supervision 3 (12-13 March, 2020)
 
 ### Instructions
@@ -61,22 +60,16 @@ Note: after adding `Project home`, you can find `Project Home` directory is show
 ![](statics/QGIS_crs.png) 
 
 
-### Import data
-1. Download dataset `Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain.zip`[(link)](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain.zip) and `flood_tweets.csv`[(link)](data/flood_tweets.csv) into your working directory.
-2. Import xxx
-3. Import xxx
-
-
 ### Making heatmap based on their location (5Mins)
 
 - How to import data from spreadsheets and CSV with coordinates?
 - How to display coordinates from spreadsheets and CSV in QGIS?
 
-**Importing spreadsheets or CSV files**
+**Importing tweets file and local authorities boundaries**
 
 1. Download `Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain` data of Cambridgeshire from: [(link)](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain.zip) {:target="_blank"} and `flood_tweets.csv`[(link)](https://github.com/hn303/CamLandEc-RM03/blob/master/data/flood_tweets.csv) into your working directory. Both files should be saved into your working directory. 
-2. Navigate to menu bar click `Layer` > `Add Layer` > `Add Delimited Text Layer`. Browse the `flood_tweets.csv` just downloaded and change the layer name to `flood_tweets`. In the section of File Format, choose CSV. In the Geometry Definition section, choose `Point coordinates` and select `Longitude` and `Latitude` fields as X Y fields respectively. Normally the Geometry definition section will be auto-populated if it finds a suitable X and Y coordinate fields. Then choose the right CRS (EPSG:4326 - WGS84) for this file. Finally, click add and you will find a point layer.<br>
-3. Navigate to menu bar click `Layer` > `Add Layer` > `Add Delimited Text Layer`. Browse the `flood_tweets.csv` just downloaded and change the layer name to `flood_tweets`. 
+2. Import shapefile into your project: Locate this file at your working directory in the Browser Panel and hold the left mouse and drag the Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain.shp into the map window. Alternatively, you can add vector file through data source manager. Click Open data source manager button on Data source manager toolbar and switch to Vector tab. Choose file as the source type and choose your shapefile in the source path.
+3. Navigate to menu bar click `Layer` > `Add Layer` > `Add Delimited Text Layer`. Browse the `flood_tweets.csv` just downloaded and change the layer name to `flood_tweets`. In the section of File Format, choose CSV. In the Geometry Definition section, choose `Point coordinates` and select `Longitude` and `Latitude` fields as X Y fields respectively. Normally the Geometry definition section will be auto-populated if it finds a suitable X and Y coordinate fields. Then choose the right CRS (EPSG:4326 - WGS84) for this file. Finally, click add and you will find a point layer.<br>
 ![csv](statics/QGIS_csv.png)
 
 **Making heatmap for geotagged tweets**
