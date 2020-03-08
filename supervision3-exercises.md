@@ -16,13 +16,16 @@ Remember to replace the notebook URL in this template with the notebook you want
 Note: functions and filename are `highlighted` in this document.
 
 ### Supervision overview
-In this exercise, you will familiarise yourself with collect data via Application programming interface(APIs), spatial visualization with collected data and creating a formal map on QGIS.
+In this exercise, you will familiarise yourself with collect data via Application programming interface(APIs), spatial visualization with collected data and creating a formal map on QGIS. The first two exercises will be practiced on Google Colab and the last exercise will be finished in QGIS.
 
+
+# 1. Collect Tweets via API
 > Please click this button below to move to Google Colab to start the first two exercises. Once open the colab, please save a copy to your own Google Drive.    
 > [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hn303/CamLandEc-RM03/blob/master/supervision3-v3.ipynb)
-# 1. Collect Tweets via API
 
 # 2. Sentiment analysis with content of tweets
+> Please click this button below to move to Google Colab to start the first two exercises. Once open the colab, please save a copy to your own Google Drive.    
+> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hn303/CamLandEc-RM03/blob/master/supervision3-v3.ipynb)
 
 # 3. Visualizaton of geo-tagged tweets
 Geo-location is another important feature of social media. Location of social media can be used in mobility pattern identification, sentiment detection, emergency management and so on. In emergency management, social media data can be used as crowdsourcing tool to collect real-time information in different effected areas. In this section, we will use tweets with geotagged location to identified the effected areas may suffer flood or storms in the early spring 2020. 
