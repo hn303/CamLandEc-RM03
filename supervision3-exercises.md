@@ -8,8 +8,6 @@ search_exclude: true
 Remember to replace the notebook URL in this template with the notebook you want to link to.
 # Supervision 3 (12-13 March, 2020)
 
-
-
 ### Instructions
 1. Read through the instruction carefully. You may face problems if you overlook any of the steps.
 2. The instruction for data collection via APIs is written in [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb#recent=true), a free jupyter environment that requires no setup to use and runs python entirely in the cloud. You need log in with your **Google Account** to use this free platform. If you do not have Google Account previously, please apply a new account via this [link](https://accounts.google.com/signup/v2/webcreateaccount?hl=en&continue=https%3A%2F%2Fmyaccount.google.com%2Fintro&flowName=GlifWebSignIn&flowEntry=SignUp) before the supervision. Know more about Google Colab, please check this [link](https://research.google.com/colaboratory/faq.html).
@@ -20,7 +18,7 @@ Note: functions and filename are `highlighted` in this document.
 ### Supervision overview
 In this exercise, you will familiarise yourself with collect data via Application programming interface(APIs), spatial visualization with collected data and creating a formal map on QGIS.
 
-> Please click this button below to move to Google Colab to start the first two exercises. Once open the colab, please save a copy to your own Google Drive.
+> Please click this button below to move to Google Colab to start the first two exercises. Once open the colab, please save a copy to your own Google Drive.    
 > [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hn303/CamLandEc-RM03/blob/master/supervision3-v3.ipynb)
 # 1. Collect Tweets via API
 
