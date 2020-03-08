@@ -55,9 +55,10 @@ the raw data is from https://data.gov.uk/dataset/b1f548a4-694c-438b-9551-af7a121
     - `Metadata` tab: It is suggested to input title, author, creation date and a short abstract in the identification tab.
     - `CRS` tab: this tab provides Coordinate Reference System (CRS) setting for the project file. Here, we choose the projected coordinate system, `OSGB 1936/British National Grid EPSG:27700`. Be aware that CRS setting in the `Project Properties` is just for the project (called `Data Frame setting` in ArcGIS). CRS setting for layers will be introduced later.<br>
 Note: after adding `Project home`, you can find `Project Home` directory is showing in the `Browser panel`. It is much easier to locate your data files through this panel.<br>
-![](statics/QGIS_general.png)
-![](statics/QGIS_metadata.png)
-![](statics/QGIS_crs.png) 
+![](statics/Sup3_crs.png) 
+![](statics/Sup3_general.png)
+![](statics/Sup3_metadata.png)
+
 
 
 ### Making heatmap based on their location (5Mins)
