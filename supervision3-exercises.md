@@ -20,10 +20,11 @@ Note: functions and filename are `highlighted` in this document.
 ### Supervision overview
 In this exercise, you will familiarise yourself with collect data via Application programming interface(APIs), spatial visualization with collected data and creating a formal map on QGIS.
 
+> Please click this button below to move to Google Colab to start the first two exercises. Once open the colab, please save a copy to your own Google Drive.
+> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hn303/CamLandEc-RM03/blob/master/supervision3-v3.ipynb)
 # 1. Collect Tweets via API
-# 2. Sentiment analysis with content of tweets
 
-> Please click this link to move to Google Colab to start the first two exercises. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hn303/CamLandEc-RM03/blob/master/supervision3-v3.ipynb)
+# 2. Sentiment analysis with content of tweets
 
 # 3. Visualizaton of geo-tagged tweets
 Geo-location is another important feature of social media. Location of social media can be used in mobility pattern identification, sentiment detection, emergency management and so on. In emergency management, social media data can be used as crowdsourcing tool to collect real-time information in different effected areas. In this section, we will use tweets with geotagged location to identified the effected areas may suffer flood or storms in the early spring 2020. 
@@ -46,11 +47,10 @@ the raw data is from https://data.gov.uk/dataset/b1f548a4-694c-438b-9551-af7a121
 ### QGIS Project Setup (5 mins)
 
 1. It is suggested to create a folder and name it as `rm03_YourCRSid_sup2`, at your prefered directory on your disk. This folder will be the working directory for the assignment and supervision.
-2. Download dataset `Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain.zip`[(link)](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain.zip) and `flood_tweets.csv`[(link)](data/flood_tweets.csv) into your working directory.
 
-3. In the menu bar, Click `Project` > `New` to create a new QGIS project.
-4. Go to `Project` > `Save As` and save as `supervision1.QGZ` to the working directory. 
-5. Go to `Project` >  `Properties` and open the `Project Properties` window. 
+2. In the menu bar, Click `Project` > `New` to create a new QGIS project.
+3. Go to `Project` > `Save As` and save as `supervision3.QGZ` to the working directory. 
+4. Go to `Project` >  `Properties` and open the `Project Properties` window. 
     - `General` tab: in the general settings, set your working directory as `Project Home`, change the unit for distance measurement you prefer and also display coordinates units.
     - `Metadata` tab: It is suggested to input title, author, creation date and a short abstract in the identification tab.
     - `CRS` tab: this tab provides Coordinate Reference System (CRS) setting for the project file. Here, we choose the projected coordinate system, `OSGB 1936/British National Grid EPSG:27700`. Be aware that CRS setting in the `Project Properties` is just for the project (called `Data Frame setting` in ArcGIS). CRS setting for layers will be introduced later.<br>
@@ -59,6 +59,13 @@ Note: after adding `Project home`, you can find `Project Home` directory is show
 ![](statics/QGIS_metadata.png)
 ![](statics/QGIS_crs.png) 
 
+
+### Import data
+1. Download dataset `Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain.zip`[(link)](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain.zip) and `flood_tweets.csv`[(link)](data/flood_tweets.csv) into your working directory.
+2. Import xxx
+3. Import xxx
+
+
 ### Making heatmap based on their location (5Mins)
 
 - How to import data from spreadsheets and CSV with coordinates?
@@ -66,9 +73,9 @@ Note: after adding `Project home`, you can find `Project Home` directory is show
 
 **Importing spreadsheets or CSV files**
 
-1. Download `York_floods_tweets` data of Cambridgeshire from: [Cambridgeshire Insight Open Data](https://data.cambridgeshireinsight.org.uk/dataset/cambridge-local-services/resource/af2c41d1-c8a0-46cf-ab77-ca407732e060){:target="_blank"} and save into your working directory. This is a set of data to be used to geo-locate a shortlist of agencies and facilities around Cambridge.
-2. Navigate to menu bar click `Layer` > `Add Layer` > `Add Delimited Text Layer`. Browse the `York_floods_tweets.csv` just downloaded and change the layer name to `York_floods_tweets`. In the section of File Format, choose CSV. In the Geometry Definition section, choose `Point coordinates` and select `Longitude` and `Latitude` fields as X Y fields respectively. Normally the Geometry definition section will be auto-populated if it finds a suitable X and Y coordinate fields. Then choose the right CRS (EPSG:4326 - WGS84) for this file. Finally, click add and you will find a point layer.<br>
-
+1. Download `Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain` data of Cambridgeshire from: [(link)](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain.zip) {:target="_blank"} and `flood_tweets.csv`[(link)](https://github.com/hn303/CamLandEc-RM03/blob/master/data/flood_tweets.csv) into your working directory. Both files should be saved into your working directory. 
+2. Navigate to menu bar click `Layer` > `Add Layer` > `Add Delimited Text Layer`. Browse the `flood_tweets.csv` just downloaded and change the layer name to `flood_tweets`. In the section of File Format, choose CSV. In the Geometry Definition section, choose `Point coordinates` and select `Longitude` and `Latitude` fields as X Y fields respectively. Normally the Geometry definition section will be auto-populated if it finds a suitable X and Y coordinate fields. Then choose the right CRS (EPSG:4326 - WGS84) for this file. Finally, click add and you will find a point layer.<br>
+3. Navigate to menu bar click `Layer` > `Add Layer` > `Add Delimited Text Layer`. Browse the `flood_tweets.csv` just downloaded and change the layer name to `flood_tweets`. 
 ![csv](statics/QGIS_csv.png)
 
 **Making heatmap for geotagged tweets**
