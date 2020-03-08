@@ -1,3 +1,10 @@
+---
+layout: default
+title: Tokens
+nav_order: 10
+nav_exclude: true
+---
+
 **APP1**    
 API key: tvQVzACFw1hqaL5PgKJKcXKEP
 API secret key: WAZhEseqgEAp1W1m0Eg97nyLC716yOLnXL0hZQbenA9cjAV9ZN
