@@ -1,8 +1,7 @@
 ---
-title: "Supervision 2"
-nav_exclude: yes
+title: "Assignment 2 Answers&Instruction"
+nav_exclude: False
 nav_order: 7
-nav_exclude: true
 search_exclude: true
 ---
 
