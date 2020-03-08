@@ -30,20 +30,6 @@ In this exercise, you will familiarise yourself with collect data via Applicatio
 Geo-location is another important feature of social media. Location of social media can be used in mobility pattern identification, sentiment detection, emergency management and so on. In emergency management, social media data can be used as crowdsourcing tool to collect real-time information in different effected areas. In this section, we will use tweets with geotagged location to identified the effected areas may suffer flood or storms in the early spring 2020. 
 Because of the limted time of supervision, we will use pre-collected data (data collected in a week) to demonstrate how to process and visualize geo-location of tweets. 
 
-Data
-- wards
-- population
-- flood 
-
-Process
-- ward and population join
-- summarise
-- calculation
-- visualization
-
-the raw data is from https://data.gov.uk/dataset/b1f548a4-694c-438b-9551-af7a121e3395/ons-mid-year-population-estimates-custom-age-tables
-
-
 ### QGIS Project Setup (5 mins)
 
 1. It is suggested to create a folder and name it as `rm03_YourCRSid_sup2`, at your prefered directory on your disk. This folder will be the working directory for the assignment and supervision.
@@ -112,12 +98,6 @@ In this example, the composition was already the way we wanted it. Ensure that y
 1. In the Print Layout window, check that the values under Composition ‣ Paper and Quality are set to the following:
 ![](statics/Sup3_symbol.png)
 
-```
-Size: A4 (210x297mm)
-Orientation: Landscape
-Quality: 300dpi
-```
-
 2. Now you’ve got the page layout the way you wanted it, but this page is still blank. To add the map, click on the `Add New Map` button: . With this tool activated, you’ll be able to place a map on the page.
 
 3. Click and drag a box on the blank page. The map will appear on the page.
@@ -132,7 +112,7 @@ Note:
 
 Because a Layout in QGIS is part of the main map file, you’ll need to save your main project. Go to the main QGIS window (the one with the Layers panel and all the other familiar elements you were working with before), and save your project from there as usual.
 
-**Adding Map Elements**
+### Adding Map Elements
 
 Now your map is looking good on the page, but your readers/users are not being told what’s going on yet. They need some context, which is what you’ll provide for them by adding map elements. First, let’s add elements.
 
