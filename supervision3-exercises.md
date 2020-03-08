@@ -19,11 +19,11 @@ In this exercise, you will familiarise yourself with collect data via Applicatio
 
 
 # 1. Collect Tweets via API
-> Please click this button below to move to Google Colab to start the first two exercises. Once open the colab, please save a copy to your own Google Drive.    
+> Please click this button below to move to Google Colab to start the first two exercises. Once open the colab, log in with your Google acount and save a copy to your own Google Drive.    
 > [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hn303/CamLandEc-RM03/blob/master/supervision3-v3.ipynb)
 
 # 2. Sentiment analysis with content of tweets
-> Please click this button below to move to Google Colab to start the first two exercises. Once open the colab, please save a copy to your own Google Drive.    
+> Please click this button below to move to Google Colab to start the first two exercises. Once open the colab, log in with your Google acount and save a copy to your own Google Drive.    
 > [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hn303/CamLandEc-RM03/blob/master/supervision3-v3.ipynb)
 
 # 3. Visualizaton of geo-tagged tweets
@@ -32,7 +32,7 @@ Because of the limted time of supervision, we will use pre-collected data (data 
 
 ### QGIS Project Setup (5 mins)
 
-1. It is suggested to create a folder and name it as `rm03_YourCRSid_sup2`, at your prefered directory on your disk. This folder will be the working directory for the assignment and supervision.
+1. It is suggested to create a folder and name it as `rm03_YourCRSid_sup3`, at your prefered directory on your disk. This folder will be the working directory for the assignment and supervision.
 
 2. In the menu bar, Click `Project` > `New` to create a new QGIS project.
 3. Go to `Project` > `Save As` and save as `supervision3.QGZ` to the working directory. 
@@ -46,7 +46,7 @@ Note: after adding `Project home`, you can find `Project Home` directory is show
 ![](statics/Sup3_metadata.png)
 
 
-### Making heatmap based on their location (5Mins)
+### Making heatmap based on their location (5 mins)
 
 - How to import data from spreadsheets and CSV with coordinates?
 - How to display coordinates from spreadsheets and CSV in QGIS?
@@ -58,23 +58,21 @@ In the raw data of geotagged tweets, there is obvious cluster around London. The
 
 **Importing tweets file and local authorities boundaries**
 
-1. Download `Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain` data from: [(link)](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain.zip) {:target="_blank"} and `flood_tweets.csv` data from[(link)](https://github.com/hn303/CamLandEc-RM03/blob/master/data/flood_tweets.csv) into your working directory. Both files should be saved into your working directory. 
+1. Download `Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain` data from: [link](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain.zip) and `flood_tweets.csv` data from [link](https://raw.githubusercontent.com/hn303/CamLandEc-RM03/master/data/flood_tweets.csv) into your working directory. Both files should be saved into your working directory. 
 2. Import shapefile into your project: Locate this file at your working directory in the Browser Panel and hold the left mouse and drag the Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain.shp into the map window. Alternatively, you can add vector file through data source manager. Click Open data source manager button on Data source manager toolbar and switch to Vector tab. Choose file as the source type and choose your shapefile in the source path.
 3. Navigate to menu bar click `Layer` > `Add Layer` > `Add Delimited Text Layer`. Browse the `flood_tweets.csv` just downloaded and change the layer name to `flood_tweets`. In the section of File Format, choose CSV. In the Geometry Definition section, choose `Point coordinates` and select `Longitude` and `Latitude` fields as X Y fields respectively. Normally the Geometry definition section will be auto-populated if it finds a suitable X and Y coordinate fields. Then choose the right CRS (EPSG:4326 - WGS84) for this file. Finally, click add and you will find a point layer.<br>
 ![csv](statics/Sup3_csv.png)
 
 **Calculate density of geo-tagged tweets (normalised by population in local authorities)**
 
-- How can we link `Census_Merged_Local_Authority_Districts_December_2011_in_Great_BritainCambridge local services` with `flood_tweets`?
-
-1. Navigate to `Processing` > `Toolbox` and search `Join attributes by location(summary)`. In the prompted window, choose `Cam_Services` as input layer and `Cam_City` as join layer. In the geometric predicate section, choose `intersects`. In the join type section, choose `create separate feature for each located feature (one-to-many)`.<br>
+1. Navigate to `Processing` > `Toolbox` and search `Join attributes by location(summary)`. In the prompted window, choose `Census_Merged_Local_Authority_Districts_December_2011_in_Great_BritainCambridge` as input layer and `flood_tweets` as join layer. In the geometric predicate section, choose `intersects`. <br>
 ![](statics/Sup3_join.png)
 ![](statics/Sup3_sum.png)
 
 2. In the Attribute Table of `Joined` layer, click `Open field calculator`. Create another new field named as `tweet_normalised` and set the output field type to ‘Decimal number (real)’, Precision = 10 and Scale = 3. In the expression window, input `text_count * 1000/Pop_2016` and we will compute tweet density, number of flood-related tweets per 1000 people in each local athority. 
 ![](statics/Sup3_nor.png)
 
-3. Symbolised cambridge map in `Graduated color` by `tweet_normalised`(per 1000 people) column . After choosing color ramp, set `Classes` at 10 in ``Natural Breaks (Jenks)` mode. Click `Classify` button and add all classes.
+3. Symbolised `Joined layer` in `Graduated color` by `tweet_normalised`(per 1000 people) column . After choosing color ramp, set `Classes` at 10 in ``Natural Breaks (Jenks)` mode. Click `Classify` button and add all classes.
 ![](statics/Sup3_symbol.png)
 
 
