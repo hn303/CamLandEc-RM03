@@ -60,46 +60,57 @@ Note: after adding `Project home`, you can find `Project Home` directory is show
 ![](statics/Sup3_metadata.png)
 
 
-
 ### Making heatmap based on their location (5Mins)
 
 - How to import data from spreadsheets and CSV with coordinates?
 - How to display coordinates from spreadsheets and CSV in QGIS?
+In the raw data of geotagged tweets, there is obvious cluster around London. The reason is that there are more twitter users in London because of large population base. It is inappropriate to directly summarise flood-related tweets within local athorities to identify possible affected areas. We need we use normalization to minimize differences in geotagged tweets based on the population of each local authority. 
+- import local authority boundary with population value.
+- import geotagged tweets
+- join by location while summarising
+
 
 **Importing tweets file and local authorities boundaries**
 
-1. Download `Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain` data of Cambridgeshire from: [(link)](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain.zip) {:target="_blank"} and `flood_tweets.csv`[(link)](https://github.com/hn303/CamLandEc-RM03/blob/master/data/flood_tweets.csv) into your working directory. Both files should be saved into your working directory. 
+1. Download `Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain` data from: [(link)](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain.zip) {:target="_blank"} and `flood_tweets.csv` data from[(link)](https://github.com/hn303/CamLandEc-RM03/blob/master/data/flood_tweets.csv) into your working directory. Both files should be saved into your working directory. 
 2. Import shapefile into your project: Locate this file at your working directory in the Browser Panel and hold the left mouse and drag the Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain.shp into the map window. Alternatively, you can add vector file through data source manager. Click Open data source manager button on Data source manager toolbar and switch to Vector tab. Choose file as the source type and choose your shapefile in the source path.
 3. Navigate to menu bar click `Layer` > `Add Layer` > `Add Delimited Text Layer`. Browse the `flood_tweets.csv` just downloaded and change the layer name to `flood_tweets`. In the section of File Format, choose CSV. In the Geometry Definition section, choose `Point coordinates` and select `Longitude` and `Latitude` fields as X Y fields respectively. Normally the Geometry definition section will be auto-populated if it finds a suitable X and Y coordinate fields. Then choose the right CRS (EPSG:4326 - WGS84) for this file. Finally, click add and you will find a point layer.<br>
-![csv](statics/QGIS_csv.png)
+![csv](statics/Sup3_csv.png)
 
-**Making heatmap for geotagged tweets**
-1. Find `QuickMapServices` function in the `Web` section from the menu bar. Choose `OSM`-`OSM Standard`, and you will add base map in QGIS.
+**Calculate density of geo-tagged tweets (normalised by population in local authorities)**
 
-2. Double click the `York_floods_tweets` layer to get in properties dialog.
-3. In the Properties dialog, switch to the Style tab. Select `Heatmap` as the renderer. You have a lot of choice of color-ramps for the heatmap.
-4. Set `10 millermeter` for radius and click OK.
+- How can we link `Census_Merged_Local_Authority_Districts_December_2011_in_Great_BritainCambridge local services` with `flood_tweets`?
 
-![heatmap](statics/QGIS_csv.png)
+1. Navigate to `Processing` > `Toolbox` and search `Join attributes by location(summary)`. In the prompted window, choose `Cam_Services` as input layer and `Cam_City` as join layer. In the geometric predicate section, choose `intersects`. In the join type section, choose `create separate feature for each located feature (one-to-many)`.<br>
+![](statics/Sup3_join.png)
+![](statics/Sup3_sum.png)
+
+2. In the Attribute Table of `Joined` layer, click `Open field calculator`. Create another new field named as `tweet_normalised` and set the output field type to ‘Decimal number (real)’, Precision = 10 and Scale = 3. In the expression window, input `text_count * 1000/Pop_2016` and we will compute tweet density, number of flood-related tweets per 1000 people in each local athority. 
+![](statics/Sup3_nor.png)
+
+3. Symbolised cambridge map in `Graduated color` by `tweet_normalised`(per 1000 people) column . After choosing color ramp, set `Classes` at 10 in ``Natural Breaks (Jenks)` mode. Click `Classify` button and add all classes.
+![](statics/Sup3_symbol.png)
+
 
 ### Using print layout 
 
 **The Layout Manager**
 
 QGIS allows you to create multiple maps using the same map file. For this reason, it has a tool called the Layout Manager.
+![](statics/Sup3_layout.png)
 
 1. Click on the `Project` -> `Layout Manager` menu entry to open this tool. You’ll see a blank Layout manager dialog appear.
-2. Click the Add button and give the new layout the name of `York_floods_tweets_heatmap`.
+2. Click the Add button and give the new layout the name of `flood_tweets`.
 3. Click OK.
 4. Click the Show button.
 
-![layout](statics/Sup_layout.png)
 
 **Basic Map Composition**
 
 In this example, the composition was already the way we wanted it. Ensure that yours is as well.
 
 1. In the Print Layout window, check that the values under Composition ‣ Paper and Quality are set to the following:
+![](statics/Sup3_symbol.png)
 
 ```
 Size: A4 (210x297mm)
@@ -107,9 +118,11 @@ Orientation: Landscape
 Quality: 300dpi
 ```
 
-2. Now you’ve got the page layout the way you wanted it, but this page is still blank. To add the map, click on the `Add New Map` button: ![add_map](statics/Sup3_add_map.png). With this tool activated, you’ll be able to place a map on the page.
+2. Now you’ve got the page layout the way you wanted it, but this page is still blank. To add the map, click on the `Add New Map` button: . With this tool activated, you’ll be able to place a map on the page.
 
-3. Click and drag a box on the blank page: ![layout](statics/Sup_layout.png). The map will appear on the page.
+3. Click and drag a box on the blank page. The map will appear on the page.
+
+![add_map](statics/Sup3_add_map.png)
 
 4. Move the map by clicking and dragging it around: ![layout](statics/Sup_layout.png)
 
@@ -121,21 +134,8 @@ Because a Layout in QGIS is part of the main map file, you’ll need to save you
 
 **Adding Map Elements**
 
-Now your map is looking good on the page, but your readers/users are not being told what’s going on yet. They need some context, which is what you’ll provide for them by adding map elements. First, let’s add a title.
+Now your map is looking good on the page, but your readers/users are not being told what’s going on yet. They need some context, which is what you’ll provide for them by adding map elements. First, let’s add elements.
 
-**Add Title**
-1. Click on this button: label
-2. Click on the page, above the map, and a label will appear at the top of the map.
-Resize it and place it in the top center of the page. It can be resized and moved in the same way that you resized and moved the map.
-3. As you move the title, you’ll notice that guidelines appear to help you position the title in the center of the page.
-![title](statics/Sup3_title.png)
-
-**Add North Arrow**
-1. Click on this button: label
-2. Click on the page, above the map, and a label will appear at the top of the map.
-Resize it and place it in the top center of the page. It can be resized and moved in the same way that you resized and moved the map.
-3. As you move the title, you’ll notice that guidelines appear to help you position the title in the center of the page.
-![arrow](statics/Sup3_arrow.png)
 
 **Add Scale**
 1. Click on this button: label
@@ -145,24 +145,32 @@ Resize it and place it in the top center of the page. It can be resized and move
 ![scale](statics/Sup3_scale.png)
 
 **Add Legend**
-1. Click on this button: addLegend
+1. Click on this button: `add Legend`
 2. Click on the page to place the legend, and move it to where you want it:
-![legend1](statics/Sup3_legend1.png)
+![legend1](statics/Sup3_legend.png)
+
+3. Input title (`Legend`) for legend.
+4. You can also rename items. Double click legend item to rename.
+5. Rename the layers to `Local Authority Boundary` and `Floods Tweets Density (per 1000 people)`. You can also reorder the items.
+![legend2](statics/Sup3_legend1.png)
 
 Not everything on the legend is necessary, so let’s remove some unwanted items.
 
-In the Item Properties tab, you’ll find the Legend items panel.
-3. Select the buildings entry.
-4. Delete it from the legend by clicking the minus button: signMinus
+6. In the `Item Properties` tab, you’ll find the `Legend items` panel. Uncheck `Auto update` to enable editing function.
+6. Select the `flood_tweets`.
+7. Delete it from the legend by clicking the minus button.
 
-You can also rename items.Select a layer from the same list.
-5. Click the Edit button: edit
-6. Rename the layers to Places, Roads and Streets, Surafce Water, and Rivers.
-Set landuse to Hidden, then click the down arrow and edit each category to name them on the legend. You can also reorder the items:
-![legend2](statics/Sup3_legend2.png)
+
+**Add North Arrow**
+1. Click on this button: ``add picture``
+2. Click on the page to place the legend, and move it to where you want it.
+3. In the `Item Properties` tab, you’ll find the `Search Directories` panel. Choose the north arrow you prefer.
+![arrow](statics/Sup3_north.png)
+
 
 Adding elements is the basic step for a map. To make a **good** map, you need to do more! Check the [experts' guidence from ESRI](https://www.esri.com/news/arcuser/0911/making-a-map-meaningful.html) illustrating how to make a meaning map by answeing 10 questions. 
 ![good_map](statics/Sup3_goodmap.png).
+
 
 **Exporting Your Map**
 
