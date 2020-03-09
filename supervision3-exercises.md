@@ -9,24 +9,24 @@ search_exclude: true
 
 ### Instructions
 1. Read through the instruction carefully. You may face problems if you overlook any of the steps.
-2. The instruction for data collection via APIs is written in [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb#recent=true), a free jupyter environment that requires no setup to use and runs python entirely in the cloud. You need log in with your **Google Account** to use this free platform. If you do not have Google Account previously, please apply a new account via this [link](https://accounts.google.com/signup/v2/webcreateaccount?hl=en&continue=https%3A%2F%2Fmyaccount.google.com%2Fintro&flowName=GlifWebSignIn&flowEntry=SignUp) before the supervision. Know more about Google Colab, please check this [link](https://research.google.com/colaboratory/faq.html).
+2. The instruction for data collection via APIs is written in [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb#recent=true), a free jupyter environment that requires no setup to use and runs python entirely in the cloud. You need log in with your **Google Account** to use this free platform. If you do not have Google account previously, you can try to log in with your Cambridge Email address (CRSid@cam.ac.uk). Know more about Google Colab, please check this [link](https://research.google.com/colaboratory/faq.html).
 3. If you do not have **Twitter account**, please apply one via this [Twitter Signup](https://twitter.com/i/flow/signup)
 
 Note: functions and filename are `highlighted` in this document.
 
 ### Supervision overview
-In this exercise, you will familiarise yourself with collect data via Application programming interface(APIs), spatial visualization with collected data and creating a formal map on QGIS. The first two exercises will be practiced on Google Colab and the last exercise will be finished in QGIS.
+In this exercise, you will familiarise yourself with collecting data via Application programming interface(APIs), spatial visualization with geotagged tweets and creating a proper map on QGIS. The first two exercises will be practiced on Google Colab and the last exercise will be practiced on QGIS.
 
 
 # 1. Collect Tweets via API
 > Please click this button below to move to Google Colab to start the first two exercises. Once open the colab, log in with your Google acount and save a copy to your own Google Drive.    
 > [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hn303/CamLandEc-RM03/blob/master/supervision3-v3.ipynb)
 
-# 2. Sentiment analysis with content of tweets
+# 2. Content Analysis of Tweets 
 > Please click this button below to move to Google Colab to start the first two exercises. Once open the colab, log in with your Google acount and save a copy to your own Google Drive.    
 > [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hn303/CamLandEc-RM03/blob/master/supervision3-v3.ipynb)
 
-# 3. Visualizaton of geo-tagged tweets
+# 3. Visualizaton of Geo-tagged Tweets
 With geotagged location, social media can be used in mobility pattern identification, sentiment detection, emergency management and so on. In emergency management, social media paltform like Twitter can be used as crowdsourcing tool to collect real-time information in different effected areas. In this section, we will use geotagged tweets to identified the effected areas may suffer flood or storms in the early spring 2020. 
 Because of the limted time of supervision, we will use pre-collected data (data was collected in last week) to demonstrate how to process and visualize geo-location of tweets. 
 
@@ -146,3 +146,4 @@ Finally the map is ready for export!
 ![map](statics/Sup3_export.png)
 Final map: Density Map of Flood-related Tweets in UK
 ![map](statics/Sup3_final.png)
+You can compare your map with Flood warnings map for England provided by flood information service via this [link](https://flood-warning-information.service.gov.uk/warnings).
