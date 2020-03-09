@@ -144,4 +144,4 @@ Finally the map is ready for export!
 1. Find export buttons near the top left corner of the Layout window:
 2. Choose `Export as Image`
 ![map](statics/Sup3_export.png)
-![map](statics/Sup3_map.png)
+![map](statics/Sup3_final.png)
