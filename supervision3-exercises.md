@@ -143,6 +143,7 @@ Finally the map is ready for export!
 1. Find export buttons near the top left corner of the Layout window:
 2. Choose `Export as Image`
 ![map](statics/Sup3_export.png)
-Final map: Density Map of Flood-related Tweets in UK
+
+**Final map: Density Map of Flood-related Tweets in UK**
 ![map](statics/Sup3_final.png)
 You can compare your map with Flood warnings map for England provided by flood information service via this [link](https://flood-warning-information.service.gov.uk/warnings).
