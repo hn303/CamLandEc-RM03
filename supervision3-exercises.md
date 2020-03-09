@@ -19,8 +19,6 @@ In this exercise, you will familiarise yourself with collecting data via Applica
 
 
 # 1. Collect Tweets via API
-> Please click this button below to move to Google Colab to start the first two exercises. Once open the colab, log in with your Google acount and save a copy to your own Google Drive.    
-> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hn303/CamLandEc-RM03/blob/master/supervision3-v3.ipynb)
 
 # 2. Content Analysis of Tweets 
 > Please click this button below to move to Google Colab to start the first two exercises. Once open the colab, log in with your Google acount and save a copy to your own Google Drive.    
@@ -30,7 +28,7 @@ In this exercise, you will familiarise yourself with collecting data via Applica
 With geotagged location, social media can be used in mobility pattern identification, sentiment detection, emergency management and so on. In emergency management, social media paltform like Twitter can be used as crowdsourcing tool to collect real-time information in different effected areas. In this section, we will use geotagged tweets to identified the effected areas may suffer flood or storms in the early spring 2020. 
 Because of the limted time of supervision, we will use pre-collected data (data was collected in last week) to demonstrate how to process and visualize geo-location of tweets. 
 
-### QGIS Project Setup (5 mins)
+### QGIS Project Setup
 Before using QGIS, we need to setup a QGIS project. It is suggested to create a folder and name it as `rm03_YourCRSid_sup3`, at your prefered directory on your disk. This folder will be the working directory for the assignment and supervision.
 
 1. In the menu bar, Click `Project` > `New` to create a new QGIS project.
