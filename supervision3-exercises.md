@@ -27,16 +27,15 @@ In this exercise, you will familiarise yourself with collect data via Applicatio
 > [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hn303/CamLandEc-RM03/blob/master/supervision3-v3.ipynb)
 
 # 3. Visualizaton of geo-tagged tweets
-Geo-location is another important feature of social media. Location of social media can be used in mobility pattern identification, sentiment detection, emergency management and so on. In emergency management, social media data can be used as crowdsourcing tool to collect real-time information in different effected areas. In this section, we will use tweets with geotagged location to identified the effected areas may suffer flood or storms in the early spring 2020. 
-Because of the limted time of supervision, we will use pre-collected data (data collected in a week) to demonstrate how to process and visualize geo-location of tweets. 
+With geotagged location, social media can be used in mobility pattern identification, sentiment detection, emergency management and so on. In emergency management, social media paltform like Twitter can be used as crowdsourcing tool to collect real-time information in different effected areas. In this section, we will use geotagged tweets to identified the effected areas may suffer flood or storms in the early spring 2020. 
+Because of the limted time of supervision, we will use pre-collected data (data was collected in last week) to demonstrate how to process and visualize geo-location of tweets. 
 
 ### QGIS Project Setup (5 mins)
+Before using QGIS, we need to setup a QGIS project. It is suggested to create a folder and name it as `rm03_YourCRSid_sup3`, at your prefered directory on your disk. This folder will be the working directory for the assignment and supervision.
 
-1. It is suggested to create a folder and name it as `rm03_YourCRSid_sup3`, at your prefered directory on your disk. This folder will be the working directory for the assignment and supervision.
-
-2. In the menu bar, Click `Project` > `New` to create a new QGIS project.
-3. Go to `Project` > `Save As` and save as `supervision3.QGZ` to the working directory. 
-4. Go to `Project` >  `Properties` and open the `Project Properties` window. 
+1. In the menu bar, Click `Project` > `New` to create a new QGIS project.
+2. Go to `Project` > `Save As` and save as `supervision3.QGZ` to the working directory. 
+3. Go to `Project` >  `Properties` and open the `Project Properties` window. 
     - `General` tab: in the general settings, set your working directory as `Project Home`, change the unit for distance measurement you prefer and also display coordinates units.
     - `Metadata` tab: It is suggested to input title, author, creation date and a short abstract in the identification tab.
     - `CRS` tab: this tab provides Coordinate Reference System (CRS) setting for the project file. Here, we choose the projected coordinate system, `OSGB 1936/British National Grid EPSG:27700`. Be aware that CRS setting in the `Project Properties` is just for the project (called `Data Frame setting` in ArcGIS). CRS setting for layers will be introduced later.<br>
@@ -47,23 +46,20 @@ Note: after adding `Project home`, you can find `Project Home` directory is show
 
 
 ### Making heatmap based on their location (5 mins)
+In the first exercise of this supervision, we learned how to collect tweets data via API and save the query as CSV file. In the CSV file, geographic coordinates are stored as `latitude` and `longtitude` (based on `WGS84`), which can be plot in QGIS as points. And we want to summarise geotagged tweets for each local authority and find the effected areas. So except for tweets data, we will boundary for local authorities.
 
-- How to import data from spreadsheets and CSV with coordinates?
-- How to display coordinates from spreadsheets and CSV in QGIS?
-In the raw data of geotagged tweets, there is obvious cluster around London. The reason is that there are more twitter users in London because of large population base. It is inappropriate to directly summarise flood-related tweets within local athorities to identify possible affected areas. We need we use normalization to minimize differences in geotagged tweets based on the population of each local authority. 
-- import local authority boundary with population value.
-- import geotagged tweets
-- join by location while summarising
-
+1. Download `Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain` data from: [link](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain.zip) and `flood_tweets.csv` data from [link](https://raw.githubusercontent.com/hn303/CamLandEc-RM03/master/data/flood_tweets.csv) (right-click and save as) into your working directory. Both files should be saved into your working directory. 
 
 **Importing tweets file and local authorities boundaries**
 
-1. Download `Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain` data from: [link](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain.zip) and `flood_tweets.csv` data from [link](https://raw.githubusercontent.com/hn303/CamLandEc-RM03/master/data/flood_tweets.csv) into your working directory. Both files should be saved into your working directory. 
-2. Import shapefile into your project: Locate this file at your working directory in the Browser Panel and hold the left mouse and drag the Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain.shp into the map window. Alternatively, you can add vector file through data source manager. Click Open data source manager button on Data source manager toolbar and switch to Vector tab. Choose file as the source type and choose your shapefile in the source path.
-3. Navigate to menu bar click `Layer` > `Add Layer` > `Add Delimited Text Layer`. Browse the `flood_tweets.csv` just downloaded and change the layer name to `flood_tweets`. In the section of File Format, choose CSV. In the Geometry Definition section, choose `Point coordinates` and select `Longitude` and `Latitude` fields as X Y fields respectively. Normally the Geometry definition section will be auto-populated if it finds a suitable X and Y coordinate fields. Then choose the right CRS (EPSG:4326 - WGS84) for this file. Finally, click add and you will find a point layer.<br>
+1. Import shapefile into your project: Locate local authorities boundary file at your working directory in the Browser Panel and hold the left mouse and drag the `Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain.shp `into the map window. Alternatively, you can add vector file through data source manager. Click Open data source manager button on Data source manager toolbar and switch to Vector tab. Choose file as the source type and choose your shapefile in the source path.
+
+2. Navigate to menu bar click `Layer` > `Add Layer` > `Add Delimited Text Layer`. Browse the `flood_tweets.csv` just downloaded. In the section of File Format, choose CSV. In the Geometry Definition section, choose `Point coordinates` and select `Longitude` and `Latitude` fields as X Y fields respectively. Normally the Geometry definition section will be auto-populated if it finds a suitable X and Y coordinate fields. Then choose the right CRS (EPSG:4326 - WGS84) for this file. Finally, click add and you will find a point layer.<br>
 ![csv](statics/Sup3_csv.png)
 
-**Calculate density of geo-tagged tweets (normalised by population in local authorities)**
+**Calculate density of geo-tagged tweets in local authorities(normalised by population )**
+
+After importing the `flood_tweets` layer, you can see there is obvious cluster around London in the layer. The reason is that there are more twitter users in London because of its large population. It is inappropriate to directly summarise flood-related tweets within local athorities to identify possible affected areas. We need we use normalization to minimize differences of amount of geotagged tweets because of population in each local authority.
 
 1. Navigate to `Processing` > `Toolbox` and search `Join attributes by location(summary)`. In the prompted window, choose `Census_Merged_Local_Authority_Districts_December_2011_in_Great_BritainCambridge` as input layer and `flood_tweets` as join layer. In the geometric predicate section, choose `intersects`. <br>
 ![](statics/Sup3_join.png)
@@ -76,54 +72,40 @@ In the raw data of geotagged tweets, there is obvious cluster around London. The
 ![](statics/Sup3_symbol.png)
 
 
-### Using print layout 
+### Using QGIS Layout Manager
+In this part, you will practice how to use QGIS Layout Manager to add map elements and export map.
 
 **The Layout Manager**
 
 QGIS allows you to create multiple maps using the same map file. For this reason, it has a tool called the Layout Manager.
-![](statics/Sup3_layout.png)
 
 1. Click on the `Project` -> `Layout Manager` menu entry to open this tool. You’ll see a blank Layout manager dialog appear.
-2. Click the Add button and give the new layout the name of `flood_tweets`.
+2. Click the `Add` button and give the new layout the name of `flood_tweets`. 
 3. Click OK.
 4. Click the Show button.
+5. In blank area of page, right-click and open `Page Properties`.
+6. In the `Item Properties` tab, you’ll find the `Page Size` panel. change `Orientation` to `Portrait`.
+![](statics/Sup3_layout.png)
+![](statics/Sup3_page.png)
 
+**Add Map**
+Now you’ve got the page layout the way you wanted it, but this page is still blank. 
 
-**Basic Map Composition**
+1. To add the map, click on the `Add New Map` button. With this tool activated, you’ll be able to place a map on the page.
+2. Click in the upper left corner and hold. Drag a box on the blank page. The map will appear on the page.
+3. Move the map by clicking and dragging it around.
+4. Please try other tools to change size of your map or move content in a right right place.
 
-In this example, the composition was already the way we wanted it. Ensure that yours is as well.
-
-1. In the Print Layout window, check that the values under Composition ‣ Paper and Quality are set to the following:
-![](statics/Sup3_symbol.png)
-
-2. Now you’ve got the page layout the way you wanted it, but this page is still blank. To add the map, click on the `Add New Map` button: . With this tool activated, you’ll be able to place a map on the page.
-
-3. Click and drag a box on the blank page. The map will appear on the page.
-
-![add_map](statics/Sup3_add_map.png)
-
-4. Move the map by clicking and dragging it around: ![layout](statics/Sup_layout.png)
-
-Note:
-- Zoom in and out on the page (but not the map!) by using these buttons ![layout_zoom](statics/Sup3_layout_zoom.png).
-- Zoom and pan the map in the main QGIS window. You can also pan the map using the Move item content tool: `move Item Content` ![layout_zoom](statics/Sup3_layout_zoom.png).
+![](statics/Sup3_addmap.png)
 
 Because a Layout in QGIS is part of the main map file, you’ll need to save your main project. Go to the main QGIS window (the one with the Layers panel and all the other familiar elements you were working with before), and save your project from there as usual.
 
 ### Adding Map Elements
 
-Now your map is looking good on the page, but your readers/users are not being told what’s going on yet. They need some context, which is what you’ll provide for them by adding map elements. First, let’s add elements.
-
-
-**Add Scale**
-1. Click on this button: label
-2. Click on the page, above the map, and a label will appear at the top of the map.
-Resize it and place it in the top center of the page. It can be resized and moved in the same way that you resized and moved the map.
-3. As you move the title, you’ll notice that guidelines appear to help you position the title in the center of the page.
-![scale](statics/Sup3_scale.png)
+Now your map is looking good on the page, but your readers/users are not being told what’s going on yet. They need some context, which is what you’ll provide for them by adding map elements. Let’s add elements.
 
 **Add Legend**
-1. Click on this button: `add Legend`
+1. Click on this button: `Add a new Legend to the layout`
 2. Click on the page to place the legend, and move it to where you want it:
 ![legend1](statics/Sup3_legend.png)
 
@@ -138,6 +120,12 @@ Not everything on the legend is necessary, so let’s remove some unwanted items
 6. Select the `flood_tweets`.
 7. Delete it from the legend by clicking the minus button.
 
+**Add Scale**
+1. Click on this button `Add label`
+2. Click on the page, above the map, and a label will appear at the top of the map.
+3. Resize it and place it in the top center of the page. It can be resized and moved in the same way that you resized and moved the map.
+4. As you move the title, you’ll notice that guidelines appear to help you position the title in the center of the page.
+![scale](statics/Sup3_scale.png)
 
 **Add North Arrow**
 1. Click on this button: ``add picture``
@@ -155,4 +143,5 @@ Adding elements is the basic step for a map. To make a **good** map, you need to
 Finally the map is ready for export! 
 1. Find export buttons near the top left corner of the Layout window:
 2. Choose `Export as Image`
+![map](statics/Sup3_export.png)
 ![map](statics/Sup3_map.png)
