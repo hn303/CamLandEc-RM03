@@ -40,7 +40,7 @@ Before using QGIS, we need to setup a QGIS project. It is suggested to create a 
 Note: after adding `Project home`, you can find `Project Home` directory is showing in the `Browser panel`. It is much easier to locate your data files through this panel.<br>
 ![](statics/Sup3_crs.png) 
 ![](statics/Sup3_general.png)
-![](statics/Sup3_metadata.png)
+![](statics/Sup3_meta.png)
 
 
 ### Making heatmap based on their location
@@ -146,4 +146,4 @@ Finally the map is ready for export!
 
 **Final map: Density Map of Flood-related Tweets in UK**
 ![map](statics/Sup3_final.png)
-You can compare your map with Flood warnings map for England provided by flood information service via this [link](https://flood-warning-information.service.gov.uk/warnings).
+You can compare your map with `Flood Warnings Map` for England provided by flood information service via this [link](https://flood-warning-information.service.gov.uk/warnings).
