@@ -25,7 +25,7 @@ Meterials of supervision could be found below.
 |Supervision 2|Netlogo - urban modelling [[Slides]](./RM03_supervision2_slides.pdf)[[Exercises]](supervision2-exercises.md)[[Assignment]](supervision2-assignment.md)[[Answer]](supervision2-answer.md)|(H. R. Kwon, P. M. Scherer)|
 |Lecture 7|Hot topics in Spatial analysis and new technologies |(H. Niu, Y. Chen, H. R. Kwon, P. M. Scherer)|
 |Lecture 8|Data Science, Complexity Theory and Adaptive Planning |(Elisabete A. Silva)|
-|Supervision 3|Linking Big Data(harvesting & mining) with QGIS [[Slides]](./RM03_supervision2_slides.pdf)[[Exercises]](supervision3-exercises.md)|(H. Niu, Y. Chen)|
+|Supervision 3|Linking Big Data(harvesting & mining) with QGIS [[Slides]](./RM03_supervision3_slides.pdf)[[Exercises]](supervision3-exercises.md)|(H. Niu, Y. Chen)|
 |Revision Supervision|TBC||
 
 
