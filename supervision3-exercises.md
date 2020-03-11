@@ -22,7 +22,7 @@ In this exercise, you will familiarise yourself with collecting data via Applica
 
 # 2. Content Analysis of Tweets 
 > Please click this button below to move to Google Colab to start the first two exercises. Once open the colab, log in with your Google acount and save a copy to your own Google Drive.    
-> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hn303/CamLandEc-RM03/blob/master/supervision3-v3.ipynb)
+> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hn303/CamLandEc-RM03/blob/master/supervision3-v3.ipynb){:target="_blank"}
 
 # 3. Visualizaton of Geotagged Tweets
 With geotagged location, social media can be used in mobility pattern identification, sentiment detection, emergency management and so on. In emergency management, social media paltform like Twitter can be used as crowdsourcing tool to collect real-time information in different effected areas. In this section, we will use geotagged tweets to identify the effected areas suffering floods or storms in the early spring 2020. 
@@ -43,7 +43,7 @@ Note: after adding `Project home`, you can find `Project Home` directory is show
 ![](statics/Sup3_meta.png)
 
 
-### Making heatmap based on their location
+### Making density map based on their location
 In the first exercise of this supervision, we learned how to collect tweets data via API and save the query as CSV file. In the CSV file, geographic coordinates are stored as `latitude` and `longtitude` (based on `WGS84`), which can be plot in QGIS as points. And we want to summarise geotagged tweets for each local authority and find the effected areas. So except for tweets data, we will boundary for local authorities.
 
 1. Download `Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain` data from: [link](https://github.com/hn303/CamLandEc-RM03/blob/master/data/Census_Merged_Local_Authority_Districts_December_2011_in_Great_Britain.zip) and `flood_tweets.csv` data from [link](https://raw.githubusercontent.com/hn303/CamLandEc-RM03/master/data/flood_tweets.csv) (right-click and save as CSV). Both files should be saved into your working directory. 

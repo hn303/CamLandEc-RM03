@@ -28,5 +28,8 @@ Meterials of supervision could be found below.
 |Supervision 3|Linking Big Data(harvesting & mining) with QGIS [[Slides]](./RM03_supervision3_slides.pdf)[[Exercises]](supervision3-exercises.md)|(H. Niu, Y. Chen)|
 |Revision Supervision|TBC||
 
+### Contributors
+This repo is created by [**Haifeng Niu**](https://haifengniu.com/en/){:target="_blank"} and contributed by Heeseo Rain Kwon, Paul Scherer and Yiqiao Chen.
 
-This repo is created by [**Haifeng Niu**](https://haifengniu.com/en/){:target="_blank"} and contributed by Heeseo Rain Kwon, Paul Scherer and Yiqiao Chen.   
+### License
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.  
