@@ -69,3 +69,5 @@ show_excerpts: true
 
 highlighter: rouge
 
+
+theme: jekyll-theme-minimal
