@@ -35,9 +35,9 @@ heading_anchors: true
 
 repository: ""
 
-# theme: jekyll-theme-cayman
+theme: jekyll-theme-minimal
 # remote_theme: YoussefRaafatNasry/portfolYOU
-remote_theme: pmarsceill/just-the-docs
+# remote_theme: pmarsceill/just-the-docs
 
 # Footer content appears at the bottom of every page's main content
 footer_content: "Copyright &copy; 2020 Haifeng Niu."
@@ -68,6 +68,3 @@ exclude:
 show_excerpts: true
 
 highlighter: rouge
-
-
-theme: jekyll-theme-minimal
