@@ -7,6 +7,8 @@ search_exclude: true
 
 # Assignment for Supervision 2 - Answers
 
+### Teaching materials are prepared by Heeseo Rain Kwon (hk394@cam.ac.uk).
+
 #### Question 1. Click the `Info` tab below the `Menu bar`. Under `HOW IT WORKS`, you can find the rules of the game. Rules can be summarised as the four points below. 
 1. If there is exactly 3 alive neighbors, the cell becomes alive. (birth)
 2. If there are less than 2 alive neighbors, the cell dies. (under-population)
@@ -59,3 +61,5 @@ ask n-of 1000 patches
 - Pinto, N. N. and Antunes, A. P. (2007) ‘Cellular automata and urban studies: a literature survey’, ACE: architecture, city and environment, 1(3), pp. 368–399. doi: 10.5821/ace.v1i3.2378. Available at: https://www.research.manchester.ac.uk/portal/files/22523283/POST-PEER-REVIEW-PUBLISHERS.PDF
 
 - Model answer: We will show some good answers from students at the revision supervision and discuss.
+
+### Teaching materials are prepared by Heeseo Rain Kwon (hk394@cam.ac.uk).
