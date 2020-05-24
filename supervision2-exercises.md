@@ -10,6 +10,7 @@ search_exclude: true
 <script type="text/javascript" src="{{ "/assets/js/dark-mode-preview.js" | absolute_url }}"></script>
 
 # Supervision 2 (27-28 February, 2020)
+Teaching materials are prepared by Heeseo Rain Kwon (hk394@cam.ac.uk).
 
 Note: This page is NOT an assignment - we will go through this together at the Supervision 2 (27-28 February). All you need to have is NetLogo installed in your laptop. If you haven't done so already, please download and install `NetLogo (6.1.1)` according to your platform. We recommend downloading `Windows (64-bit)`, `Mac OS X`, or `Linux (64-bit)`: [NetLogo Download Page](https://ccl.northwestern.edu/netlogo/6.1.1/){:target="_blank"}. See you at the Supervision 2!
 
@@ -254,3 +255,5 @@ Note: As this supervision is for introducing how QGIS and raster data can be use
 
 10. In a short period of time, you have been introduced to the concept of NetLogo, how to load your own raster data into an existing model that uses the GIS extension, as well as making changes to the code. If you are more interested, there are many more resources available on the [NetLogo website](https://ccl.northwestern.edu/netlogo/){:target="_blank"}, for example, in `Help`, `Resources` and tabs under `Models` and `User Manuals`. Please feel free to reach out to Rain (hk394@cam.ac.uk) for any specific advise!
 11. Also, there is an assignment [Supervision 2 Assignment](CamLandEc-RM03/supervision2-assignment_invisible_v2.md) which will allow you to explore more of the codes on NetLogo using the Game of Life model. Thanks for your concentration!
+
+Teaching materials are prepared by Heeseo Rain Kwon (hk394@cam.ac.uk).
