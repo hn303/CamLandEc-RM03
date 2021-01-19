@@ -1,4 +1,6 @@
-# Download and install Teams on Mac
+# Setup Microsoft Teams
+
+## Download and install Teams on Mac
 
 1. From the Teams website (https://www.microsoft.com/en-gb/microsoft-teams/download-app), click Download Teams
    ![](statics/setup_1.png)
@@ -20,7 +22,7 @@
    ![](statics/setup_6_1.png)
    ![](statics/setup_6_2.png)
 
-# Download and install Teams on Windows
+## Download and install Teams on Windows
 
 1. from the website (https://www.microsoft.com/en-us/microsoft-teams/download-app), click Download Teams
 
@@ -32,7 +34,7 @@
 3. login to Teams with your Crsid
    ![](statics/setup_9.png)
 
-# Share screen & screen control
+## Share screen & screen control
 
 1. Click the `Share content` button to share content
    ![](statics/setup_10.png)
