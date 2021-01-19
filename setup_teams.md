@@ -1,5 +1,9 @@
 # Setup Microsoft Teams
 
+1. [Download and install Teams on Mac](#download-and-install-teams-on-mac)
+2. [Download and install Teams on Windows](#download-and-install-teams-on-windows)
+3. [Share screen & screen control](##share-screen--screen-control)
+
 ## Download and install Teams on Mac
 
 1. From the Teams website (https://www.microsoft.com/en-gb/microsoft-teams/download-app), click Download Teams
