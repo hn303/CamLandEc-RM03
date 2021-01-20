@@ -8,7 +8,7 @@ nav_order: 2
 
 - [Download and install Teams on Mac](#download-and-install-teams-on-mac)
 - [Download and install Teams on Windows](#download-and-install-teams-on-windows)
-- [Share screen & screen control](##share-screen--screen-control)
+- [Share screen & screen control](#share-screen--screen-control)
 
 ## Download and install Teams on Mac
 
