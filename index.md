@@ -32,11 +32,9 @@ Meterials of supervision could be found below.
 |
 
 
-**Time &amp; Group** : Supervision will be given in 1 hour to small groups (3 or 4 students in each group).
+**Time &amp; Group** : Supervision will be given in 1 hour to small groups (3-5 students in each group).
 
-**Booking supervision** : when you receive email via Moodle about supervision scheduler, please carefully choose your preferred time slot. Please noted that supervisors would strictly stick to the enrolled lists on the scheduler and all change of time slots should be completed via Moodle scheduler.
-
-**Preparation &amp; Platform** : The supervision will be given via Microsoft Teams, a supported online collaboration tool for the University. Please download and test Microsoft Teams and **log in with your Cambridge Microsoft account** (not your personal account) before the first supervision. Before each supervision, supervisors will invite you to chat groups by your Cambridge email address (Please make sure you are using the right account). Check the following link for installation instruction and how to share your screen within group chat: [Setup Microsoft Teams](https://hn303.github.io/CamLandEc-RM03/setup_teams){:target="\_blank"}.
+**Preparation &amp; Platform** : The supervision will be given via **Microsoft Teams**, a supported online collaboration tool for the University. Please download and test Microsoft Teams and **log in with your Cambridge Microsoft account** (not your personal account) before the first supervision. Before each supervision, supervisors will invite you to chat groups by your Cambridge email address (Please make sure you are using the right account). Check the following link for installation instruction and how to share your screen within group chat: [Setup Microsoft Teams](https://hn303.github.io/CamLandEc-RM03/setup_teams){:target="\_blank"}.
 
 Related Links:
 
@@ -44,7 +42,9 @@ Related Links:
 - [How to get Teams](/var/folders/42/y431w00d305dqbsjz3fvx1dw0000gn/T/com.apple.mail/com.apple.mail/compose/attach/How%20to%20get%20Teams){:target="\_blank"}
 - [How to log in to your University of Cambridge Microsoft account](https://help.uis.cam.ac.uk/service/accounts-passwords/microsoft-accounts/ees-login){:target="\_blank"}
 
-**Supervision materials** : Supervision material will be released on Moodle. During each supervision, we will ask students to go through _supervision exercise_ with detailed instruction. The material for _supervision exercise_ will be released in advance (You will receive a Moodle reminder when we release the material). You should follow the instruction to download the required software as preparation. Please note that you do not need to practice _supervision exercise_ before each supervision. After each supervision, we will release _supervision assignment_ via Moodle. Students should submit their assignment via Moodle by the deadline. Please note that there is no assignment for supervision 3 and revision supervision.
+**Booking supervision** : when you receive email via Moodle about supervision scheduler, you can choose your preferred time slot to book supervision. The first supervision scheduler will be released after Lecture 3. Please note that any change of time slots should be made via Moodle scheduler. Supervisors would strictly stick to the enrolled lists on the scheduler.
+
+**Supervision materials** : Supervision material will be released on Moodle. During each supervision, we will ask students to go through supervision exercise with provided instruction. The material for supervision exercise will be released in advance (You will receive a Moodle reminder when we release the material). You should follow the instruction to download the required software as preparation. Please note that you do not need to practice supervision exercise before each supervision. After each supervision, we will release supervision assignment via Moodle. Students should submit their assignment via Moodle by the deadline. Please note that there is no assignment for supervision 3 and revision supervision. 
 
 | Material      | _Supervision Exercises_ | _Supervision Assignment_ | Software       |
 |---------------|-------------------------|--------------------------|----------------|
