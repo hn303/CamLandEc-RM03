@@ -26,8 +26,8 @@ Meterials of supervision could be found below.
 | Lecture 6     | Dynamic simulation models SA, MCA, ABM, CA, GA and NN: development, calibration, validation                                                                                                                                       | (Elisabete Silva)                            |
 | **Supervision 2** | **Netlogo - urban modelling** <!-- [[Slides]](./RM03_supervision2_slides.pdf)[[Exercises]](supervision2-exercises.md)[[Assignment]](supervision2-assignment.md)[[Answer]](supervision2-answer.md)-->                                  | (P. M. Scherer, Y. Chen)                  |
 | Lecture 7     | Hot topics in Spatial analysis and new technologies                                                                                                                                                                               | (H. Niu, Y. Chen, P. M. Scherer) |
-| Lecture 8     | Data Science, Complexity Theory and Adaptive Planning                                                                                                                                                                             | (Elisabete A. Silva)                         |
 | **Supervision 3** | **Linking Big Data(harvesting & mining) with QGIS** <!-- [[Slides]](./RM03_supervision3_slides.pdf)[[Exercises]](supervision3-exercises.md) -->                                                                                       | (H. Niu, Y. Chen)                            |
+| Lecture 8     | Data Science, Complexity Theory and Adaptive Planning                                                                                                                                                                             | (Elisabete A. Silva)                         |
 | Revision Supervision        | TBC                                                                                                                                                                                                                               |
 |
 
@@ -39,7 +39,7 @@ Meterials of supervision could be found below.
 Related Links:
 
 - [Microsoft Teams at Cambridge Hub](https://help.uis.cam.ac.uk/news/teams-launch){:target="\_blank"}
-- [How to get Teams](/var/folders/42/y431w00d305dqbsjz3fvx1dw0000gn/T/com.apple.mail/com.apple.mail/compose/attach/How%20to%20get%20Teams){:target="\_blank"}
+- [How to get Teams](https://universityofcambridgecloud.sharepoint.com/sites/MicrosoftTeamsHub/SitePages/How-to-get-Teams.aspx){:target="\_blank"}
 - [How to log in to your University of Cambridge Microsoft account](https://help.uis.cam.ac.uk/service/accounts-passwords/microsoft-accounts/ees-login){:target="\_blank"}
 
 **Booking supervision** : when you receive email via Moodle about supervision scheduler, you can choose your preferred time slot to book supervision. The first supervision scheduler will be released after Lecture 3. Please note that any change of time slots should be made via Moodle scheduler. Supervisors would strictly stick to the enrolled lists on the scheduler.
