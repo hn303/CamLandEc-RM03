@@ -2,6 +2,7 @@
 .Rhistory
 .Rapp.history
 *.Rproj
+*.Rmd
 
 # Folder
 private/
