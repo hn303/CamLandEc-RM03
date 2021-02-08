@@ -2,8 +2,8 @@
 layout: default
 nav_order: 3
 title: Supervision 1
-nav_exclude: flase
-search_exclude: flase
+nav_exclude: false
+search_exclude: false
 ---
 
 <button class="btn js-toggle-dark-mode">Dark color scheme</button>
