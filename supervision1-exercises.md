@@ -10,7 +10,7 @@ search_exclude: true
 
 <script type="text/javascript" src="{{ "/assets/js/dark-mode-preview.js" | absolute_url }}"></script>
 
-# Supervision 1 (12-13 February, 2020)
+# Supervision 1 (16-18 February, 2021)
 
 ## Instructions
 
@@ -117,7 +117,7 @@ In this exercise, you will familiarise yourself with the basic features of QGIS 
     ![](statics/QGIS_new_field.png)
 
 4.  Select the `My_POI` layer in the layer panel, then open `Toggle editing` and select `Add Point Feature`. After pining a point feature on map window, a `Feature Attribute` window will pop up. Input id, name and category (cafe, restaurant, book shop, etc.) of this new feature. <br>
-    ![](statics/QGIS_feature.png)
+    <!-- ![](statics/QGIS_feature.png) -->
     ![](statics/QGIS_add_point.png)
 
 5.  After creating features in the map window, click `Toggle Editing` again and save changes.
