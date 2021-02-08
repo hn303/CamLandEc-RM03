@@ -10,6 +10,8 @@ search_exclude: flase
 
 <script type="text/javascript" src="{{ "/assets/js/dark-mode-preview.js" | absolute_url }}"></script>
 
+> If you prefer to print out the whole supervision instruction, please find the pdf version in the section of supervision on [RM03 Moodle page](https://www.vle.cam.ac.uk/course/view.php?id=179012){: .btn }.
+
 # Supervision 1 (16-18 February, 2021)
 
 ## Instructions
