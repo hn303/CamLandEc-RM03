@@ -3,7 +3,7 @@
 .Rapp.history
 *.Rproj
 *.Rmd
-
+*pdf.*
 # Folder
 private/
 pdf/
@@ -11,3 +11,4 @@ pdf/
 # Temporary files created by R markdown
 *.DS_Store
 
+.Rproj.user
