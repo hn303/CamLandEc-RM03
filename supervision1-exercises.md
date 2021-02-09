@@ -27,7 +27,7 @@ In this exercise, you will familiarise yourself with the basic features of QGIS 
 
 ### Setup Work Environment (10 mins)
 
-1. Please download and install `QGIS standalone install version`（Long term release repository, Version 3.10） according to your platform: [QGIS Download Page](https://qgis.org/en/site/forusers/download.html){: .btn }{:target="\_blank"}.
+1. Please download and install `QGIS standalone install version` （Long term release repository, Version 3.10) according to your platform: [QGIS Download Page](https://qgis.org/en/site/forusers/download.html){: .btn }{:target="\_blank"}.
 2. It is suggested to create a folder and name it as `rm03_YourCRSid_sup1`, at your prefered directory on your disk. This folder will be the working directory for all datasets and QGIS project file in this supervision.
 3. Launch QGIS: Start QGIS Desktop and check interface (menu bar, toolbar, browser panel, layer panel and map window)<br>
    Note: if some panels or toolbars are not showing, navigate to menu bar `View` > `Panels` or `Toolbars` to switch on.<br>
