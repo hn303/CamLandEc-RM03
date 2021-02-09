@@ -14,10 +14,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: CamLandEc-RM03
-logo: /statics/logo.jpg
+logo: #"/statics/logo.jpg"
 email: ""
 description: >- # this means to ignore newlines until "baseurl:"
-  Course material for RM03 in lent term, 2020
+  Course material for RM03 in lent term, 2021
 #baseurl: "" # the subpath of your site, e.g. /blog
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: haifengniu
