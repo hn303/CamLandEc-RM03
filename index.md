@@ -4,9 +4,21 @@ title: Home
 nav_order: 1
 ---
 
-<button class="btn js-toggle-dark-mode">Dark color scheme</button>
+<button class="btn js-toggle-dark-mode">Dark mode</button>
 
-<script type="text/javascript" src="{{ "/assets/js/dark-mode-preview.js" | absolute_url }}"></script>
+<script>
+const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
+
+jtd.addEvent(toggleDarkMode, 'click', function(){
+  if (jtd.getTheme() === 'dark') {
+    jtd.setTheme('light');
+    toggleDarkMode.textContent = 'Dark mode';
+  } else {
+    jtd.setTheme('dark');
+    toggleDarkMode.textContent = 'Return to the light mode';
+  }
+});
+</script>
 
 # RM03: Spatial Analysis and Modelling
 
