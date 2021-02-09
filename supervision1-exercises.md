@@ -27,7 +27,7 @@ In this exercise, you will familiarise yourself with the basic features of QGIS 
 
 ### Setup Work Environment (10 mins)
 
-1. Please download and install `QGIS standalone install version` according to your platform: [QGIS Download Page](https://qgis.org/en/site/forusers/download.html){: .btn }{:target="\_blank"}.
+1. Please download and install `QGIS standalone install version`（Long term release repository, Version 3.10） according to your platform: [QGIS Download Page](https://qgis.org/en/site/forusers/download.html){: .btn }{:target="\_blank"}.
 2. It is suggested to create a folder and name it as `rm03_YourCRSid_sup1`, at your prefered directory on your disk. This folder will be the working directory for all datasets and QGIS project file in this supervision.
 3. Launch QGIS: Start QGIS Desktop and check interface (menu bar, toolbar, browser panel, layer panel and map window)<br>
    Note: if some panels or toolbars are not showing, navigate to menu bar `View` > `Panels` or `Toolbars` to switch on.<br>
@@ -37,13 +37,22 @@ In this exercise, you will familiarise yourself with the basic features of QGIS 
 
 1. In the menu bar, Click `Project` > `New` to create a new QGIS project.
 2. Go to `Project` > `Save As` and save as `supervision1.QGZ` to the working directory.
-3. Go to `Project` > `Properties` and open the `Project Properties` window. - `General` tab: in the general settings, set your working directory as `Project Home`, change the unit for distance measurement you prefer and also display coordinates units. - `Metadata` tab: It is suggested to input title, author, creation date and a short abstract in the identification tab. - `CRS` tab: this tab provides Coordinate Reference System (CRS) setting for the project file. Here, we choose the projected coordinate system, `OSGB 1936/British National Grid EPSG:27700`. Be aware that CRS setting in the `Project Properties` is just for the project (called `Data Frame setting` in ArcGIS). CRS setting for layers will be introduced later.<br>
-   Note: after adding `Project home`, you can find `Project Home` directory is showing in the `Browser panel`. It is much easier to locate your data files through this panel.<br>
+3. Go to `Project` > `Properties` and open the `Project Properties` window.
+
+- `CRS` tab: this tab provides Coordinate Reference System (CRS) setting for the project file. Here, we choose the projected coordinate system, `OSGB 1936/British National Grid EPSG:27700`. Clip `Apply` button in the left bottom corner. Be aware that CRS setting in the `Project Properties` ((called `Data Frame setting` in ArcGIS) is just for the project file not including layer CRS. CRS setting for layers will be introduced later.
+
+- `General` tab: in the general settings, set your working directory as `Project Home`, change the unit for distance measurement as `Meters` since we choose projected CRS (EPSG:27700) in the last step and set display coordinates units as `Map units (meters)`. 
+    
+- `Metadata` tab: It is suggested to input title, author, creation date and a short abstract in the identification tab. <br>
+
+Note: after adding `Project home`, you can find `Project Home` directory is showing in the `Browser panel`. It is much easier to locate your data files through the panel.<br>
+   ![](statics/QGIS_crs.png)
    ![](statics/QGIS_general.png)
    ![](statics/QGIS_metadata.png)
-   ![](statics/QGIS_crs.png)
-
+   
 ### Vector Data (30 mins)
+
+First, we will play with some vector data. In this part, you will learn:
 
 - How to import shapefile into QGIS?
 - How to activate a layer?
@@ -70,7 +79,7 @@ In this exercise, you will familiarise yourself with the basic features of QGIS 
    Note: You don't need to type expression manually, expand `Field and Values` option in the right panel and double click `lad15nm`. The field name will show in the expression window. Once you select the field `lad15nm`, click `All Unique` button on the right, it will show a list of unique values from the field of `lad15nm`. Double click it to add to your expression.<br>
    ![](statics/QGIS_select3.png)
 
-4. Once select elements you need, right-click this layer and click `Export` > `Save Selected Features As`. Please change the format to `ESRI Shapfile`. Name this file as `Cam_City`. This exported shapefile should include these wards: Abbey, Arbury, Castle, Cherry Hinton, Coleridge, East Chesterton, King’s Hedges, Market, Newnham, Petersfield, Queen Edith’s, Romsey, Trumpington and West Chesterton.
+4. Once select elements you need, right-click this layer and click `Export` > `Save Selected Features As`. First, change the format to `ESRI Shapfile`. Then, you need to click the ellipsis (`...`) button to select the output directory and name the file as `Cam_City`. This exported shapefile should include these wards: Abbey, Arbury, Castle, Cherry Hinton, Coleridge, East Chesterton, King’s Hedges, Market, Newnham, Petersfield, Queen Edith’s, Romsey, Trumpington and West Chesterton.
 
 5. Try other functions in attribute table: `select all`, `invert selection`, `deselect all`
 
@@ -79,11 +88,10 @@ In this exercise, you will familiarise yourself with the basic features of QGIS 
 - How to import data from spreadsheets and CSV with coordinates?
 - How to display coordinates from spreadsheets and CSV in QGIS?
 
-1. Download `Cambridge local services` data of Cambridgeshire from: [Cambridgeshire Insight Open Data](https://data.cambridgeshireinsight.org.uk/dataset/cambridge-local-services/resource/af2c41d1-c8a0-46cf-ab77-ca407732e060){:target="\_blank"} and save into your working directory. This is a set of data to be used to geo-locate a shortlist of agencies and facilities around Cambridge.
+1. Download `Cambridge local services` data of Cambridgeshire from: [Cambridgeshire Insight Open Data](https://data.cambridgeshireinsight.org.uk/dataset/cambridge-local-services/resource/af2c41d1-c8a0-46cf-ab77-ca407732e060){:target="\_blank"} and save into your working directory. (If you are using Safari on MacOS, you need to click `download` > `right click` in the pop-up window > save page as csv file.) This is a dataset to be used to geo-locate a shortlist of agencies and facilities around Cambridge. 
 2. Navigate to menu bar click `Layer` > `Add Layer` > `Add Delimited Text Layer`. Browse the `cambridge-services-geolocated-csv-2-standardized.csv` just downloaded and change the layer name to `Cam_Services`. In the section of File Format, choose CSV. In the Geometry Definition section, choose `Point coordinates` and select `Longitude` and `Latitude` fields as X Y fields respectively. Normally the Geometry definition section will be auto-populated if it finds a suitable X and Y coordinate fields. Then choose the right CRS (EPSG:4326 - WGS84) for this file. Finally, click add and you will find a point layer.<br>
    ![](statics/QGIS_csv.png)
 
-> When you finished the above parts, please inform supervisors.
 
 **Join layer**
 
@@ -113,8 +121,8 @@ In this exercise, you will familiarise yourself with the basic features of QGIS 
 
 1.  Once you add base map for your QGIS project, you will see a scalable map in the map window.<br>
     Note: You computer must be connected to the internet to add base map as the imagery is fetched from web servers.
-2.  Zoom in to the Cambridge area to find the location of your frequently visited services including cafes, restaurants, book shops, cash machines, etc.
-3.  Create the following three shapefiles using `Layer` > `Create Layer` > `New Shapefile Layer`. Name the file as `My_POI.shp`(Point). Remember to choose the `EPSG:27700 - OSGB 1936 / British National Grid` coordinate system (select CRS > filter > Search `OSGB 1936`). You will add two `New Fields` (`name` and `category`) to its `Fields List` to store the name and category of each POI.<br>
+2.  Zoom in to the Cambridge area to find the location of your frequently visited services including cafes, restaurants, book shops, cash machines, etc. If you are not familar about the Cambridge city due to the COVID-19, please try to find our department and your college on the map and explore the surroundings.
+3.  Create the following three shapefiles using `Layer` > `Create Layer` > `New Shapefile Layer`. You need to click the ellipsis (`...`) button to select the output directory and name the file as `My_POI.shp`(Point). Remember to choose the `EPSG:27700 - OSGB 1936 / British National Grid` coordinate system (select CRS > filter > Search `OSGB 1936`). You will add two `New Fields` (`name` and `category`) to its `Fields List` to store the name and category of each POI.<br>
     ![](statics/QGIS_new.png)
     ![](statics/QGIS_new_field.png)
 
@@ -126,13 +134,15 @@ In this exercise, you will familiarise yourself with the basic features of QGIS 
 
 6.  Repeat above step from 4 to 5. Create another 4 points with inputting attributes.
 
-### Raster Data (15 mins)
+### Raster Data (10 mins)
+
+Now, you will take a few mins to familise the raster data. In this part, you will learn:
 
 - How to import raster data?
 - How to extract part of raster in Cambridge?
 - How to symbolise raster map?
 
-1. Download `Cambridge SRTM1` data of Cambridgeshire from: [Cambridge SRTM1 Data](data/n52_e000_1arc_v3.tif){:target="\_blank"} into your working directory.
+1. Download `Cambridge SRTM1` data of Cambridgeshire from: [Cambridge SRTM1 Data](data/n52_e000_1arc_v3.tif){:target="\_blank"} into your working directory. This dataset is used to generate digital elevation data and make a topographic map.
 
 2. Import shapefile into your project: Locate this file at your working directory through `Browser Panel` and hold the left mouse and drag the `n52_e000_1arc_v3.tif` into the map window. Or, you can add vector file through data source manager.<br>
    ![](statics/QGIS_raster.png)
@@ -149,4 +159,4 @@ In this exercise, you will familiarise yourself with the basic features of QGIS 
    ![](statics/QGIS_symbology.png)
    ![](statics/QGIS_cam_dem.png)
 
-6. Check your raster map with [Camrbidge Terrain Map](https://en-gb.topographic-map.com/maps/dgf/Cambridge/){:target="\_blank"}
+6. Now you have topographic map about Cambridge city. You can compare your result with [Camrbidge Terrain Map](https://en-gb.topographic-map.com/maps/dgf/Cambridge/){:target="\_blank"}
