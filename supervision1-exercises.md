@@ -24,7 +24,7 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 
 > If you prefer to print out the whole supervision instruction, please find the pdf version in the section of supervision on [RM03 Moodle page](https://www.vle.cam.ac.uk/course/view.php?id=179012){: .btn }.
 
-# Supervision 1 (16-18 February, 2021)
+# Supervision 1 (17 February, 2021)
 
 ## Instructions
 
@@ -39,7 +39,7 @@ In this exercise, you will familiarise yourself with the basic features of QGIS 
 
 ### Setup Work Environment (10 mins)
 
-1. Please download and install `QGIS standalone install version` （Long term release repository, Version 3.10) according to your platform: [QGIS Download Page](https://qgis.org/en/site/forusers/download.html){: .btn }{:target="\_blank"}.
+1. Please download and install `QGIS standalone install version` (Long term release repository, Version 3.10) according to your platform: [QGIS Download Page](https://qgis.org/en/site/forusers/download.html){: .btn }{:target="\_blank"}.
 2. It is suggested to create a folder and name it as `rm03_YourCRSid_sup1`, at your prefered directory on your disk. This folder will be the working directory for all datasets and QGIS project file in this supervision.
 3. Launch QGIS: Start QGIS Desktop and check interface (menu bar, toolbar, browser panel, layer panel and map window)<br>
    Note: if some panels or toolbars are not showing, navigate to menu bar `View` > `Panels` or `Toolbars` to switch on.<br>
@@ -100,7 +100,7 @@ First, we will play with some vector data. In this part, you will learn:
 - How to import data from spreadsheets and CSV with coordinates?
 - How to display coordinates from spreadsheets and CSV in QGIS?
 
-1. Download `Cambridge local services` data of Cambridgeshire from: [Cambridgeshire Insight Open Data](https://data.cambridgeshireinsight.org.uk/dataset/cambridge-local-services/resource/af2c41d1-c8a0-46cf-ab77-ca407732e060){:target="\_blank"} and save into your working directory. (If you are using Safari on MacOS, you need to click `download` > `right click` in the pop-up window > save page as a csv file.) This is a dataset to be used to geo-locate a shortlist of agencies and facilities around Cambridge. 
+1. Download `Cambridge local services` data of Cambridgeshire from: [Cambridgeshire Insight Open Data](https://data.cambridgeshireinsight.org.uk/dataset/cambridge-local-services/resource/af2c41d1-c8a0-46cf-ab77-ca407732e060){: .btn }{:target="\_blank"} and save into your working directory. (If you are using Safari on MacOS, you need to click `download` > `right click` in the pop-up window > save page as a csv file.) This is a dataset to be used to geo-locate a shortlist of agencies and facilities around Cambridge. 
 2. Navigate to menu bar click `Layer` > `Add Layer` > `Add Delimited Text Layer`. Browse the `cambridge-services-geolocated-csv-2-standardized.csv` just downloaded and change the layer name to `Cam_Services`. In the section of File Format, choose CSV. In the Geometry Definition section, choose `Point coordinates` and select `Longitude` and `Latitude` fields as X Y fields respectively. Normally the Geometry definition section will be auto-populated if it finds a suitable X and Y coordinate fields. Then choose the right CRS (EPSG:4326 - WGS84) for this file. Finally, click `Add`, and you will find a point layer.<br>
    ![](statics/QGIS_csv.png)
 
@@ -171,4 +171,4 @@ Now, you will take a few mins to families the raster data. In this part, you wil
    ![](statics/QGIS_symbology.png)
    ![](statics/QGIS_cam_dem.png)
 
-6. Now you have a topographic map about Cambridge city. You can compare your result with [Camrbidge Terrain Map](https://en-gb.topographic-map.com/maps/dgf/Cambridge/){:target="\_blank"}
+6. Now you have a topographic map about Cambridge city. You can compare your result with [Camrbidge Terrain Map](https://en-gb.topographic-map.com/maps/dgf/Cambridge/){: .btn }{:target="\_blank"}
