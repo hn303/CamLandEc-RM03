@@ -1,5 +1,5 @@
 ---
-title: "Supervision 2"
+title: "Supervision 2: Netlogo urban modelling"
 nav_order: 5
 nav_exclude: false
 search_exclude: true
@@ -31,10 +31,6 @@ Note: This page is NOT an assignment - we will go through this together at the S
 The aim of this supervision is to have you familiarise yourself with geoprocessing raster data on QGIS software as well as basic features of NetLogo software and how to use the GIS extension to input raster maps.
 
 We will do this together by using QGIS to rasterise vector data representations of a city to produce a raster map. After introducing NetLogo and some hallmarks of agent based modelling (ABM), we will use the raster map you created to model urban growth using NetLogo. 
-
-## Short presentation by supervisors (5-10 min)
-1. The slides are available on: [CamLandEc-RM03](https://hn303.github.io/CamLandEc-RM03/){:target="_blank"}.
-
 
 ## Instructions
 1. Read through the instructions carefully. You may face problems if you overlook any of the steps.
