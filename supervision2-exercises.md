@@ -226,7 +226,7 @@ So since the buttons are simply making calls to procedures, lets see what these 
 
 ![](statics/Sup2_ugm9.PNG) 
 
-8. To check the completed netlogo file of this exercise, please find the file [Urbanization_sejong_completed.nlogo](statics/Urbanization_sejong_completed.nlogo)
+8. To check the completed netlogo file of this exercise, please find the zipped file [Urbanization_sejong_completed.nlogo](statics/netlogo_supervision2_completed.zip)
 
 ## (If time allows) Discussion with supervisor
 
