@@ -21,7 +21,7 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 });
 </script>
 
-# Supervision 2 (3-5 March, 2021)
+# Supervision 2 (2 March, 2021)
 
 Note: This page is NOT an assignment - we will go through this together at the Supervision 2 (3-5 March). All you need to have is NetLogo installed in your laptop. If you haven't done so already, please download and install `NetLogo (6.0.4)` according to your platform. There are newer versions but please make sure to download 6.0.4 so that all users will have a consistent experience in the supervision. We recommend downloading `Windows (64-bit)`, `Mac OS X`, or `Linux (64-bit)`: [NetLogo Download Page](https://ccl.northwestern.edu/netlogo/6.0.4/){:target="_blank"}. See you at the Supervision 2!
 
