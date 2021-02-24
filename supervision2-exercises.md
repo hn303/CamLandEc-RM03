@@ -2,7 +2,7 @@
 title: "Supervision 2: Netlogo urban modelling"
 nav_order: 5
 nav_exclude: false
-search_exclude: true
+search_exclude: false
 ---
 
 <button class="btn js-toggle-dark-mode">Dark mode</button>
@@ -20,6 +20,8 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
   }
 });
 </script>
+
+> If you prefer to print out the whole supervision instruction, please find the pdf version in the section of supervision on [RM03 Moodle page](https://www.vle.cam.ac.uk/course/view.php?id=179012){: .btn }.
 
 # Supervision 2 (2 March, 2021)
 

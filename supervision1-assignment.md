@@ -1,8 +1,8 @@
 ---
 title: "Assignment 1"
-output:
-  pdf_document: default
-  html_document: default
+nav_order: 4
+nav_exclude: false
+search_exclude: false
 ---
 
 <button class="btn js-toggle-dark-mode">Dark mode</button>

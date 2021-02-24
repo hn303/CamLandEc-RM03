@@ -1,6 +1,6 @@
 ---
+title: "Supervision 1: Introduction of spatial analysis using Quantum GIS(QGIS)"
 nav_order: 3
-title: Supervision 1: Introduction of spatial analysis using Quantum GIS(QGIS)
 nav_exclude: false
 search_exclude: false
 ---
