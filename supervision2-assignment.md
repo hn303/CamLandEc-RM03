@@ -7,9 +7,7 @@ search_exclude: true
 
 # Assignment for Supervision 2
 
-### Teaching materials are prepared by Heeseo Rain Kwon (hk394@cam.ac.uk).
-
-**Submission Dealine: 5 Mar(Thursday) 12:00pm, 2020**
+**Submission Dealine: 10 Mar(Thursday) 12:00pm, 2021**
 
 ## Instructions
 
