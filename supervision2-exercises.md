@@ -142,7 +142,7 @@ Having looked at a basic model integrated in the model library of NetLogo (we wh
 
 ### Setting the work environment
 
-1. Download the `netlogo_supervision2.zip` archive onto the directory of your choice (e.g. 'rm03_YourCRSid_sup2' is a good choice). Unzip and extract the contents from the archive.
+1. Download the [netlogo_supervision2.zip](statics/netlogo_supervision2.zip) archive onto the directory of your choice (e.g. 'rm03_YourCRSid_sup2' is a good choice). Unzip and extract the contents from the archive.
 2. Look over its contents. It should contain rasterized versions of the vector data we looked at in QGIS:
 	- `Boundary.asc`
 	- `Exclusion.asc`
@@ -226,6 +226,8 @@ So since the buttons are simply making calls to procedures, lets see what these 
 
 ![](statics/Sup2_ugm9.PNG) 
 
+8. To check the completed netlogo file of this exercise, please find the file [Urbanization_sejong_completed.nlogo](statics/Urbanization_sejong_completed.nlogo)
+
 ## (If time allows) Discussion with supervisor
 
 The model we have created is a parametric model. The behaviour of the various growth rules can be augmented by changing the values of the coefficients to better fit real life conditions in a process called calibration. What do we need in order to perform calibration?
@@ -236,4 +238,4 @@ The model we have created is a parametric model. The behaviour of the various gr
 
 2. If you are interested in learning more, there is a whole myriad of resources online starting with the models integrated in the model library as well as detailed tutorials and usecases on the [NetLogo website](https://ccl.northwestern.edu/netlogo/){:target="_blank"}
 
-3. There is an assignment [Supervision 2 Assignment](CamLandEc-RM03/supervision2-assignment_invisible_v2.md) which will allow you to explore more of NetLogo using the Game of Life model. Thanks for attending this supervision.
+3. There is an assignment [Supervision 2 Assignment](supervision2-assignment.md) which will allow you to explore more of NetLogo using the Game of Life model. Thanks for attending this supervision.
