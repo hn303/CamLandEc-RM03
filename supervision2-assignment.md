@@ -7,7 +7,7 @@ search_exclude: true
 
 # Assignment for Supervision 2
 
-**Submission Dealine: 9 Mar(Thursday) 12:00pm, 2021**
+**Submission Dealine: 9 Mar(Tuesday) 12:00pm, 2021**
 
 ## Instructions
 
@@ -88,5 +88,3 @@ ask n-of 1000 patches
 ### Optional: Manually drawing cells
 
 1. Open the original `Life` model from `Models Library` again. Click `setup-blank` and `draw-cells` button and manually attempt drawing shapes that are stable and do not change, or shapes that return to their initial state after a few ticks. (Note: You can test the patterns suggested here: https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life.)
-
-### Teaching materials are prepared by Heeseo Rain Kwon (hk394@cam.ac.uk).
