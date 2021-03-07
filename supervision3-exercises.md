@@ -1,9 +1,27 @@
 ---
-title: "Supervision 3"
+title: "Supervision 3: Linking Big Data(harvesting & mining) with QGIS"
 nav_order: 8
-nav_exclude: true
-search_exclude: true
+nav_exclude: false
+search_exclude: false
 ---
+<button class="btn js-toggle-dark-mode">Dark mode</button>
+
+<script>
+const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
+
+jtd.addEvent(toggleDarkMode, 'click', function(){
+  if (jtd.getTheme() === 'dark') {
+    jtd.setTheme('light');
+    toggleDarkMode.textContent = 'Dark mode';
+  } else {
+    jtd.setTheme('dark');
+    toggleDarkMode.textContent = 'Return to the light mode';
+  }
+});
+</script>
+
+> If you prefer to print out the whole supervision instruction, please find the pdf version in the section of supervision on [RM03 Moodle page](https://www.vle.cam.ac.uk/course/view.php?id=179012){: .btn }.
+
 
 # Supervision 3 (10 March, 2021)
 
