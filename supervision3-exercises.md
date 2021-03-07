@@ -5,7 +5,7 @@ nav_exclude: true
 search_exclude: true
 ---
 
-# Supervision 3 (12-13 March, 2020)
+# Supervision 3 (10 March, 2021)
 
 ### Instructions
 
@@ -24,12 +24,12 @@ In this exercise, you will familiarise yourself with collecting data via Applica
 # 2. Content Analysis of Tweets
 
 > Please click this button below to move to Google Colab to start the first two exercises. Once open the colab, log in with your Google acount and save a copy to your own Google Drive.  
-> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hn303/CamLandEc-RM03/blob/master/supervision3-v3.ipynb){:target="\_blank"}
+> [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hn303/CamLandEc-RM03/blob/master/supervision3-v4.ipynb){:target="\_blank"}
 
 # 3. Visualizaton of Geotagged Tweets
 
-With geotagged location, social media can be used in mobility pattern identification, sentiment detection, emergency management and so on. In emergency management, social media paltform like Twitter can be used as crowdsourcing tool to collect real-time information in different effected areas. In this section, we will use geotagged tweets to identify the effected areas suffering floods or storms in the early spring 2020.
-Because of the limted time of supervision, we will use pre-collected data (data was collected in last week) to demonstrate how to process and visualize geotagged tweets.
+With geotagged location, social media can be used in mobility pattern identification, sentiment detection, emergency management and so on. In emergency management such as natural disaster or epidemic, social media paltform like Twitter can be used as crowdsourcing tool to collect real-time information in different effected areas. In this section, we will use geotagged tweets to identify the effected areas suffering floods or storms in the early spring 2020.
+In this exercise, we will give you a collected data (data was collected in March 2020) to demonstrate how to process and visualize geotagged tweets. 
 
 ### QGIS Project Setup
 
@@ -56,7 +56,7 @@ In the first exercise of this supervision, we learned how to collect tweets data
 2. Navigate to menu bar click `Layer` > `Add Layer` > `Add Delimited Text Layer`. Browse the `flood_tweets.csv` just downloaded. In the section of File Format, choose CSV. In the Geometry Definition section, choose `Point coordinates` and select `Longitude` and `Latitude` fields as X Y fields respectively. Normally the Geometry definition section will be auto-populated if it finds a suitable X and Y coordinate fields. Then choose the right CRS (EPSG:4326 - WGS84) for this file. Finally, click add and you will find a point layer.<br>
    ![csv](statics/Sup3_csv.png)
 
-**Calculate density of geotagged tweets in local authorities (normalised by population )**
+**Calculate density of geotagged tweets in local authorities (normalised by the population)**
 
 After importing the `flood_tweets` layer, you can see there is obvious cluster around London in the layer. The reason is that there are more twitter users in London because of its large population. It is inappropriate to directly summarise flood-related tweets within local athorities to identify possible affected areas. We need to use normalization to minimize differences in the amount of geotagged tweets, which is caused by population variation among local authorities.
 
@@ -149,4 +149,4 @@ Finally the map is ready for export!
 
 **Final map: Density Map of Flood-related Tweets in UK**
 ![map](statics/Sup3_final.png)
-You can compare your map with `Flood Warnings Map` for England provided by flood information service via this [link](https://flood-warning-information.service.gov.uk/warnings).
+
