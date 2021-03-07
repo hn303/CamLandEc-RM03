@@ -1,8 +1,8 @@
 ---
 title: "Assignment 2"
 nav_order: 6
-nav_exclude: true
-search_exclude: true
+nav_exclude: false
+search_exclude: false
 ---
 <button class="btn js-toggle-dark-mode">Dark mode</button>
 
