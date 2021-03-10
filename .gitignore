@@ -3,7 +3,6 @@
 .Rapp.history
 *.Rproj
 *.Rmd
-*pdf.*
 *.ipynb_checkpoints
 
 # Folder
@@ -12,5 +11,8 @@ pdf/
 
 # Temporary files created by R markdown
 *.DS_Store
-
 .Rproj.user
+
+# Specific files
+*pdf.*
+*answer.*
