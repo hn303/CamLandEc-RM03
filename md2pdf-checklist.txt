@@ -1,0 +1,3 @@
+remove darkmode
+remove {: .btn }{:target="\_blank"}
+replace br by \
