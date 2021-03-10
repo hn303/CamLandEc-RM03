@@ -4,6 +4,8 @@
 *.Rproj
 *.Rmd
 *pdf.*
+*.ipynb_checkpoints
+
 # Folder
 private/
 pdf/
