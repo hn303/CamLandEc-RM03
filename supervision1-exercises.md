@@ -23,7 +23,7 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 
 > If you prefer to print out the whole supervision instruction, please find the pdf version in the section of supervision on [RM03 Moodle page](https://www.vle.cam.ac.uk/course/view.php?id=179012){: .btn }.
 
-# Supervision 1 (17 February, 2021)
+# Supervision 1 (15 February, 2022)
 
 ## Instructions
 
