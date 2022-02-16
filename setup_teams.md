@@ -2,6 +2,8 @@
 layout: default
 title: Setup Microsoft Teams
 nav_order: 2
+nav_exclude: true
+search_exclude: true
 ---
 
 # Setup Microsoft Teams
