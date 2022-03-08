@@ -1,8 +1,8 @@
 ---
 title: "Supervision 3: Linking Big Data(harvesting & mining) with QGIS"
 nav_order: 8
-nav_exclude: false
-search_exclude: false
+nav_exclude: true
+search_exclude: true
 ---
 <button class="btn js-toggle-dark-mode">Dark mode</button>
 
