@@ -1,8 +1,8 @@
 ---
 title: "Supervision 2: Netlogo urban modelling"
 nav_order: 5
-nav_exclude: true
-search_exclude: true
+nav_exclude: false
+search_exclude: false
 ---
 
 <button class="btn js-toggle-dark-mode">Dark mode</button>
